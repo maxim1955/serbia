@@ -1,18 +1,18 @@
 @font-face{
 font-family:"Inter-Medium";
-src: url(./fonts/Inter-Medium.woff);
+src: url('../fonts/Inter-Medium.woff');
 }
 @font-face{
     font-family:"Inter-Regular";
-    src: url(./fonts/Inter-Regular.woff);
+    src: url('../fonts/Inter-Regular.woff');
  }
  @font-face{
     font-family:"Mulish-Bold";
-    src: url(./fonts/Mulish-Bold.woff);
+    src: url('../fonts/Mulish-Bold.woff');
  }
  @font-face{
     font-family:"Wadik";
-    src: url(./fonts/Wadik.woff);
+    src: url('../fonts/Wadik.woff');
  }
 .whole{
     display: flex;
@@ -44,7 +44,7 @@ src: url(./fonts/Inter-Medium.woff);
     padding-bottom: 40px;
 }
 .start_btn{
-    background-image: url(./img/Button_Primary.svg);
+    background-image: url('../img/Button_Primary.svg');
     width: 440px;
     height: 80px;
     background-repeat: no-repeat;
@@ -60,14 +60,14 @@ src: url(./fonts/Inter-Medium.woff);
     border-image: linear-gradient(to right,rgba(255, 170, 0, 1), rgba(170, 0, 255, 1)) 1;
     padding: 60px 115px 35px 115px;
     border-radius: 6px;
-    background-image: url(./img/test.svg);
+    background-image: url('../img/test.svg');
     background-size: cover;
     color: white;
     height: fit-content;
     display: none;
 }
 body{
-    background-image: url(./img/sun.svg);
+    background-image: url('../img/sun.svg');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -161,7 +161,7 @@ li{
 }
 .return::before{
     content: '';
-    background-image: url(./img/Vector.svg);
+    background-image: url('../img/Vector.svg');
     width: 20px;
     height: 16px;
     background-size: cover;
@@ -293,7 +293,7 @@ header{
 }
 .return_footer::before{
     content: '';
-    background-image: url(./img/Vector.svg);
+    background-image: url('../img/Vector.svg');
     width: 20px;
     height: 16px;
     background-size: cover;
@@ -319,7 +319,7 @@ header{
         width: 322px;
     }
     .quiz{
-        background-image: url(./img/vector_tablet.svg);
+        background-image: url('../img/vector_tablet.svg');
         padding: 60px 86px 60px 86px;
         margin-right: 10%;
         margin-left: 10%;
@@ -347,7 +347,7 @@ header{
         font-size: 16px;
     }
     body{
-        background-image: url(./img/sun_tablet.svg);
+        background-image: url('../img/sun_tablet.svg');
     }
     .count, .return{
         font-size: 16px;
@@ -385,7 +385,7 @@ header{
         justify-content: center;
     }
     body{
-        background-image: url(./img/sun_mob.svg);
+        background-image: url('../img/sun_mob.svg');
         background-position-x: center;
     }
     .quiz{
