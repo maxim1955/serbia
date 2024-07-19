@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
       navItems[index].removeAttribute("aria-current");
     }
   });
-  //   console.log(currentUrl);
+    console.log(currentUrl);
 });
 
 // Переворачивание карточек в Программе

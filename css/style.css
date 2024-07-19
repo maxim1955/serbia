@@ -1199,6 +1199,7 @@ nav li[aria-current="page"] {
   top: 0;
   left: 0;
   object-fit: contain;
+  pointer-events: none;
 }
 
 .broadcast-play {
