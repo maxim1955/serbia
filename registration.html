@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css" />
+  <style type="text/css">
+    @font-face {
+      src: url(fonts/Inter-Medium.woff) format('woff');
+      font-family: 'Inter';
+      font-weight: 500;
+    }
+
+    @font-face {
+      src: url(fonts/Inter-Regular.woff) format('woff');
+      font-family: 'Inter';
+      font-weight: 400;
+    }
+
+    @font-face {
+      src: url(fonts/Wadik.woff) format('woff');
+      font-family: 'Wadik';
+      font-weight: 700;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .reg {
+      font-family: inter;
+      position: absolute;
+      height: 100vh;
+      width: 100%;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      box-sizing: border-box;
+      overflow: auto;
+      display: flex;
+    }
+
+    .reg__notice {
+      width: 900px;
+      height: 352px;
+      background-image: url('img/background-notice-desktop.svg');
+      display: none;
+      flex-direction: column;
+      align-self: center;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      border: 2px solid #FFAA00;
+      border-radius: 6px;
+      box-sizing: border-box;
+      padding: 80px 40px;
+    }
+
+    .reg__notice-close {
+      position: absolute;
+      background-image: url('img/Close.svg');
+      width: 60px;
+      height: 60px;
+      right: 20px;
+      top: 20px;
+      background-repeat: no-repeat;
+      cursor: pointer;
+    }
+
+    .reg__notice-robot {
+      display: none;
+    }
+
+    .reg__notice-title {
+      font-family: Wadik;
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 39.82px;
+      background: linear-gradient(50deg, #FFAA00, #AA00FF);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .reg__notice-text {
+      color: white;
+      font-size: 20px;
+      line-height: 24px;
+      margin-top: 40px;
+    }
+
+    .reg__modal {
+      background-image: url('img/reg-background.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      max-width: 1440px;
+      max-height: 1500px;
+      box-sizing: border-box;
+      margin-right: auto;
+      margin-left: auto;
+      display: none;
+    }
+
+    .reg__mask {
+      background: rgba(14 2 20 / 0.4);
+      display: flex;
+      max-width: 1440px;
+      max-height: 1500px;
+      color: white;
+      position: relative;
+      box-sizing: border-box;
+      padding-top: 120px;
+    }
+
+    .reg__close {
+      background-image: url('img/Close.svg');
+      height: 40px;
+      width: 40px;
+      position: absolute;
+      right: 40px;
+      top: 40px;
+      cursor: pointer;
+    }
+
+    .reg__info-container {
+      display: flex;
+      flex-direction: column;
+      width: 805px;
+      margin-left: 40px;
+      position: relative;
+    }
+
+    .reg__info-figure {
+      position: absolute;
+      height: 318px;
+      width: 28px;
+      top: 200px;
+      background-image: url('img/reg-figure.svg');
+    }
+
+    .reg__title {
+      font-family: Wadik;
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 53.09px;
+      background: linear-gradient(50deg, #FFAA00, #AA00FF);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      max-width: 670px;
+    }
+
+    .reg__text {
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 28px;
+      max-width: 660px;
+      margin-left: auto;
+    }
+
+    .reg__robot-image {
+      background-image: url('img/reg-robot.svg');
+      height: 828px;
+      width: 670px;
+    }
+
+    .reg__form {
+      display: flex;
+      flex-direction: column;
+      max-width: 440px;
+      margin-left: 20px;
+      margin-right: 155px;
+    }
+
+    .reg__input-label {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 24px;
+      margin-bottom: 16px;
+    }
+
+    .reg__input-label-last {
+      margin-top: 28px;
+    }
+
+    .reg__input {
+      background: #0E0214;
+      border-radius: 6px;
+      width: 100%;
+      border: none;
+      box-sizing: border-box;
+      padding: 22px 16px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    .reg__input-border {
+      position: relative;
+      background: linear-gradient(50deg, #FFAA00, #AA00FF);
+      border-radius: 6px;
+      max-width: 440px;
+      box-sizing: border-box;
+      padding: 1px 1px;
+      margin-bottom: 28px;
+    }
+
+    .reg__input-border-last {
+      margin-bottom: 0;
+    }
+
+    .reg__radio-container-first {
+      margin-bottom: 6px;
+    }
+
+    .reg__radio-label {
+      display: flex;
+    }
+
+    .reg__radio {
+      margin: 0;
+      display: none
+    }
+
+    .reg__fake-radio {
+      height: 24px;
+      width: 24px;
+      display: inline-block;
+      background: linear-gradient(70deg, #FFAA00, #AA00FF);
+      ;
+      border-radius: 50px;
+      position: relative;
+    }
+
+    .reg__fake-radio::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      content: '';
+      display: block;
+      width: 20px;
+      height: 20px;
+      border-radius: 50px;
+      background-color: #FFF;
+      transition: .2s;
+    }
+
+    .reg__radio:checked+.reg__fake-radio::before {
+      width: 10px;
+      height: 10px;
+    }
+
+    .reg__input-label-rad {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      margin-left: 12px;
+    }
+
+    .reg__checkbox-label {
+      display: flex;
+      margin-top: 40px;
+    }
+
+    .reg__checkbox {
+      display: none;
+      height: 24px;
+      width: 24px;
+    }
+
+    .reg__fake-checkbox {
+      height: 24px;
+      width: 52px;
+      box-sizing: border-box;
+      display: inline-block;
+      border: 2px solid #FFAA00;
+      background-color: transparent;
+      border-radius: 2px;
+      position: relative;
+      margin-right: 8px;
+    }
+
+    .reg__fake-checkbox::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      content: '';
+      display: block;
+      height: 24px;
+      width: 24px;
+      border-radius: 2px;
+      background-color: #FFAA00;
+      opacity: 0;
+      transition: .2s;
+    }
+
+    .reg__checkbox:checked+.reg__fake-checkbox::before {
+      opacity: 1;
+    }
+
+    .reg__checkbox-text {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 16px;
+    }
+
+    .reg__checkbox-text-span {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 14.06px;
+      text-decoration: underline;
+    }
+
+    .reg__button-container {
+      width: 100%;
+      height: 82px;
+      position: relative;
+      margin-top: 20px;
+      margin-bottom: 120px;
+    }
+
+    .reg__button {
+      clip-path: polygon(0 0, 100% 0, 100% 75%, 95% 100%, 0 100%);
+      width: 100%;
+      height: 75px;
+      background-color: #FFAA00;
+      border: none;
+      box-sizing: border-box;
+      font-size: 20px;
+      line-height: 24.2px;
+      font-weight: 500;
+      color: black;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .reg__button-figure {
+      background-image: url('img/button-figure.svg');
+      width: 120px;
+      height: 14px;
+      position: absolute;
+      left: 32px;
+      bottom: 1px;
+    }
+
+    @media screen and (max-width: 1483px) {
+      .reg__modal {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+    }
+
+    @media screen and (max-width: 1386px) {
+      .reg__info-figure {
+        display: none;
+      }
+
+      .reg__form {
+        margin-right: 40px;
+      }
+    }
+
+    @media screen and (max-width: 1150px) {
+
+      .reg__mask {
+        flex-direction: column;
+        padding-top: 60px;
+        align-items: center;
+      }
+
+      .reg__close {
+        background-image: url('img/Close-mini.svg');
+        height: 32px;
+        width: 32px;
+        right: 20px;
+        top: 20px;
+      }
+
+      .reg__info-container {
+        margin-left: 40px;
+        margin-right: 40px;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 60px;
+      }
+
+      .reg__title {
+        font-size: 24px;
+        line-height: 26.54px;
+        text-align: center;
+      }
+
+      .reg__text {
+        margin: 0;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+      }
+
+      .reg__robot-image {
+        display: none;
+      }
+
+      .reg__form {
+        margin-left: 40px;
+        margin-right: 40px;
+      }
+    }
+
+    @media screen and (max-width: 900px) {
+      .reg__notice {
+        width: 493px;
+        height: 274px;
+        background-image: url('img/background-notice-tablet.svg');
+        padding: 60px 40px 40px 40px;
+      }
+
+      .reg__notice-close {
+        background-image: url('img/Close-mini.svg');
+        width: 32px;
+        height: 32px;
+      }
+
+      .reg__notice-title {
+        font-size: 24px;
+        line-height: 26.54px;
+      }
+
+      .reg__notice-text {
+        font-size: 16px;
+        line-height: 20px;
+        margin-top: 20px;
+      }
+
+      .reg__modal {
+        max-width: 492px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .reg__mask {
+        max-width: 492px;
+      }
+
+      .reg__info-container {
+        max-width: 412px;
+      }
+
+      .reg__title {
+        text-align: start;
+      }
+
+      .reg__text {
+        text-align: start;
+      }
+
+      .reg__input-label {
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      .reg__input {
+        font-size: 14px;
+        line-height: 18px;
+        padding: 17px 11px;
+      }
+
+      .reg__checkbox-label {
+        margin-top: 20px;
+      }
+
+      .reg__button-container {
+        height: 58px;
+        margin-bottom: 40px;
+      }
+
+      .reg__button {
+        font-size: 16px;
+        line-height: 19.36px;
+        height: 51px;
+      }
+    }
+
+    @media screen and (max-width: 500px) {
+      .reg {
+        padding: 0;
+      }
+
+      .reg__notice {
+        width: 360px;
+        height: 640px;
+        background-image: url('img/background-notice-phone.svg');
+        padding: 92px 20px 72px;
+        border: none;
+      }
+
+      .reg__notice-robot {
+        display: inline-block;
+        width: 235px;
+        height: 290px;
+        align-self: center;
+        margin-top: 40px;
+      }
+
+      .reg__notice-title {
+        font-size: 16px;
+        line-height: 17.7px;
+      }
+
+      .reg__notice-text {
+        font-size: 14px;
+        line-height: 18px;
+      }
+
+      .reg__modal {
+        max-width: 360px;
+      }
+
+      .reg__mask {
+        max-width: 360px;
+        padding-top: 64px;
+      }
+
+      .reg__close {
+        right: 20px;
+        top: 20px;
+      }
+
+      .reg__info-container {
+        max-width: 320px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 28px;
+      }
+
+      .reg__text {
+        font-size: 14px;
+        line-height: 18px;
+      }
+
+      .reg__form {
+        max-width: 320px;
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+
+      .reg__input-label {
+        font-size: 14px;
+        line-height: 18px;
+      }
+
+      .reg__input {
+        font-size: 14px;
+        line-height: 18px;
+      }
+
+      .reg__input-360 {
+        height: 72px;
+      }
+
+      .reg__fake-checkbox {
+        width: 70px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="reg">
+    <div class="reg__modal">
+      <div class="reg__mask">
+        <div class="reg__close"></div>
+        <div class="reg__info-container">
+          <h1 class="reg__title">ОТКРОЙ МИР НОВЫХ ВОЗМОЖНОСТЕЙ</h1>
+          <h3 class="reg__text">При авторизации вы получите сертификат участника, программу мероприятий и
+            эксклюзивные бонусы. Успейте забрать ваш ключ к новым знаниям, навыкам и незабываемым впечатлениям!</h3>
+          <div class="reg__robot-image"></div>
+          <div class="reg__info-figure"></div>
+        </div>
+        <form class="reg__form">
+          <label class="reg__input-label">Ф.И.О.</label>
+          <div class="reg__input-border">
+            <input class="reg__input" placeholder="Введите Ф.И.О">
+          </div>
+          <label class="reg__input-label">Email</label>
+          <div class="reg__input-border">
+            <input class="reg__input" placeholder="Введите Email">
+          </div>
+          <label class="reg__input-label">Телефон</label>
+          <div class="reg__input-border">
+            <input class="reg__input" placeholder="Введите телефон">
+          </div>
+          <label class="reg__input-label">Город</label>
+          <div class="reg__input-border">
+            <input class="reg__input" placeholder="Выберите город">
+          </div>
+          <label class="reg__input-label">Категория</label>
+          <div class="reg__input-border">
+            <input class="reg__input" placeholder="Выберите категорию">
+          </div>
+          <label class="reg__input-label">Наименование учебного заведения</label>
+          <div class="reg__input-border">
+            <input class="reg__input reg__input-360" placeholder="Введите наименование учебного заведения">
+          </div>
+          <label class="reg__input-label">Вам есть 14 лет?</label>
+          <div class="reg__radio-container reg__radio-container-first">
+            <label class="reg__radio-label">
+              <input class="reg__radio" name="age" type="radio">
+              <span class="reg__fake-radio"></span>
+              <span class="reg__input-label-rad">Да</span>
+            </label>
+          </div>
+          <div class="reg__radio-container">
+            <label class="reg__radio-label">
+              <input class="reg__radio" name="age" type="radio" checked>
+              <span class="reg__fake-radio"></span>
+              <span class="reg__input-label-rad">Нет</span>
+            </label>
+          </div>
+          <label class="reg__input-label reg__input-label-last">ФИО представителя</label>
+          <div class="reg__input-border reg__input-border-last">
+            <input class="reg__input" placeholder="Введите ФИО представителя">
+          </div>
+          <div class="reg__checkbox-container">
+
+            <label class="reg__checkbox-label">
+              <input class="reg__checkbox" type="checkbox">
+              <span class="reg__fake-checkbox"></span>
+              <span class="reg__checkbox-text">Соглашаюсь с условиями <span class="reg__checkbox-text-span">Политики
+                  конфиденциальности,
+                  Согласия на обработку персональных данных</span> и <span class="reg__checkbox-text-span">Согласия
+                  Пользователя на обработку персональных
+                  данных</span></span>
+            </label>
+          </div>
+          <div class="reg__button-container">
+            <button class="reg__button">Зарегистрироваться</button>
+            <div class="reg__button-figure"></div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="reg__notice">
+      <div class="reg__notice-close"></div>
+      <h1 class="reg__notice-title">ВЫ УСПЕШНО ЗАРЕГИСТРИРОВАЛИСЬ</h1>
+      <span class="reg__notice-text">В ближайшее время на вашу электронную почту придёт письмо с логином и паролем для
+        входа в
+        аккаунт. Проверьте папку «Входящие» или «Спам», чтобы получить доступ к личному кабинету.</span>
+      <img class="reg__notice-robot" src="img/robot-phone.svg" alt="">
+    </div>
+
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css" />
+  <style type="text/css">
+    @font-face {
+      src: url(fonts/Inter-Medium.woff) format('woff');
+      font-family: 'Inter';
+      font-weight: 500;
+    }
+
+    @font-face {
+      src: url(fonts/Inter-Regular.woff) format('woff');
+      font-family: 'Inter';
+      font-weight: 400;
+    }
+
+    @font-face {
+      src: url(fonts/Wadik.woff) format('woff');
+      font-family: 'Wadik';
+      font-weight: 700;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Inter;
+    }
+
+    .fb {
+      position: absolute;
+      height: 100vh;
+      width: 100%;
+      box-sizing: border-box;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      overflow: auto;
+      display: flex;
+    }
+
+    .fb__notice {
+      background-image: url('img/back-notice-feedback-desktop-.svg');
+      background-repeat: no-repeat;
+      width: 589px;
+      height: 288px;
+      padding: 80px 40px;
+      box-sizing: border-box;
+      align-self: center;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      border: 2px solid #FFAA00;
+    }
+
+    .fb__notice-display-none {
+      display: none;
+    }
+
+    .fb__notice-close {
+      width: 60px;
+      height: 60px;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-image: url('img/Close.svg');
+      background-repeat: no-repeat;
+      cursor: pointer;
+    }
+
+    .fb__notice-title {
+      font-family: Wadik;
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 39.82px;
+      background: linear-gradient(50deg, #FFAA00, #AA00FF);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .fb__notice-text {
+      color: white;
+      font-size: 20px;
+      line-height: 24px;
+      margin-top: 40px;
+    }
+
+    .fb__modal {
+      background-image: url('img/Background-feedback.svg');
+      background-repeat: no-repeat;
+      height: 1158px;
+      width: 1440px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      color: white;
+      font-family: inter;
+    }
+
+    .fb__close {
+      position: absolute;
+      background-image: url('img/Close-feedback.svg');
+      height: 40px;
+      width: 40px;
+      right: 10px;
+      top: 10px;
+      cursor: pointer;
+    }
+
+    .fb__container {
+      display: flex;
+      flex-direction: column;
+      padding-top: 119px;
+      width: 649px;
+      margin-right: 40px;
+    }
+
+    .fb__title {
+      font-family: Wadik;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 26.54px;
+      margin-bottom: 40px;
+    }
+
+    .fb__text {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 24px;
+      margin-bottom: 40px;
+    }
+
+    .fb__input-label {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    .fb__input {
+      background: #0E0214;
+      border-radius: 6px;
+      width: 100%;
+      border: none;
+      box-sizing: border-box;
+      padding: 22px 16px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      color: white;
+    }
+
+    .fb__input-border {
+      position: relative;
+      background: linear-gradient(50deg, #FFAA00, #AA00FF);
+      border-radius: 6px;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 1px;
+      margin-bottom: 32px;
+      margin-top: 16px;
+      max-height: 150px;
+    }
+
+    .fb__input-textarea {
+      resize: none;
+      height: 148px;
+    }
+
+    .fb__checkbox-label {
+      display: flex;
+      align-items: center;
+      margin-top: 40px;
+    }
+
+    .fb__checkbox-label-second {
+      align-items: flex-start;
+      margin-top: 20px;
+    }
+
+    .fb__checkbox {
+      display: none;
+      height: 24px;
+      width: 24px;
+    }
+
+    .fb__fake-checkbox {
+      height: 24px;
+      width: 24px;
+      box-sizing: border-box;
+      display: inline-block;
+      border: 2px solid #FFAA00;
+      background-color: transparent;
+      border-radius: 2px;
+      position: relative;
+      margin-right: 8px;
+    }
+
+    .fb__fake-checkbox::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      content: '';
+      display: block;
+      height: 24px;
+      width: 24px;
+      border-radius: 2px;
+      background-color: #FFAA00;
+      opacity: 0;
+      transition: .2s;
+    }
+
+    .fb__checkbox:checked+.fb__fake-checkbox::before {
+      opacity: 1;
+    }
+
+    .fb__checkbox-text {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 16px;
+      max-width: 553px;
+    }
+
+    .fb__checkbox-text-span {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 14.06px;
+      text-decoration: underline;
+    }
+
+    .fb__button {
+      clip-path: polygon(0 0, 100% 0, 100% 75%, 97% 100%, 0 100%);
+      margin-top: 40px;
+      width: 100%;
+      height: 64px;
+      background-color: #AA00FF;
+      border: none;
+      border-radius: 6px;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24.2px;
+      color: white;
+      cursor: pointer;
+    }
+
+    @media screen and (max-width: 1450px) {
+      .fb__modal {
+        background-image: url('img/Background-feedback-tablet.svg');
+        width: 493px;
+        height: 950px;
+      }
+
+      .fb__close {
+        background-image: url('img/Close-feedback-small.svg');
+        background-repeat: no-repeat;
+        width: 32px;
+        height: 32px;
+        right: 4px;
+        top: 4px;
+
+      }
+
+      .fb__container {
+        width: 432px;
+        margin-right: 30px;
+        padding-top: 60px;
+      }
+
+      .fb__title {
+        margin-bottom: 20px;
+      }
+
+      .fb__text {
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 20px;
+      }
+
+      .fb__input-label {
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      .fb__input {
+        padding: 18px 12px;
+        font-size: 14px;
+        line-height: 18px;
+      }
+
+      .fb__input-border {
+        margin-top: 12px;
+        margin-bottom: 20px;
+        max-height: 157px
+      }
+
+      .fb__input-textarea {
+        height: 155px;
+      }
+
+      .fb__checkbox-text {
+        max-width: 400px;
+      }
+
+      .fb__checkbox-label {
+        margin-top: 20px;
+      }
+
+      .fb__checkbox-label-second {
+        margin-top: 12px;
+      }
+
+      .fb__button {
+        margin-top: 20px;
+        height: 42px;
+        font-size: 16px;
+        line-height: 19.36px;
+      }
+    }
+
+    @media screen and (max-width: 900px) {
+      .fb__notice {
+        background-image: url('img/back-notice-feedback-tablet.svg');
+        width: 458px;
+        height: 207px;
+        padding: 80px 40px 40px 40px;
+      }
+
+      .fb__notice-close {
+        width: 32px;
+        height: 32px;
+        background-image: url('img/Close-mini.svg');
+      }
+
+      .fb__notice-title {
+        font-size: 24px;
+        line-height: 26.54px;
+      }
+
+      .fb__notice-text {
+        font-size: 16px;
+        line-height: 20px;
+        margin-top: 20px;
+      }
+    }
+
+    @media screen and (max-width: 500px) {
+      .fb {
+        padding: 0;
+      }
+
+      .fb__notice {
+        background-image: url('img/back-notice-feedback-phone.svg');
+        width: 360px;
+        height: 640px;
+        padding: 80px 40px;
+        border: none;
+      }
+
+      .fb__notice-text {
+        font-size: 14px;
+        line-height: 18px;
+      }
+
+      .fb__modal {
+        background-image: url('img/Background-feedback-phone.svg');
+        width: 360px;
+        height: 1005px;
+      }
+
+      .fb__close {
+        background-image: url('img/Close-mini.svg');
+        background-repeat: no-repeat;
+        width: 32px;
+        height: 32px;
+        right: 20px;
+        top: 20px;
+
+      }
+
+      .fb__container {
+        width: 320px;
+        margin-right: 20px;
+        padding-top: 64px;
+      }
+
+      .fb__title {
+        background: linear-gradient(50deg, #FFAA00, #AA00FF);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 20px;
+      }
+
+      .fb__text {
+        font-size: 14px;
+        line-height: 18px;
+        margin-bottom: 20px;
+      }
+
+      .fb__input-label {
+        font-size: 14px;
+        line-height: 18px;
+      }
+
+      .fb__input {
+        padding: 18px 12px;
+        font-size: 14px;
+        line-height: 18px;
+      }
+
+      .fb__input-border {
+        margin-top: 12px;
+        margin-bottom: 32px;
+        max-height: 157px
+      }
+
+      .fb__input-border:last-of-type {
+        margin-bottom: 0;
+      }
+
+      .fb__input-textarea {
+        height: 155px;
+      }
+
+      .fb__checkbox-text {
+        max-width: 288px;
+      }
+
+      .fb__checkbox-label {
+        margin-top: 20px;
+      }
+
+      .fb__checkbox-label-second {
+        margin-top: 12px;
+      }
+
+      .fb__button {
+        margin-top: 20px;
+        height: 43px;
+        font-size: 16px;
+        line-height: 19.36px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="fb">
+    <div class="fb__modal">
+      <div class="fb__close"></div>
+      <div class="fb__container">
+        <h1 class="fb__title">НЕ НАШЛИ ОТВЕТА НА СВОЙ ВОПРОС?</h1>
+        <h3 class="fb__text">Воспользуйтесь формой, задайте вопрос, и мы лично свяжемся с вами в ближайшее время.</h3>
+        <form class="fb__form">
+          <label class="fb__input-label">Ф.И.О.*</label>
+          <div class="fb__input-border">
+            <input class="fb__input" placeholder="Введите Ф.И.О">
+          </div>
+          <label class="fb__input-label">E-mail*</label>
+          <div class="fb__input-border">
+            <input class="fb__input" placeholder="Введите E-mail">
+          </div>
+          <label class="fb__input-label">Телефон*</label>
+          <div class="fb__input-border">
+            <input class="fb__input" placeholder="Введите телефон">
+          </div>
+          <label class="fb__input-label">Задать вопрос *</label>
+          <div class="fb__input-border">
+            <textarea class="fb__input fb__input-textarea"></textarea>
+          </div>
+          <label class="fb__checkbox-label">
+            <input class="fb__checkbox" type="checkbox">
+            <span class="fb__fake-checkbox"></span>
+            <span class="fb__checkbox-text">Соглашаюсь с условиями <span class="fb__checkbox-text-span">Политики
+                конфиденциальности</span></span>
+          </label>
+          <label class="fb__checkbox-label fb__checkbox-label-second">
+            <input class="fb__checkbox" type="checkbox">
+            <span class="fb__fake-checkbox"></span>
+            <span class="fb__checkbox-text">Соглашаюсь с условиями <span class="fb__checkbox-text-span">
+                Согласия на обработку персональных данных, Согласия Пользователя на обработку персональных данных
+              </span></span>
+          </label>
+          <button class="fb__button">Задать вопрос</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="fb__notice fb__notice-display-none">
+      <div class="fb__notice-close"></div>
+      <h1 class="fb__notice-title">СПАСИБО!</h1>
+      <span class="fb__notice-text">Мы ценим каждое обращение и ответим в ближайшее время на e-mail</span>
+    </div>
+  </div>
+
+</body>
+
+</html>

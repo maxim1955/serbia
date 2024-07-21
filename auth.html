@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css" />
+  <style type="text/css">
+    @font-face {
+      src: url(fonts/Inter-Medium.woff) format('woff');
+      font-family: 'Inter';
+      font-weight: 500;
+    }
+
+    @font-face {
+      src: url(fonts/Inter-Regular.woff) format('woff');
+      font-family: 'Inter';
+      font-weight: 400;
+    }
+
+    @font-face {
+      src: url(fonts/Wadik.woff) format('woff');
+      font-family: 'Wadik';
+      font-weight: 700;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .auth {
+      font-family: Inter;
+      position: absolute;
+      height: 100vh;
+      width: 100%;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .auth-close {
+      display: none;
+    }
+
+    .auth__modal {
+      background-image: url('img/Auth-Desktop.svg');
+      width: 972px;
+      height: 605px;
+      position: relative;
+      display: flex;
+      justify-content: end;
+      color: white;
+    }
+
+    .auth__close {
+      background-image: url('img/Close.svg');
+      width: 40px;
+      height: 40px;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 25px;
+      right: 64.38px;
+    }
+
+    .auth__container {
+      width: 422px;
+      margin-top: 100px;
+      margin-right: 60px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .auth__title {
+      font-family: Wadik;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 26.54px;
+      background: linear-gradient(50deg, #FFAA00, #AA00FF);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-align: center;
+      width: 100%;
+      margin-bottom: 28px;
+    }
+
+    .auth__input-label {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    .auth__input {
+      background: #0E0214;
+      border-radius: 6px;
+      width: 100%;
+      border: none;
+      box-sizing: border-box;
+      padding: 22px 16px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      color: white;
+    }
+
+    .auth__input-border {
+      position: relative;
+      background: linear-gradient(50deg, #FFAA00, #AA00FF);
+      border-radius: 6px;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 1px;
+      margin-bottom: 32px;
+      margin-top: 16px;
+      max-height: 150px;
+    }
+
+    .auth__input-border:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .auth__miss-pass {
+      display: inline-block;
+      margin-top: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    .auth__text {
+      display: inline-block;
+      margin-top: 28px;
+      text-align: center;
+      width: 100%;
+      font-size: 20px;
+      line-height: 24px;
+      font-weight: 400;
+    }
+
+    .auth__link-reg {
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    .auth__button {
+      clip-path: polygon(0 0, 100% 0, 100% 75%, 97% 100%, 0 100%);
+      margin-top: 28px;
+      width: 100%;
+      height: 64px;
+      background-color: #AA00FF;
+      border: none;
+      border-radius: 6px;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24.2px;
+      cursor: pointer;
+      color: white;
+    }
+
+    @media screen and (max-width: 990px) {
+      .auth__modal {
+        background-image: url('img/Auth-tablet.svg');
+        width: 652px;
+        height: 473px;
+      }
+
+      .auth__close {
+        background-image: url('img/Close-mini.svg');
+        width: 32px;
+        height: 32px;
+        top: 20px;
+        right: 20px;
+      }
+
+      .auth__container {
+        width: 364px;
+        margin-top: 72px;
+        margin-right: 20px;
+      }
+
+      .auth__title {
+        margin-bottom: 20px;
+      }
+
+      .auth__input-label {
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      .auth__input {
+        font-size: 14px;
+        line-height: 18px;
+      }
+
+      .auth__input-border {
+        margin-bottom: 20px;
+        margin-top: 12px;
+        max-height: 150px;
+      }
+
+      .auth__input-border:last-of-type {
+        margin-bottom: 0;
+      }
+
+      .auth__miss-pass {
+        font-size: 14px;
+        line-height: 18px;
+      }
+
+      .auth__text {
+        margin-top: 12px;
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      .auth__link-reg {
+        cursor: pointer;
+        font-weight: 700;
+        line-height: 24px;
+        font-size: 16px;
+      }
+
+      .auth__button {
+        margin-top: 20px;
+        height: 42px;
+        font-size: 16px;
+        line-height: 19.36px;
+      }
+    }
+
+    @media screen and (max-width: 667px) {
+      .auth__modal {
+        background-image: url('img/Auth-Phone.svg');
+        width: 360px;
+        height: 640px;
+      }
+
+      .auth__container {
+        width: 320px;
+        margin-top: 107px;
+        margin-right: 20px;
+      }
+
+      .auth__title {
+        margin-bottom: 40px;
+      }
+
+      .auth__input-label {
+        font-size: 14px;
+        line-height: 18px;
+      }
+
+      .auth__input-border {
+        margin-bottom: 28px;
+      }
+
+      .auth__text {
+        margin-top: 13px;
+        font-size: 14px;
+        line-height: 18px;
+      }
+
+      .auth__link-reg {
+        font-size: 14px;
+      }
+
+      .auth__button {
+        margin-top: 40px;
+        height: 43px;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="auth">
+    <div class="auth__modal">
+      <div class="auth__close"></div>
+      <div class="auth__container">
+        <hi class="auth__title">АВТОРИЗАЦИЯ</hi>
+        <form class="auth__form">
+          <label class="auth__input-label">E-mail</label>
+          <div class="auth__input-border">
+            <input class="auth__input" placeholder="Введите E-mail">
+          </div>
+          <label class="auth__input-label">Пароль</label>
+          <div class="auth__input-border">
+            <input class="auth__input" placeholder="Введите пароль">
+          </div>
+          <a class="auth__miss-pass">Забыли пароль?</a>
+          <span class="auth__text">Еще нет аккаунта? <a class="auth__link-reg">Зарегистрироваться</a></span>
+          <button class="auth__button">Войти</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
