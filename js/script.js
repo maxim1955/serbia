@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
       navItems[index].removeAttribute("aria-current");
     }
   });
-    console.log(currentUrl);
+  console.log(currentUrl);
 });
 
 // Переворачивание карточек в Программе
@@ -197,29 +197,14 @@ swiperSlideContent.forEach((sideContent) => {
   }
 
   // Громкость видео
+  const tabletMediaQueryList = window.matchMedia("(max-width: 1024px)");
+
   let isDragging = false;
   let isMuted = false;
   let savedVolume = 0.3;
 
   video.volume = savedVolume;
   volumeTimeline.style.width = video.volume * 100 + "%";
-
-  volumeWrap.addEventListener("mousedown", function (event) {
-    isDragging = true;
-    adjustVolume(event);
-
-    volumeWrap.addEventListener("mousemove", adjustVolume);
-  });
-
-  document.addEventListener("mouseup", function () {
-    isDragging = false;
-    volumeWrap.removeEventListener("mousemove", adjustVolume);
-  });
-
-  volumeWrap.addEventListener("mouseleave", function () {
-    isDragging = false;
-    volumeWrap.removeEventListener("mousemove", adjustVolume);
-  });
 
   // Кнопка выключения звука
   muteButton.addEventListener("click", function () {
@@ -240,15 +225,49 @@ swiperSlideContent.forEach((sideContent) => {
   // регулятор громкости звука
   function adjustVolume(event) {
     if (isDragging) {
-      const moveX = event.clientX - volumeWrap.getBoundingClientRect().left;
-      const percentage = Math.max(
-        0,
-        Math.min(100, (moveX / volumeWrap.offsetWidth) * 100)
-      );
+      const rect = volumeWrap.getBoundingClientRect();
+      const moveX = tabletMediaQueryList.matches
+        ? event.touches[0].clientX - rect.left
+        : event.clientX - rect.left;
+      const percentage = Math.max(0, Math.min(100, (moveX / rect.width) * 100));
 
       volumeTimeline.style.width = percentage + "%";
       video.volume = percentage / 100;
     }
+  }
+
+  if (tabletMediaQueryList.matches) {
+    volumeWrap.addEventListener("touchstart", () => {
+      isDragging = true;
+      adjustVolume(event);
+    });
+    volumeWrap.addEventListener("touchmove", adjustVolume);
+    volumeWrap.addEventListener("touchend", () => {
+      isDragging = false;
+    });
+    volumeWrap.addEventListener("touchleave", () => {
+      isDragging = false;
+    });
+    volumeWrap.addEventListener("touchcancel", () => {
+      isDragging = false;
+    });
+  } else {
+    volumeWrap.addEventListener("mousedown", function (event) {
+      isDragging = true;
+      adjustVolume(event);
+
+      volumeWrap.addEventListener("mousemove", adjustVolume);
+    });
+
+    document.addEventListener("mouseup", function () {
+      isDragging = false;
+      volumeWrap.removeEventListener("mousemove", adjustVolume);
+    });
+
+    volumeWrap.addEventListener("mouseleave", function () {
+      isDragging = false;
+      volumeWrap.removeEventListener("mousemove", adjustVolume);
+    });
   }
 
   // Закрытие модального окна
@@ -377,6 +396,73 @@ btnMenu.addEventListener("click", (e) => {
 burgerClose.addEventListener("click", (e) => {
   e.preventDefault();
   burgerMenu.classList.remove("appear");
+});
+
+// Модалка авторизации
+const btnBurger = document.querySelector(".burger__btn");
+const btnHeader = document.querySelector(".header__btn");
+const auth = document.querySelector(".auth");
+const authClose = document.querySelector(".auth__close");
+
+btnHeader.addEventListener("click", (e) => {
+  e.preventDefault();
+  auth.style.display = "flex";
+  body.classList.add("noscroll");
+});
+
+btnBurger.addEventListener("click", (e) => {
+  e.preventDefault();
+  auth.style.display = "flex";
+  body.classList.add("noscroll");
+});
+
+authClose.addEventListener("click", (e) => {
+  e.preventDefault();
+  auth.style.display = "none";
+  body.classList.remove("noscroll");
+});
+
+// Модалка регистрации
+const btnHero = document.querySelector(".hero-btn");
+const btnCard = document.querySelectorAll(".card-btn");
+const reg = document.querySelector(".reg");
+const regClose = document.querySelector(".reg__close");
+
+btnHero.addEventListener("click", (e) => {
+  e.preventDefault();
+  reg.style.display = "flex";
+  body.classList.add("overflow-body");
+});
+
+btnCard.forEach((btn) => {
+  btn.addEventListener("click", function (e) {
+    e.preventDefault();
+    reg.style.display = "flex";
+    body.classList.add("overflow-body");
+  });
+});
+
+regClose.addEventListener("click", (e) => {
+  e.preventDefault();
+  reg.style.display = "none";
+  body.classList.remove("overflow-body");
+});
+
+// Модалка обратной связи
+const btnFooter = document.querySelector(".footer__btn");
+const fb = document.querySelector(".fb");
+const fbClose = document.querySelector(".fb__close");
+
+btnFooter.addEventListener("click", (e) => {
+  e.preventDefault();
+  fb.style.display = "flex";
+  body.classList.add("overflow-body");
+});
+
+fbClose.addEventListener("click", (e) => {
+  e.preventDefault();
+  fb.style.display = "none";
+  body.classList.remove("overflow-body");
 });
 
 // Адаптив

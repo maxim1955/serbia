@@ -13,12 +13,13 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/styles/choices.min.css" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/media.css" />
+  <link rel="stylesheet" href="css/modals.css">
 </head>
 
 <body>
 
-   <!-- Модальное окно бургер-меню -->
-   <div class="burger-menu">
+  <!-- Модальное окно бургер-меню -->
+  <div class="burger-menu">
     <div class="header-burger flex">
       <div class="burger-logo-block flex">
         <a href="index.html" class="logo">
@@ -39,7 +40,7 @@
     <div class="main-burger">
       <ul class="list-reset burger-list">
         <li class="burger-item">
-          <a href="/index.html" class="burger__link">Главная</a>
+          <a href="index.html" class="burger__link">Главная</a>
         </li>
 
         <li class="burger-item">
@@ -47,7 +48,7 @@
         </li>
 
         <li class="burger-item">
-          <a href="#" class="burger__link">Профтест</a>
+          <a href="tests.html" class="burger__link">Профтест</a>
         </li>
 
         <li class="burger-item">
@@ -541,8 +542,166 @@
     </div>
   </div>
 
-  <!-- ------------------------- -->
+  <!-- Модальное окно авторизации -->
+  <div class="auth">
+    <div class="auth__modal flex">
+      <div class="auth__close"></div>
+      <div class="auth__container">
+        <hi class="auth__title">АВТОРИЗАЦИЯ</hi>
+        <form class="auth__form">
+          <label class="auth__input-label">E-mail</label>
+          <div class="auth__input-border">
+            <input class="auth__input" placeholder="Введите E-mail">
+          </div>
+          <label class="auth__input-label">Пароль</label>
+          <div class="auth__input-border">
+            <input class="auth__input" placeholder="Введите пароль">
+          </div>
+          <a class="auth__miss-pass">Забыли пароль?</a>
+          <span class="auth__text">Еще нет аккаунта? <a class="auth__link-reg">Зарегистрироваться</a></span>
+          <button class="auth__button">Войти</button>
+        </form>
+      </div>
+    </div>
+  </div>
 
+  <!-- Модальное окно регистрации -->
+  <div class="reg">
+    <div class="reg__modal">
+      <div class="reg__mask">
+        <div class="reg__close"></div>
+        <div class="reg__info-container">
+          <h1 class="reg__title">ОТКРОЙ МИР НОВЫХ ВОЗМОЖНОСТЕЙ</h1>
+          <h3 class="reg__text">При авторизации вы получите сертификат участника, программу мероприятий и
+            эксклюзивные бонусы. Успейте забрать ваш ключ к новым знаниям, навыкам и незабываемым впечатлениям!</h3>
+          <div class="reg__robot-image"></div>
+          <div class="reg__info-figure"></div>
+        </div>
+        <form class="reg__form">
+          <label class="reg__input-label">Ф.И.О.</label>
+          <div class="reg__input-border">
+            <input class="reg__input" placeholder="Введите Ф.И.О">
+          </div>
+          <label class="reg__input-label">Email</label>
+          <div class="reg__input-border">
+            <input class="reg__input" placeholder="Введите Email">
+          </div>
+          <label class="reg__input-label">Телефон</label>
+          <div class="reg__input-border">
+            <input class="reg__input" placeholder="Введите телефон">
+          </div>
+          <label class="reg__input-label">Город</label>
+          <div class="reg__input-border">
+            <input class="reg__input" placeholder="Выберите город">
+          </div>
+          <label class="reg__input-label">Категория</label>
+          <div class="reg__input-border">
+            <input class="reg__input" placeholder="Выберите категорию">
+          </div>
+          <label class="reg__input-label">Наименование учебного заведения</label>
+          <div class="reg__input-border">
+            <input class="reg__input reg__input-360" placeholder="Введите наименование учебного заведения">
+          </div>
+          <label class="reg__input-label">Вам есть 14 лет?</label>
+          <div class="reg__radio-container reg__radio-container-first">
+            <label class="reg__radio-label">
+              <input class="reg__radio" name="age" type="radio">
+              <span class="reg__fake-radio"></span>
+              <span class="reg__input-label-rad">Да</span>
+            </label>
+          </div>
+          <div class="reg__radio-container">
+            <label class="reg__radio-label">
+              <input class="reg__radio" name="age" type="radio" checked>
+              <span class="reg__fake-radio"></span>
+              <span class="reg__input-label-rad">Нет</span>
+            </label>
+          </div>
+          <label class="reg__input-label reg__input-label-last">ФИО представителя</label>
+          <div class="reg__input-border reg__input-border-last">
+            <input class="reg__input" placeholder="Введите ФИО представителя">
+          </div>
+          <div class="reg__checkbox-container">
+
+            <label class="reg__checkbox-label">
+              <input class="reg__checkbox" type="checkbox">
+              <span class="reg__fake-checkbox"></span>
+              <span class="reg__checkbox-text">Соглашаюсь с условиями <span class="reg__checkbox-text-span">Политики
+                  конфиденциальности,
+                  Согласия на обработку персональных данных</span> и <span class="reg__checkbox-text-span">Согласия
+                  Пользователя на обработку персональных
+                  данных</span></span>
+            </label>
+          </div>
+          <div class="reg__button-container">
+            <button class="reg__button">Зарегистрироваться</button>
+            <div class="reg__button-figure"></div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="reg__notice">
+      <div class="reg__notice-close"></div>
+      <h1 class="reg__notice-title">ВЫ УСПЕШНО ЗАРЕГИСТРИРОВАЛИСЬ</h1>
+      <span class="reg__notice-text">В ближайшее время на вашу электронную почту придёт письмо с логином и паролем для
+        входа в
+        аккаунт. Проверьте папку «Входящие» или «Спам», чтобы получить доступ к личному кабинету.</span>
+      <img class="reg__notice-robot" src="img/robot-phone.svg" alt="">
+    </div>
+
+  </div>
+
+  <!-- Модальное окно обратной связи -->
+  <div class="fb">
+    <div class="fb__modal">
+      <div class="fb__close"></div>
+      <div class="fb__container">
+        <h1 class="fb__title">НЕ НАШЛИ ОТВЕТА НА СВОЙ ВОПРОС?</h1>
+        <h3 class="fb__text">Воспользуйтесь формой, задайте вопрос, и мы лично свяжемся с вами в ближайшее время.</h3>
+        <form class="fb__form">
+          <label class="fb__input-label">Ф.И.О.*</label>
+          <div class="fb__input-border">
+            <input class="fb__input" placeholder="Введите Ф.И.О">
+          </div>
+          <label class="fb__input-label">E-mail*</label>
+          <div class="fb__input-border">
+            <input class="fb__input" placeholder="Введите E-mail">
+          </div>
+          <label class="fb__input-label">Телефон*</label>
+          <div class="fb__input-border">
+            <input class="fb__input" placeholder="Введите телефон">
+          </div>
+          <label class="fb__input-label">Задать вопрос *</label>
+          <div class="fb__input-border">
+            <textarea class="fb__input fb__input-textarea"></textarea>
+          </div>
+          <label class="fb__checkbox-label">
+            <input class="fb__checkbox" type="checkbox">
+            <span class="fb__fake-checkbox"></span>
+            <span class="fb__checkbox-text">Соглашаюсь с условиями <span class="fb__checkbox-text-span">Политики
+                конфиденциальности</span></span>
+          </label>
+          <label class="fb__checkbox-label fb__checkbox-label-second">
+            <input class="fb__checkbox" type="checkbox">
+            <span class="fb__fake-checkbox"></span>
+            <span class="fb__checkbox-text">Соглашаюсь с условиями <span class="fb__checkbox-text-span">
+                Согласия на обработку персональных данных, Согласия Пользователя на обработку персональных данных
+              </span></span>
+          </label>
+          <button class="fb__button">Задать вопрос</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="fb__notice fb__notice-display-none">
+      <div class="fb__notice-close"></div>
+      <h1 class="fb__notice-title">СПАСИБО!</h1>
+      <span class="fb__notice-text">Мы ценим каждое обращение и ответим в ближайшее время на e-mail</span>
+    </div>
+  </div>
+
+  <!-- ------------------------- -->
   <section class="main-block">
     <header class="header container flex">
       <div class="logo-block flex">
@@ -565,13 +724,13 @@
       <nav class="nav">
         <ul class="nav__list nav__list-visible list-reset flex">
           <li class="nav__item">
-            <a href="index.html" class="nav__link" id="link-home">Главная</a>
+            <a href="/serbia/index.html" class="nav__link" id="link-home">Главная</a>
           </li>
           <li class="nav__item">
             <a href="#" class="nav__link" id="link-map">Карта будущего</a>
           </li>
           <li class="nav__item">
-            <a href="#" class="nav__link" id="link-test">Профтест</a>
+            <a href="tests.html" class="nav__link">Профтест</a>
           </li>
           <li class="nav__item nav__click flex">
             <p class="nav__link nav__text flex">Еще</p>
