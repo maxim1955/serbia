@@ -107,6 +107,11 @@ body {
   overflow: hidden;
 }
 
+.overflow-body {
+  position: fixed;
+  top: 0;
+}
+
 /* main-block header*/
 .header {
   margin-bottom: 51px;
