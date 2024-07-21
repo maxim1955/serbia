@@ -5,6 +5,9 @@ const navListVisible = document.querySelector(".nav__list-visible");
 const nav = document.querySelector(".nav");
 const navText = document.querySelector(".nav__text");
 const arrowDown = document.querySelector(".arrow_down");
+const navLinksHidden = document.querySelectorAll(
+  ".nav__list-hidden .nav__link"
+);
 
 navClick.addEventListener("click", (event) => {
   event.preventDefault();
@@ -14,6 +17,17 @@ navClick.addEventListener("click", (event) => {
   navListVisible.classList.toggle("open");
   arrowDown.classList.toggle("open");
   navText.classList.toggle("hidden");
+});
+
+navLinksHidden.forEach((link) => {
+  link.addEventListener("click", () => {
+    navClick.classList.remove("open");
+    navListHidden.classList.add("opacity");
+    nav.classList.remove("open");
+    navListVisible.classList.remove("open");
+    arrowDown.classList.remove("open");
+    navText.classList.remove("hidden");
+  });
 });
 
 // Выделение текущей ссылки в меню
@@ -29,18 +43,31 @@ document.addEventListener("DOMContentLoaded", function () {
       navItems[index].removeAttribute("aria-current");
     }
   });
-  //   console.log(currentUrl);
+    console.log(currentUrl);
 });
 
 // Переворачивание карточек в Программе
 const cards = document.querySelectorAll(".program-card");
+const cardBtn = document.querySelectorAll(".card-btn");
+
 cards.forEach((card) => {
   card.addEventListener("click", () => {
     card.classList.toggle("flipped");
   });
 });
 
+// Чтобы карточка не переворачивалась по клику на кнопку
+cardBtn.forEach((el) => {
+  el.addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    // console.log("Нажали");
+  });
+});
+
 // Слайдер модалки отзывов
+const mobileMediaQueryList = window.matchMedia("(max-width: 700px)");
+
 var swiperModal = new Swiper(".swiper-modal", {
   slidesPerView: 1,
   loop: true,
@@ -51,6 +78,14 @@ var swiperModal = new Swiper(".swiper-modal", {
   on: {
     slideChange(swiper) {
       console.log(swiper.realIndex);
+    },
+  },
+  breakpoints: {
+    320: {
+      spaceBetween: 20,
+    },
+    700: {
+      spaceBetween: 0,
     },
   },
 });
@@ -70,6 +105,23 @@ let swiperReviews = new Swiper(".swiper-review", {
       swiperModal.slideToLoop(Number(swiper.clickedSlide.id), 0);
       reviewsModal.style.display = "flex";
       body.classList.add("noscroll");
+    },
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 70,
+    },
+    701: {
+      slidesPerView: 2.2,
+      spaceBetween: 20,
+    },
+    820: {
+      slidesPerView: 2.5,
+      spaceBetween: 20,
+    },
+    1201: {
+      slidesPerView: 3,
     },
   },
 });
@@ -235,6 +287,17 @@ var swiperPartners = new Swiper(".swiper-partners", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+    376: {
+      slidesPerView: 2,
+    },
+    577: {
+      slidesPerView: 3,
+    },
+  },
 });
 
 // Кнопка play в трансляциях
@@ -293,10 +356,80 @@ dateSelect.addEventListener("change", () => {
   if (videoSource) {
     broadcastVideo.src = videoSource;
     broadcastPlay.classList.remove("hidden");
-    broadcastPlay.disabled = false; 
+    broadcastPlay.disabled = false;
   } else {
     broadcastVideo.src = "";
     broadcastPlay.classList.add("hidden");
-    broadcastPlay.disabled = true; 
+    broadcastPlay.disabled = true;
   }
 });
+
+// Бургер меню
+const btnMenu = document.querySelector(".menu-btn");
+const burgerMenu = document.querySelector(".burger-menu");
+const burgerClose = document.querySelector(".burger-close");
+
+btnMenu.addEventListener("click", (e) => {
+  e.preventDefault();
+  burgerMenu.classList.toggle("appear");
+});
+
+burgerClose.addEventListener("click", (e) => {
+  e.preventDefault();
+  burgerMenu.classList.remove("appear");
+});
+
+// Адаптив
+const mediaQuery = window.matchMedia("(max-width: 1366px)");
+function handleTabletChange(e) {
+  if (e.matches) {
+    const previewFoto1 = document.querySelector(".preview-foto1");
+    const previewRightBottom = document.querySelector(".preview-right_bottom");
+    previewRightBottom.append(previewFoto1);
+  }
+}
+mediaQuery.addListener(handleTabletChange);
+handleTabletChange(mediaQuery);
+
+const mediaQuery2 = window.matchMedia("(max-width: 992px)");
+function handleTabletChange2(e) {
+  if (e.matches) {
+    const footerCenter = document.querySelector(".footer-center");
+    const footerRight = document.querySelector(".footer-right");
+    footerRight.append(footerCenter);
+  }
+}
+mediaQuery2.addListener(handleTabletChange2);
+handleTabletChange2(mediaQuery2);
+
+const mediaQuery3 = window.matchMedia("(max-width: 700px)");
+function handleTabletChange3(e) {
+  if (e.matches) {
+    const heroContent = document.querySelector(".hero-content");
+    const heroImg = document.querySelector(".hero-img");
+    heroContent.append(heroImg);
+  }
+}
+mediaQuery3.addListener(handleTabletChange3);
+handleTabletChange3(mediaQuery3);
+
+const mediaQuery4 = window.matchMedia("(max-width: 576px)");
+function handleTabletChange4(e) {
+  if (e.matches) {
+    const broadcastTitleWrap = document.querySelector(".broadcast-title-wrap");
+    const broadcastVideoFlex = document.querySelector(".broadcast-video_flex");
+    broadcastTitleWrap.append(broadcastVideoFlex);
+  }
+}
+mediaQuery4.addListener(handleTabletChange4);
+handleTabletChange4(mediaQuery4);
+
+const mediaQuery5 = window.matchMedia("(max-width: 480px)");
+function handleTabletChange5(e) {
+  if (e.matches) {
+    const previewTitle = document.querySelector(".preview-title");
+    previewTitle.textContent = "Дни робототехники и инноваций";
+  }
+}
+mediaQuery5.addListener(handleTabletChange5);
+handleTabletChange5(mediaQuery5);
