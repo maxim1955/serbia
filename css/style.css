@@ -1278,6 +1278,9 @@ nav li[aria-current="page"] {
 .footer {
   padding: 20px 40px;
   padding-top: 120px;
+}
+
+.partners-footer-background {
   background-image: url(../img/footer-background.png);
   background-repeat: no-repeat;
   background-position: left top -60px;

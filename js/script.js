@@ -13,7 +13,6 @@ cardBtn.forEach((el) => {
   el.addEventListener("click", (e) => {
     e.preventDefault();
     e.stopPropagation();
-    // console.log("Нажали");
   });
 });
 

@@ -28,6 +28,11 @@
   .broadcast-video_frame {
     width: auto;
   }
+
+  .partners-footer-background {
+    background-position: left top 160px;
+    background-size: auto;
+  }
 }
 
 @media (max-width: 1400px) {
@@ -815,9 +820,8 @@
     background-size: auto;
   }
 
-  .footer {
+  .partners-footer-background {
     background-image: url(../img/footer-background-tablet.png);
-    background-position: left top -70px;
     background-size: auto;
   }
 
@@ -1415,7 +1419,7 @@
     background-repeat: no-repeat;
   } */
 
-  .footer {
+  .partners-footer-background {
     background-image: url(../img/footer-background-mobile.png);
     background-position: left bottom;
   }

@@ -1,20 +1,24 @@
-/* Pages 401 and 404 */
-
-.main-block-401 {
-  padding: 20px 40px 30px 40px;
+.body-401 {
   background-image: url(../img/401-background.webp);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+.boby-404 {
+  background-image: url(../img/404-background.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.main-block-401 {
+  padding: 20px 40px 30px 40px;
   overflow: hidden;
 }
 
 .main-block-404 {
   padding: 20px 40px 30px 40px;
-  background-image: url(../img/404-background.webp);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
   overflow: hidden;
 }
 
@@ -62,26 +66,6 @@
   }
 }
 
-@media (max-width: 1400px) {
-
-}
-
-@media (max-width: 1366px) {
-
-}
-
-@media (max-width: 1300px) {
-
-}
-
-@media (max-width: 1200px) {
-
-}
-
-@media (max-width: 1180px) {
-
-}
-
 @media (max-width: 1080px) {
   .p404-img-img {
     width: 450px;
@@ -115,10 +99,6 @@
   }
 }
 
-@media (max-width: 992px) {
-
-}
-
 @media (max-width: 768px) {
   .p404-img-img {
     width: auto;
@@ -126,12 +106,7 @@
   }
 }
 
-@media (max-width: 730px) {
-
-}
-
 @media (max-width: 700px) {
-
   .main-block-401 {
     background-image: url(../img/401-background-tablet.webp);
     background-size: cover;
@@ -151,12 +126,7 @@
   }
 }
 
-@media (max-width: 576px) {
-
-}
-
 @media (max-width: 480px) {
-
   .p401-btn {
     padding: 14px 37px;
   }
@@ -168,8 +138,4 @@
   .p404-img-img {
     width: auto;
   }
-}
-
-@media (max-width: 375px) {
-
 }
