@@ -241,6 +241,7 @@
 
 /* Регистрация */
 .reg {
+  justify-content: center;
   position: fixed;
   overflow: auto;
   top: 0;
