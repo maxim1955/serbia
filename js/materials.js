@@ -40,7 +40,8 @@ function handleTabletChange(e) {
       cards[i].addEventListener("click", (e) => {
         e.preventDefault();
         materials[i].classList.add("materials_content--active");
-        document.querySelector(".materials_information").style.display = "block";
+        document.querySelector(".materials_information").style.display =
+          "block";
         document.querySelector(".materials_name").style.display = "none";
         document.body.append(document.querySelector(".materials_information"));
         document.querySelector(".materials").style.marginBottom = "0";
@@ -66,12 +67,25 @@ mediaQuery.addListener(handleTabletChange);
 handleTabletChange(mediaQuery);
 
 // Читать подробнее
-const detailsTop = document.querySelector(".details-top");
-const detailsBottom = document.querySelector(".details-bottom");
-const arrowDown = document.querySelector(".arrow_down-white");
+const detailsTop = document.querySelectorAll(".details-top");
+const detailsBottom = document.querySelectorAll(".details-bottom");
+const arrowsDown = document.querySelectorAll(".arrow_down-white");
 
-detailsTop.addEventListener("click", (event) => {
-  event.preventDefault();
-  detailsBottom.classList.toggle("open");
-  arrowDown.classList.toggle("open");
+detailsTop.forEach((button, index) => {
+  button.addEventListener("click", (event) => {
+    event.preventDefault();
+    const detailBottom = detailsBottom[index];
+    const arrowDown = arrowsDown[index];
+    detailBottom.classList.toggle("open");
+    arrowDown.classList.toggle("open");
+  });
+});
+
+// Рубрики
+const captionTop = document.querySelector(".caption-top");
+const captionBottom = document.querySelector(".caption-bottom");
+
+captionTop.addEventListener("click", function (e) {
+  e.preventDefault();
+  captionBottom.classList.toggle("caption-bottom-open");
 });
