@@ -1,5 +1,3 @@
-/* Pages 401 and 404 */
-
 .body-401 {
   background-image: url(../img/401-background.webp);
   background-repeat: no-repeat;
@@ -68,21 +66,6 @@
   }
 }
 
-@media (max-width: 1400px) {
-}
-
-@media (max-width: 1366px) {
-}
-
-@media (max-width: 1300px) {
-}
-
-@media (max-width: 1200px) {
-}
-
-@media (max-width: 1180px) {
-}
-
 @media (max-width: 1080px) {
   .p404-img-img {
     width: 450px;
@@ -116,17 +99,11 @@
   }
 }
 
-@media (max-width: 992px) {
-}
-
 @media (max-width: 768px) {
   .p404-img-img {
     width: auto;
     bottom: 0;
   }
-}
-
-@media (max-width: 730px) {
 }
 
 @media (max-width: 700px) {
@@ -149,9 +126,6 @@
   }
 }
 
-@media (max-width: 576px) {
-}
-
 @media (max-width: 480px) {
   .p401-btn {
     padding: 14px 37px;
@@ -164,7 +138,4 @@
   .p404-img-img {
     width: auto;
   }
-}
-
-@media (max-width: 375px) {
 }
