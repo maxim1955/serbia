@@ -1,46 +1,24 @@
-// Кнопка разварачивания меню
-const navClick = document.querySelector(".nav__click");
-const navListHidden = document.querySelector(".nav__list-hidden");
-const navListVisible = document.querySelector(".nav__list-visible");
-const nav = document.querySelector(".nav");
-const navText = document.querySelector(".nav__text");
-const arrowDown = document.querySelector(".arrow_down");
-
-navClick.addEventListener("click", (event) => {
-  event.preventDefault();
-  navClick.classList.toggle("open");
-  navListHidden.classList.toggle("opacity");
-  nav.classList.toggle("open");
-  navListVisible.classList.toggle("open");
-  arrowDown.classList.toggle("open");
-  navText.classList.toggle("hidden");
-});
-
-// Выделение текущей ссылки в меню
-document.addEventListener("DOMContentLoaded", function () {
-  const currentUrl = window.location.pathname;
-  const links = document.querySelectorAll("nav a");
-  const navItems = document.querySelectorAll(".nav__item");
-
-  links.forEach((link, index) => {
-    if (link.getAttribute("href") === currentUrl) {
-      navItems[index].setAttribute("aria-current", "page");
-    } else {
-      navItems[index].removeAttribute("aria-current");
-    }
-  });
-  //   console.log(currentUrl);
-});
-
 // Переворачивание карточек в Программе
 const cards = document.querySelectorAll(".program-card");
+const cardBtn = document.querySelectorAll(".card-btn");
+
 cards.forEach((card) => {
   card.addEventListener("click", () => {
     card.classList.toggle("flipped");
   });
 });
 
+// Чтобы карточка не переворачивалась по клику на кнопку
+cardBtn.forEach((el) => {
+  el.addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+  });
+});
+
 // Слайдер модалки отзывов
+const mobileMediaQueryList = window.matchMedia("(max-width: 700px)");
+
 var swiperModal = new Swiper(".swiper-modal", {
   slidesPerView: 1,
   loop: true,
@@ -51,6 +29,14 @@ var swiperModal = new Swiper(".swiper-modal", {
   on: {
     slideChange(swiper) {
       console.log(swiper.realIndex);
+    },
+  },
+  breakpoints: {
+    320: {
+      spaceBetween: 20,
+    },
+    700: {
+      spaceBetween: 0,
     },
   },
 });
@@ -72,13 +58,29 @@ let swiperReviews = new Swiper(".swiper-review", {
       body.classList.add("noscroll");
     },
   },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 70,
+    },
+    701: {
+      slidesPerView: 2.2,
+      spaceBetween: 20,
+    },
+    820: {
+      slidesPerView: 2.5,
+      spaceBetween: 20,
+    },
+    1201: {
+      slidesPerView: 3,
+    },
+  },
 });
 
 const reviewsSlideClick = document.querySelectorAll(".reviews-slide-click"); //карточки, по которым кликаем
 const swiperSlide = document.querySelectorAll(".swiper-slide");
 const reviewsModal = document.querySelector(".reviews-modal-background");
 const closeButton = document.querySelector(".close-button");
-const body = document.body;
 
 // Кнопки управления видео для модалки отзывов
 const swiperSlideContent = document.querySelectorAll(".reviews-modal_left");
@@ -145,29 +147,14 @@ swiperSlideContent.forEach((sideContent) => {
   }
 
   // Громкость видео
+  const tabletMediaQueryList = window.matchMedia("(max-width: 1024px)");
+
   let isDragging = false;
   let isMuted = false;
   let savedVolume = 0.3;
 
   video.volume = savedVolume;
   volumeTimeline.style.width = video.volume * 100 + "%";
-
-  volumeWrap.addEventListener("mousedown", function (event) {
-    isDragging = true;
-    adjustVolume(event);
-
-    volumeWrap.addEventListener("mousemove", adjustVolume);
-  });
-
-  document.addEventListener("mouseup", function () {
-    isDragging = false;
-    volumeWrap.removeEventListener("mousemove", adjustVolume);
-  });
-
-  volumeWrap.addEventListener("mouseleave", function () {
-    isDragging = false;
-    volumeWrap.removeEventListener("mousemove", adjustVolume);
-  });
 
   // Кнопка выключения звука
   muteButton.addEventListener("click", function () {
@@ -188,15 +175,49 @@ swiperSlideContent.forEach((sideContent) => {
   // регулятор громкости звука
   function adjustVolume(event) {
     if (isDragging) {
-      const moveX = event.clientX - volumeWrap.getBoundingClientRect().left;
-      const percentage = Math.max(
-        0,
-        Math.min(100, (moveX / volumeWrap.offsetWidth) * 100)
-      );
+      const rect = volumeWrap.getBoundingClientRect();
+      const moveX = tabletMediaQueryList.matches
+        ? event.touches[0].clientX - rect.left
+        : event.clientX - rect.left;
+      const percentage = Math.max(0, Math.min(100, (moveX / rect.width) * 100));
 
       volumeTimeline.style.width = percentage + "%";
       video.volume = percentage / 100;
     }
+  }
+
+  if (tabletMediaQueryList.matches) {
+    volumeWrap.addEventListener("touchstart", () => {
+      isDragging = true;
+      adjustVolume(event);
+    });
+    volumeWrap.addEventListener("touchmove", adjustVolume);
+    volumeWrap.addEventListener("touchend", () => {
+      isDragging = false;
+    });
+    volumeWrap.addEventListener("touchleave", () => {
+      isDragging = false;
+    });
+    volumeWrap.addEventListener("touchcancel", () => {
+      isDragging = false;
+    });
+  } else {
+    volumeWrap.addEventListener("mousedown", function (event) {
+      isDragging = true;
+      adjustVolume(event);
+
+      volumeWrap.addEventListener("mousemove", adjustVolume);
+    });
+
+    document.addEventListener("mouseup", function () {
+      isDragging = false;
+      volumeWrap.removeEventListener("mousemove", adjustVolume);
+    });
+
+    volumeWrap.addEventListener("mouseleave", function () {
+      isDragging = false;
+      volumeWrap.removeEventListener("mousemove", adjustVolume);
+    });
   }
 
   // Закрытие модального окна
@@ -234,6 +255,17 @@ var swiperPartners = new Swiper(".swiper-partners", {
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+    376: {
+      slidesPerView: 2,
+    },
+    577: {
+      slidesPerView: 3,
+    },
   },
 });
 
@@ -293,10 +325,54 @@ dateSelect.addEventListener("change", () => {
   if (videoSource) {
     broadcastVideo.src = videoSource;
     broadcastPlay.classList.remove("hidden");
-    broadcastPlay.disabled = false; 
+    broadcastPlay.disabled = false;
   } else {
     broadcastVideo.src = "";
     broadcastPlay.classList.add("hidden");
-    broadcastPlay.disabled = true; 
+    broadcastPlay.disabled = true;
   }
 });
+
+// Адаптив
+const mediaQuery = window.matchMedia("(max-width: 1366px)");
+function handleTabletChange(e) {
+  if (e.matches) {
+    const previewFoto1 = document.querySelector(".preview-foto1");
+    const previewRightBottom = document.querySelector(".preview-right_bottom");
+    previewRightBottom.append(previewFoto1);
+  }
+}
+mediaQuery.addListener(handleTabletChange);
+handleTabletChange(mediaQuery);
+
+const mediaQuery3 = window.matchMedia("(max-width: 700px)");
+function handleTabletChange3(e) {
+  if (e.matches) {
+    const heroContent = document.querySelector(".hero-content");
+    const heroImg = document.querySelector(".hero-img");
+    heroContent.append(heroImg);
+  }
+}
+mediaQuery3.addListener(handleTabletChange3);
+handleTabletChange3(mediaQuery3);
+
+const mediaQuery4 = window.matchMedia("(max-width: 576px)");
+function handleTabletChange4(e) {
+  if (e.matches) {
+    const broadcastTitleWrap = document.querySelector(".broadcast-title-wrap");
+    const broadcastVideoFlex = document.querySelector(".broadcast-video_flex");
+    broadcastTitleWrap.append(broadcastVideoFlex);
+  }
+}
+mediaQuery4.addListener(handleTabletChange4);
+handleTabletChange4(mediaQuery4);
+
+const mediaQuery5 = window.matchMedia("(max-width: 480px)");
+function handleTabletChange5(e) {
+  if (e.matches) {
+    const previewTitle = document.querySelector(".preview-title");
+    previewTitle.textContent = "Дни робототехники и инноваций";
+  }
+}
+mediaQuery5.addListener(handleTabletChange5);
+handleTabletChange5(mediaQuery5);

@@ -4,14 +4,29 @@
             <div class="footer-left">
                 <div class="footer-logo-wrap flex">
                     <a href="https://concord.ac/" class="logo" target="_blank">
-                        <img src="img/logo-sodruzestvo.png" alt="logo">
+                        <picture>
+                            <source srcset="img/logo-sodruzestvo-mobile.png" media="(max-width: 730px)">
+                            <source srcset="img/logo-sodruzestvo-tablet.png" media="(max-width: 768px)">
+                            <img src="img/logo-sodruzestvo.png" alt="logo">
+                        </picture>
                     </a>
-                    <a href="https://rs.gov.ru/" class="logo" target="_blank">
-                        <img src="img/logo-ros.png" alt="logo">
-                    </a>
-                    <a href="#" class="logo" target="_blank">
-                        <img src="img/logo-Russian.png" alt="logo">
-                    </a>
+                    <div class="footer-logo-wrap2 flex">
+                        <a href="https://rs.gov.ru/" class="logo" target="_blank">
+                            <picture>
+                                <source srcset="img/logo-ros-mobile.png" media="(max-width: 730px)">
+                                <source srcset="img/logo-ros-tablet.png" media="(max-width: 768px)">
+                                <img src="img/logo-ros.png" alt="logo">
+                            </picture>
+                        </a>
+                        <a href="https://ruskidom.rs/" class="logo" target="_blank">
+                            <picture>
+                                <source srcset="img/logo-Rus-house_slider-mobile.png" media="(max-width: 730px)">
+                                <source srcset="img/logo-Russian-tablet.png" media="(max-width: 768px)">
+                                <img src="img/logo-Russian.png" alt="logo">
+                            </picture>
+                        </a>
+                    </div>
+
                 </div>
 
                 <div class="footer_contacts">
@@ -36,7 +51,7 @@
             </div>
 
             <div class="footer-right flex">
-                <a class="footer-links" onclick="window.location.href ='#'" target="blank">Вход в личный кабинет</a>
+                <a class="footer-links" href="/401.php">Вход в личный кабинет</a>
                 <a class="footer-links" href="docs/Политика_обработки_ПДн_на_сайте_Содружество_проект.pdf" target="blank"
                    download="">Политика конфиденциальности</a>
                 <a class="footer-links" href="docs/Согласие_на_обработку_ПДн_на_сайте_Содружество_проект.pdf" target="blank"
