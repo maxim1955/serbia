@@ -56,9 +56,7 @@
         </div>
 
         <div class="container map_wrapper ">
-            <div class=""></div>
-            <div id="map">
-            </div>
+            <div id="map"></div>
             <svg viewBox="0 0 1360 760" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M688.225 0H0L0.5 117L60.5 57.5H634L688.225 0Z" fill="#0E0214"/>
                 <path d="M1359.5 0L1360 265L1302.5 208.5L1300.03 2.5H1300L1298 0H1300H1359.5Z" fill="#0E0214"/>
@@ -114,34 +112,44 @@
             <div class="detail-modal">
                 <svg viewBox="0 0 348 658" fill="none" xmlns="http://www.w3.org/2000/svg" class="detail-modal__bg">
                     <rect x="1" y="1" width="316" height="656" fill="#0E0214"/>
-                    <rect x="1" y="1" width="316" height="656" stroke="url(#paint0_linear_4001_24673)" stroke-width="2"/>
+                    <rect x="1" y="1" width="316" height="656" stroke="url(#paint0_linear_4001_24673)"
+                          stroke-width="2"/>
                     <rect x="306" y="117" width="4" height="63" fill="url(#paint1_linear_4001_24673)"/>
                     <mask id="path-3-inside-1_4001_24673" fill="white">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M348 0H316V32V64L348 32V0Z"/>
                     </mask>
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M348 0H316V32V64L348 32V0Z" fill="#0E0214"/>
-                    <path d="M316 0V-2H314V0H316ZM348 0H350V-2H348V0ZM316 64H314V68.8284L317.414 65.4142L316 64ZM348 32L349.414 33.4142L350 32.8284V32H348ZM316 2H348V-2H316V2ZM318 32V0H314V32H318ZM318 64V32H314V64H318ZM346.586 30.5858L314.586 62.5858L317.414 65.4142L349.414 33.4142L346.586 30.5858ZM346 0V32H350V0H346Z" fill="url(#paint2_linear_4001_24673)" mask="url(#path-3-inside-1_4001_24673)"/>
-                    <path d="M322 26L341.799 6.20101" stroke="url(#paint3_linear_4001_24673)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" id="closeDetail"/>
-                    <path d="M341.799 25.799L322 6" stroke="url(#paint4_linear_4001_24673)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path
+                        d="M316 0V-2H314V0H316ZM348 0H350V-2H348V0ZM316 64H314V68.8284L317.414 65.4142L316 64ZM348 32L349.414 33.4142L350 32.8284V32H348ZM316 2H348V-2H316V2ZM318 32V0H314V32H318ZM318 64V32H314V64H318ZM346.586 30.5858L314.586 62.5858L317.414 65.4142L349.414 33.4142L346.586 30.5858ZM346 0V32H350V0H346Z"
+                        fill="url(#paint2_linear_4001_24673)" mask="url(#path-3-inside-1_4001_24673)"/>
+                    <path d="M322 26L341.799 6.20101" stroke="url(#paint3_linear_4001_24673)" stroke-width="1.5"
+                          stroke-linecap="round" stroke-linejoin="round" id="closeDetail"/>
+                    <path d="M341.799 25.799L322 6" stroke="url(#paint4_linear_4001_24673)" stroke-width="1.5"
+                          stroke-linecap="round" stroke-linejoin="round"/>
                     <defs>
-                        <linearGradient id="paint0_linear_4001_24673" x1="0" y1="329" x2="357.735" y2="78.0358" gradientUnits="userSpaceOnUse">
+                        <linearGradient id="paint0_linear_4001_24673" x1="0" y1="329" x2="357.735" y2="78.0358"
+                                        gradientUnits="userSpaceOnUse">
                             <stop stop-color="#FFAA00"/>
                             <stop offset="0.789328" stop-color="#AA00FF"/>
                             <stop offset="0.965" stop-color="#AA00FF"/>
                         </linearGradient>
-                        <linearGradient id="paint1_linear_4001_24673" x1="306" y1="148.5" x2="310" y2="148.5" gradientUnits="userSpaceOnUse">
+                        <linearGradient id="paint1_linear_4001_24673" x1="306" y1="148.5" x2="310" y2="148.5"
+                                        gradientUnits="userSpaceOnUse">
                             <stop stop-color="#FFAA00"/>
                             <stop offset="1" stop-color="#AA00FF"/>
                         </linearGradient>
-                        <linearGradient id="paint2_linear_4001_24673" x1="316" y1="32" x2="348" y2="32" gradientUnits="userSpaceOnUse">
+                        <linearGradient id="paint2_linear_4001_24673" x1="316" y1="32" x2="348" y2="32"
+                                        gradientUnits="userSpaceOnUse">
                             <stop stop-color="#AA00FF"/>
                             <stop offset="0.445417" stop-color="#FFAA00"/>
                         </linearGradient>
-                        <linearGradient id="paint3_linear_4001_24673" x1="322.354" y1="26.3536" x2="342.153" y2="6.55456" gradientUnits="userSpaceOnUse">
+                        <linearGradient id="paint3_linear_4001_24673" x1="322.354" y1="26.3536" x2="342.153"
+                                        y2="6.55456" gradientUnits="userSpaceOnUse">
                             <stop stop-color="#FFAA00"/>
                             <stop offset="1" stop-color="#AA00FF"/>
                         </linearGradient>
-                        <linearGradient id="paint4_linear_4001_24673" x1="331.899" y1="15.8995" x2="332.607" y2="15.1924" gradientUnits="userSpaceOnUse">
+                        <linearGradient id="paint4_linear_4001_24673" x1="331.899" y1="15.8995" x2="332.607"
+                                        y2="15.1924" gradientUnits="userSpaceOnUse">
                             <stop stop-color="#FFAA00"/>
                             <stop offset="1" stop-color="#AA00FF"/>
                         </linearGradient>
@@ -157,26 +165,31 @@
                         Федеральное государственное автономное образовательное учреждение высшего образования «Новосибирский национальный исследовательский государственный университет»
                         </span>
                     </div>
-                    <div class="pb-40"">
+                    <div class="pb-40">
                         <p class="font-20 pb-10">Направление профессиональной подготовки:</p>
                         <span id="modalDirection" class="font-16 pb-40">15.03.06 «Мехатроника и робототехника. Искусственный интеллект» («Когнитивная робототехника»)</span>
                     </div>
-                    <div class="pb-40"">
+
+                    <div class="pb-40">
                         <p class="font-20 pb-10">О программе:</p>
                         <span id="modalDescription" class="font-16 pb-40">
                         Программа бакалавриата «Когнитивная робототехника» готовит к тому, что будет завтра: беспилотный транспорт, умные и ловкие роботы, производство будущего. Студенты изучают и создают продукты на базе глубокого машинного обучения.
                         </span>
                     </div>
-                    <div class="pb-40"">
+                </div>
+                <div>
+                    <div class="pb-40">
                         <p class="font-20 pb-10">Формат и сроки обучения:</p>
                         <span id="modalFormat" class="font-16 pb-10">бакалавриат, 4 года</span>
                     </div>
                 </div>
-
             </div>
-
-
+            <div class="add-modal">
+                <img src="img/icon-add-modal.png" alt="icon-add-modal">
+                <p></p>
+            </div>
         </div>
+
     </section>
 </main>
 
