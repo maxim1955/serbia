@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="css/media.css" />
   <link rel="stylesheet" href="css/modals.css">
   <link rel="stylesheet" href="css/materials.css" />
+  <link rel="icon" href="img/favicon.png" type="image/x-icon">
 </head>
 
 <body>
@@ -213,6 +214,11 @@
               <input class="reg__radio" name="age" type="radio">
               <span class="reg__fake-radio"></span>
               <span class="caption-text">Тренды робототехники в России</span>
+            </label>
+            <label class="reg__radio-label caption-label">
+              <input class="reg__radio" name="age" type="radio">
+              <span class="reg__fake-radio"></span>
+              <span class="caption-text">Образовательные материалы</span>
             </label>
           </div>
         </div>
