@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="css/401_404.css" />
   <link rel="stylesheet" href="css/media.css" />
   <link rel="stylesheet" href="css/modals.css" />
+  <link rel="icon" href="img/favicon.png" type="image/x-icon">
 </head>
 
 <body class="boby-404">

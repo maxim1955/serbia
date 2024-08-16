@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/styles/choices.min.css"/>
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="stylesheet" href="css/future_map.css"/>
+    <link rel="icon" href="img/favicon.png" type="image/x-icon">
     <script src="https://api-maps.yandex.ru/v3/?apikey=409c56c9-7868-499c-af77-f29e4cde70d9&lang=ru_RU"></script>
 
 

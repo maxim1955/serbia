@@ -1051,13 +1051,23 @@ nav li[aria-current="page"] {
   scroll-snap-type: none;
 }
 
-.reviews-modal_text {
+/* .reviews-modal_text {
   font-size: 16px;
   line-height: 20px;
   color: var(--white-color);
 }
 
 .reviews-modal_text:not(:last-child) {
+  margin-bottom: 8px;
+} */
+
+.reviews-text_wrap p {
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--white-color);
+}
+
+.reviews-text_wrap p:not(:last-child) {
   margin-bottom: 8px;
 }
 
