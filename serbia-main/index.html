@@ -13,7 +13,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/styles/choices.min.css" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/media.css" />
-  <link rel="stylesheet" href="css/modals.css">
+  <link rel="stylesheet" href="css/modals.css" />
+  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
 </head>
 
 <body>
@@ -548,14 +549,22 @@
       <div class="auth__close"></div>
       <div class="auth__container">
         <hi class="auth__title">АВТОРИЗАЦИЯ</hi>
-        <form class="auth__form">
+        <form class="auth__form" id="authform">
           <label class="auth__input-label">E-mail</label>
           <div class="auth__input-border">
-            <input class="auth__input" placeholder="Введите E-mail">
+            <label class="input__invisible-shield">
+              <input class="auth__input input__clear" placeholder="Введите E-mail" type="email" maxlength="256"
+                name="email" id="email" required>
+              <img class="input-figure input-figure-hidden" src="./img/x-circle.svg" alt="кнопка" />
+            </label>
           </div>
           <label class="auth__input-label">Пароль</label>
           <div class="auth__input-border">
-            <input class="auth__input" placeholder="Введите пароль">
+            <label class="input__invisible-shield">
+              <input class="auth__input input__pass" placeholder="Введите пароль" type="password" minlength="6"
+                maxlength="64" id="pass" name="pass" required>
+            </label>
+            <img class="input-figure input-figure-eye" src="./img/password-eye.svg" alt="кнопка" />
           </div>
           <a class="auth__miss-pass">Забыли пароль?</a>
           <span class="auth__text">Еще нет аккаунта? <a class="auth__link-reg">Зарегистрироваться</a></span>
@@ -577,50 +586,92 @@
           <div class="reg__robot-image"></div>
           <div class="reg__info-figure"></div>
         </div>
-        <form class="reg__form">
+        <form class="reg__form" id="regform">
           <label class="reg__input-label">Ф.И.О.</label>
           <div class="reg__input-border">
-            <input class="reg__input" placeholder="Введите Ф.И.О">
+            <label class="input__invisible-shield">
+              <input class="reg__input input__clear" placeholder="Введите Ф.И.О" type="text" name="name" id="name"
+                maxlength="100" required>
+              <img class="input-figure input-figure-hidden" src="./img/x-circle.svg" alt="кнопка" />
+            </label>
           </div>
           <label class="reg__input-label">Email</label>
           <div class="reg__input-border">
-            <input class="reg__input" placeholder="Введите Email">
+            <label class="input__invisible-shield">
+              <input class="reg__input input__clear" placeholder="Введите Email" type="email" maxlength="256"
+                name="email" id="email" required>
+              <img class="input-figure input-figure-hidden" src="./img/x-circle.svg" alt="кнопка" />
+            </label>
           </div>
           <label class="reg__input-label">Телефон</label>
           <div class="reg__input-border">
-            <input class="reg__input" placeholder="Введите телефон">
+            <label class="input__invisible-shield">
+              <input class="reg__input input__clear" placeholder="Введите телефон" maxlength="20" name="phone"
+                id="phone" required>
+              <img class="input-figure input-figure-hidden" src="./img/x-circle.svg" alt="кнопка" />
+            </label>
           </div>
           <label class="reg__input-label">Город</label>
           <div class="reg__input-border">
-            <input class="reg__input" placeholder="Выберите город">
+            <label class="input__invisible-shield">
+              <input class="reg__input reg__input-city" placeholder="Выберите город" id="city" type="text" name="city"
+                readonly required>
+            </label>
+            <img class="input-figure city-button" src="./img/arrow-down-white.svg" alt="кнопка" />
+            <ul class="reg-select reg-select-hidden" name="cities">
+              <li class="reg-select-option" data-value="Город 1">Город 1</li>
+              <li class="reg-select-option" data-value="Город 2">Город 2</li>
+              <li class="reg-select-option" data-value="Город 3">Город 3</li>
+              <li class="reg-select-option" data-value="Город 4">Город 4</li>
+            </ul>
           </div>
           <label class="reg__input-label">Категория</label>
           <div class="reg__input-border">
-            <input class="reg__input" placeholder="Выберите категорию">
+            <label class="input__invisible-shield">
+              <input class="reg__input reg__input-cat" placeholder="Выберите категорию" id="cat" type="text" name="cat" readonly
+                required>
+            </label>
+            <img class="input-figure cat-button" src="./img/arrow-down-white.svg" alt="кнопка" />
+            <ul class="reg-select-cat reg-select-cat-hidden" name="cathegory">
+              <li class="reg-select-cat-option" data-value="Школьник">Школьник</li>
+              <li class="reg-select-cat-option" data-value="Студент">Студент</li>
+              <li class="reg-select-cat-option" data-value="Преподаватель">Преподаватель</li>
+              <li class="reg-select-cat-option" data-value="Другая категория">Другая категория</li>
+            </ul>
           </div>
           <label class="reg__input-label">Наименование учебного заведения</label>
           <div class="reg__input-border">
-            <input class="reg__input reg__input-360" placeholder="Введите наименование учебного заведения">
+            <label class="input__invisible-shield">
+              <input class="reg__input reg__input-360 input__clear"
+                placeholder="Введите наименование учебного заведения" type="text" name="school" id="school"
+                maxlength="156" required>
+              <img class="input-figure input-figure-hidden" src="./img/x-circle.svg" alt="кнопка" />
+            </label>
           </div>
           <label class="reg__input-label">Вам есть 14 лет?</label>
           <div class="reg__radio-container reg__radio-container-first">
             <label class="reg__radio-label">
-              <input class="reg__radio" name="age" type="radio">
+              <input class="reg__radio" name="age" type="radio" checked>
               <span class="reg__fake-radio"></span>
               <span class="reg__input-label-rad">Да</span>
             </label>
           </div>
-          <div class="reg__radio-container">
+          <div class="reg__radio-container reg__radio-enable">
             <label class="reg__radio-label">
-              <input class="reg__radio" name="age" type="radio" checked>
+              <input class="reg__radio" id="enable" name="age" type="radio">
               <span class="reg__fake-radio"></span>
               <span class="reg__input-label-rad">Нет</span>
             </label>
           </div>
-          <label class="reg__input-label reg__input-label-last">ФИО представителя</label>
-          <div class="reg__input-border reg__input-border-last">
-            <input class="reg__input" placeholder="Введите ФИО представителя">
-          </div>
+          <label class="reg__input-label reg__input-label-last">ФИО представителя
+            <div class="reg__input-border reg__input-border-last">
+              <label class="input__invisible-shield">
+                <input class="reg__input reg__input-profname input__clear" placeholder="Введите ФИО представителя"
+                  type="text" name="profname" id="profname" maxlength="100" required>
+                <img class="input-figure input-figure-hidden" src="./img/x-circle.svg" alt="кнопка" />
+              </label>
+            </div>
+          </label>
           <div class="reg__checkbox-container">
 
             <label class="reg__checkbox-label">
@@ -659,22 +710,34 @@
       <div class="fb__container">
         <h1 class="fb__title">НЕ НАШЛИ ОТВЕТА НА СВОЙ ВОПРОС?</h1>
         <h3 class="fb__text">Воспользуйтесь формой, задайте вопрос, и мы лично свяжемся с вами в ближайшее время.</h3>
-        <form class="fb__form">
+        <form class="fb__form" id="fb-form">
           <label class="fb__input-label">Ф.И.О.*</label>
           <div class="fb__input-border">
-            <input class="fb__input" placeholder="Введите Ф.И.О">
+            <label class="input__invisible-shield">
+              <input class="fb__input input__clear" placeholder="Введите Ф.И.О" type="text" name="name" id="name" maxlength="100" required>
+              <img class="input-figure input-figure-fb input-figure-hidden" src="./img/x-circle.svg" alt="кнопка" />
+            </label>
           </div>
           <label class="fb__input-label">E-mail*</label>
           <div class="fb__input-border">
-            <input class="fb__input" placeholder="Введите E-mail">
+            <label class="input__invisible-shield">
+              <input class="fb__input input__clear" placeholder="Введите E-mail" type="email" maxlength="256" name="email" id="email" required>
+              <img class="input-figure input-figure-fb input-figure-hidden" src="./img/x-circle.svg" alt="кнопка" />
+            </label>
           </div>
           <label class="fb__input-label">Телефон*</label>
           <div class="fb__input-border">
-            <input class="fb__input" placeholder="Введите телефон">
+            <label class="input__invisible-shield">
+              <input class="fb__input input__clear" placeholder="Введите телефон" maxlength="20" name="phone" id="phone" required>
+              <img class="input-figure input-figure-fb input-figure-hidden" src="./img/x-circle.svg" alt="кнопка" />
+            </label>
           </div>
           <label class="fb__input-label">Задать вопрос *</label>
           <div class="fb__input-border">
-            <textarea class="fb__input fb__input-textarea"></textarea>
+            <label class="input__invisible-shield">
+              <textarea class="fb__input fb__input-textarea" type="text" name="textarea" id="textarea"
+              maxlength="4000" required></textarea>
+            </label>
           </div>
           <label class="fb__checkbox-label">
             <input class="fb__checkbox" type="checkbox">
@@ -1389,5 +1452,6 @@
     </div>
   </footer>
 </body>
+<script src="./js/validationMain.js"></script>
 
 </html>
