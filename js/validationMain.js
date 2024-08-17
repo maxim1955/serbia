@@ -147,6 +147,7 @@ authValidation.addField('#email', [
   })
 
 // валидация формы обратной связи
+const inputWithClearFb = document.querySelectorAll('.input__clear-fb')
 
 let fbValidation = new JustValidate('#fb-form', {
   focusInvalidField: false,
@@ -226,7 +227,10 @@ fbValidation.addField('#name', [
     e.preventDefault()
     fbNotice.style.display = "flex";
     fb.style.display = "none";
-  })
+    inputWithClearFb.forEach((item) => {
+      clearFields(item);
+    });
+  });
 
 
 const passwordBtns = document.querySelectorAll(".input-figure-eye");
@@ -257,6 +261,10 @@ function updateButtonVisibility(input) {
 function clearField(input) {
   input.value = "";
   updateButtonVisibility(input);
+}
+
+function clearFields(input) {
+  input.value = "";
 }
 
 const inputWithClear = document.querySelectorAll(".input__clear");
