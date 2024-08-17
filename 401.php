@@ -317,7 +317,7 @@
               <use xlink:href="sprite.svg#figure"></use>
             </svg>
           </div>
-          <button onclick="window.location.href ='/index.php'" class="btn-reset btn p401-btn" style="width: 100%;">Вернуться на главную</button>
+          <button onclick="window.location.href ='index.php'" class="btn-reset btn p401-btn" style="width: 100%;">Вернуться на главную</button>
         </div>
       </div>
 

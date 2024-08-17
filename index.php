@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="css/modals.css">
   <link rel="icon" href="img/favicon.png" type="image/x-icon">
 </head>
+
 <body>
 
   <!-- Модальное окно бургер-меню -->
@@ -215,27 +216,27 @@
                     </div>
                   </div>
                   <div class="reviews-text_wrap">
-                    <p class="reviews-modal_text">
+                    <p>
                       Также как высокое качество позиционных исследований в значительной степени обусловливает
                       важность
                       прогресса профессионального сообщества.</p>
-                    <p class="reviews-modal_text">
+                    <p>
                       Также как высокое качество позиционных исследований в значительной степени обусловливает
                       важность
                       прогресса профессионального сообщества.</p>
-                    <p class="reviews-modal_text">
+                    <p>
                       Также как высокое качество позиционных исследований в значительной степени обусловливает
                       важность
                       прогресса профессионального сообщества.</p>
-                    <p class="reviews-modal_text">
+                    <p>
                       Также как высокое качество позиционных исследований в значительной степени обусловливает
                       важность
                       прогресса профессионального сообщества.</p>
-                    <p class="reviews-modal_text">
+                    <p>
                       Также как высокое качество позиционных исследований в значительной степени обусловливает
                       важность
                       прогресса профессионального сообщества.</p>
-                    <p class="reviews-modal_text">
+                    <p>
                       Также как высокое качество позиционных исследований в значительной степени обусловливает
                       важность
                       прогресса профессионального сообщества.</p>
@@ -311,27 +312,27 @@
                     </div>
                   </div>
                   <div class="reviews-text_wrap">
-                    <p class="reviews-modal_text">
+                    <p>
                       Также как высокое качество позиционных исследований в значительной степени обусловливает
                       важность
                       прогресса профессионального сообщества.</p>
-                    <p class="reviews-modal_text">
+                    <p>
                       Также как высокое качество позиционных исследований в значительной степени обусловливает
                       важность
                       прогресса профессионального сообщества.</p>
-                    <p class="reviews-modal_text">
+                    <p>
                       Также как высокое качество позиционных исследований в значительной степени обусловливает
                       важность
                       прогресса профессионального сообщества.</p>
-                    <p class="reviews-modal_text">
+                    <p>
                       Также как высокое качество позиционных исследований в значительной степени обусловливает
                       важность
                       прогресса профессионального сообщества.</p>
-                    <p class="reviews-modal_text">
+                    <p>
                       Также как высокое качество позиционных исследований в значительной степени обусловливает
                       важность
                       прогресса профессионального сообщества.</p>
-                    <p class="reviews-modal_text">
+                    <p>
                       Также как высокое качество позиционных исследований в значительной степени обусловливает
                       важность
                       прогресса профессионального сообщества.</p>
@@ -407,27 +408,27 @@
                     </div>
                   </div>
                   <div class="reviews-text_wrap">
-                    <p class="reviews-modal_text">
+                    <p>
                       Также как высокое качество позиционных исследований в значительной степени обусловливает
                       важность
                       прогресса профессионального сообщества.</p>
-                    <p class="reviews-modal_text">
+                    <p>
                       Также как высокое качество позиционных исследований в значительной степени обусловливает
                       важность
                       прогресса профессионального сообщества.</p>
-                    <p class="reviews-modal_text">
+                    <p>
                       Также как высокое качество позиционных исследований в значительной степени обусловливает
                       важность
                       прогресса профессионального сообщества.</p>
-                    <p class="reviews-modal_text">
+                    <p>
                       Также как высокое качество позиционных исследований в значительной степени обусловливает
                       важность
                       прогресса профессионального сообщества.</p>
-                    <p class="reviews-modal_text">
+                    <p>
                       Также как высокое качество позиционных исследований в значительной степени обусловливает
                       важность
                       прогресса профессионального сообщества.</p>
-                    <p class="reviews-modal_text">
+                    <p>
                       Также как высокое качество позиционных исследований в значительной степени обусловливает
                       важность
                       прогресса профессионального сообщества.</p>
@@ -503,27 +504,27 @@
                     </div>
                   </div>
                   <div class="reviews-text_wrap">
-                    <p class="reviews-modal_text">
+                    <p>
                       Также как высокое качество позиционных исследований в значительной степени обусловливает
                       важность
                       прогресса профессионального сообщества.</p>
-                    <p class="reviews-modal_text">
+                    <p>
                       Также как высокое качество позиционных исследований в значительной степени обусловливает
                       важность
                       прогресса профессионального сообщества.</p>
-                    <p class="reviews-modal_text">
+                    <p>
                       Также как высокое качество позиционных исследований в значительной степени обусловливает
                       важность
                       прогресса профессионального сообщества.</p>
-                    <p class="reviews-modal_text">
+                    <p>
                       Также как высокое качество позиционных исследований в значительной степени обусловливает
                       важность
                       прогресса профессионального сообщества.</p>
-                    <p class="reviews-modal_text">
+                    <p>
                       Также как высокое качество позиционных исследований в значительной степени обусловливает
                       важность
                       прогресса профессионального сообщества.</p>
-                    <p class="reviews-modal_text">
+                    <p>
                       Также как высокое качество позиционных исследований в значительной степени обусловливает
                       важность
                       прогресса профессионального сообщества.</p>
@@ -979,11 +980,7 @@
                 <div id="0" class="swiper-slide reviews-slide">
                   <div class="reviews-slide-info">
                     <div class="reviews-slide-click" data-modal-slide="0">
-                      <picture>
-                        <source srcset="img/reviewCard-1-mobile.webp" media="(max-width: 700px)">
-                        <source srcset="img/reviewCard-1-tablet.webp" media="(max-width: 1024px)">
-                        <img class="reviews-slide-click_img" src="img/reviewCard-1.webp" alt="">
-                      </picture>
+                      <img class="reviews-slide-click_img" src="img/reviewCard-1.webp" alt="">
                       <div class="user-wrap flex">
                         <img src="img/avatar.png" alt="avatar">
                         <div class="user-data">
@@ -998,11 +995,7 @@
                 <div id="1" class="swiper-slide reviews-slide">
                   <div class="reviews-slide-info">
                     <div class="reviews-slide-click" data-modal-slide="1">
-                      <picture>
-                        <source srcset="img/reviewCard-2-mobile.webp" media="(max-width: 700px)">
-                        <source srcset="img/reviewCard-2-tablet.webp" media="(max-width: 1024px)">
-                        <img class="reviews-slide-click_img" src="img/reviewCard-2.webp" alt="">
-                      </picture>
+                      <img class="reviews-slide-click_img" src="img/reviewCard-2.webp" alt="">
                       <div class="user-wrap flex">
                         <img src="img/avatar.png" alt="avatar">
                         <div class="user-data">
@@ -1017,11 +1010,7 @@
                 <div id="2" class="swiper-slide reviews-slide">
                   <div class="reviews-slide-info">
                     <div class="reviews-slide-click" data-modal-slide="2">
-                      <picture>
-                        <source srcset="img/reviewCard-3-mobile.webp" media="(max-width: 700px)">
-                        <source srcset="img/reviewCard-3-tablet.webp" media="(max-width: 1024px)">
-                        <img class="reviews-slide-click_img" src="img/reviewCard-3.webp" alt="">
-                      </picture>
+                    <img class="reviews-slide-click_img" src="img/reviewCard-3.webp" alt="">
                       <div class="user-wrap flex">
                         <img src="img/avatar.png" alt="avatar">
                         <div class="user-data">
@@ -1036,11 +1025,7 @@
                 <div id="3" class="swiper-slide reviews-slide">
                   <div class="reviews-slide-info">
                     <div class="reviews-slide-click" data-modal-slide="3">
-                      <picture>
-                        <source srcset="img/reviewCard-2-mobile.webp" media="(max-width: 700px)">
-                        <source srcset="img/reviewCard-2-tablet.webp" media="(max-width: 1024px)">
-                        <img class="reviews-slide-click_img" src="img/reviewCard-2.webp" alt="">
-                      </picture>
+                    <img class="reviews-slide-click_img" src="img/reviewCard-2.webp" alt="">
                       <div class="user-wrap flex">
                         <img src="img/avatar.png" alt="avatar">
                         <div class="user-data">
