@@ -591,6 +591,11 @@
     margin-bottom: 40px;
   }
 
+  .reviews-slide-click_img {
+    width: 250px;
+    height: 306px;
+  }
+
   .user-wrap img {
     margin-right: 14px;
     width: 46px;
@@ -1079,6 +1084,11 @@
 
   .reviews {
     margin-bottom: 190px;
+  }
+
+  .reviews-slide-click_img {
+    width: 320px;
+    height: 392px;
   }
 }
 

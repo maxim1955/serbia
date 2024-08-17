@@ -260,7 +260,7 @@
         </div>
 
         <div class="hero-btn-wrap" style="margin-bottom: 30px; margin-top: 20px;">
-          <button onclick="window.location.href ='index.html'" class="btn-reset btn p401-btn"
+          <button onclick="window.location.href ='index.php'" class="btn-reset btn p401-btn"
             style="width: 100%;">Вернуться на главную</button>
         </div>
 
