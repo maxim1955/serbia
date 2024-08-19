@@ -18,7 +18,7 @@ let profileValidation = new JustValidate('#profile-form', {
   validateBeforeSubmitting: false,
 });
 
-profileValidation.addField('#name', [
+profileValidation.addField('#namnameprofilee', [
   {
     rule: 'required',
     errorMessage: 'Введите Ф.И.О.'
@@ -34,7 +34,7 @@ profileValidation.addField('#name', [
     errorMessage: "Фамилия не может содержать больше 100 символов",
   },
 ])
-  .addField('#email', [
+  .addField('#emailprofile', [
     {
       rule: 'required',
       errorMessage: 'Введите Email'
@@ -49,7 +49,7 @@ profileValidation.addField('#name', [
       errorMessage: "E-mail не может содержать больше 256 символов",
     },
   ])
-  .addField('#phone', [
+  .addField('#phoneprofile', [
     {
       rule: "required",
       errorMessage: "Введите ваш телефон",
@@ -65,7 +65,7 @@ profileValidation.addField('#name', [
       errorMessage: "Номер телефона не может содержать больше 18 символов",
     },
   ])
-  .addField('#profname', [
+  .addField('#profnameprofile', [
     {
       rule: 'required',
       errorMessage: 'Введите Ф.И.О. представителя'
@@ -81,7 +81,7 @@ profileValidation.addField('#name', [
       errorMessage: "Ф.И.О. представителя не может содержать больше 100 символов",
     },
   ])
-  .addField('#school', [
+  .addField('#schoolprofile', [
     {
       rule: 'required',
       errorMessage: 'Введите наименование учебного заведения'
@@ -97,13 +97,13 @@ profileValidation.addField('#name', [
       errorMessage: "Наименование учебного заведения не может содержать больше 156 символов",
     },
   ])
-  .addField('#city', [
+  .addField('#cityprofile', [
     {
       rule: 'required',
       errorMessage: 'Выберите город'
     }
   ])
-  .addField('#cat', [
+  .addField('#catprofile', [
     {
       rule: 'required',
       errorMessage: 'Выберите категорию'
@@ -117,7 +117,7 @@ profileValidation.addField('#name', [
 
 let profilePassValidation = new JustValidate('#profile-pass-form')
 
-profilePassValidation.addField('#pass', [
+profilePassValidation.addField('#passprofile', [
   {
     rule: 'required',
     errorMessage: 'Введите текущий пароль'
@@ -133,7 +133,7 @@ profilePassValidation.addField('#pass', [
     errorMessage: "Пароль не может содержать меньше 6 символов",
   }
 ])
-  .addField('#newpass', [
+  .addField('#newpassprofile', [
     {
       rule: 'required',
       errorMessage: 'Введите новый пароль'
@@ -149,7 +149,7 @@ profilePassValidation.addField('#pass', [
       errorMessage: "Новый пароль не может содержать меньше 6 символов",
     }
   ])
-  .addField('#rep-newpass', [
+  .addField('#rep-newpassproflie', [
     {
       rule: 'required',
       errorMessage: 'Повторите новый пароль'

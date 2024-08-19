@@ -4,7 +4,7 @@ let regValidation = new JustValidate('#regform', {
   focusInvalidField: false,
 });
 
-regValidation.addField('#name', [
+regValidation.addField('#namereg', [
   {
     rule: 'required',
     errorMessage: 'Введите Ф.И.О.'
@@ -20,7 +20,7 @@ regValidation.addField('#name', [
     errorMessage: "Фамилия не может содержать больше 100 символов",
   },
 ])
-  .addField('#email', [
+  .addField('#emailreg', [
     {
       rule: 'required',
       errorMessage: 'Введите Email'
@@ -35,7 +35,7 @@ regValidation.addField('#name', [
       errorMessage: "E-mail не может содержать больше 256 символов",
     },
   ])
-  .addField('#phone', [
+  .addField('#phonereg', [
     {
       rule: "required",
       errorMessage: "Введите ваш телефон",
@@ -51,19 +51,19 @@ regValidation.addField('#name', [
       errorMessage: "Номер телефона не может содержать больше 18 символов",
     },
   ])
-  .addField('#city', [
+  .addField('#cityreg', [
     {
       rule: 'required',
       errorMessage: 'Выберите город'
     }
   ])
-  .addField('#cat', [
+  .addField('#catreg', [
     {
       rule: 'required',
       errorMessage: 'Выберите категорию'
     }
   ])
-  .addField('#school', [
+  .addField('#schoolreg', [
     {
       rule: 'required',
       errorMessage: 'Введите наименование учебного заведения'
@@ -79,7 +79,7 @@ regValidation.addField('#name', [
       errorMessage: "Наименование учебного заведения не может содержать больше 156 символов",
     },
   ])
-  .addField('#profname', [
+  .addField('#profnamereg', [
     {
       rule: 'required',
       errorMessage: 'Введите Ф.И.О. представителя'
@@ -95,7 +95,7 @@ regValidation.addField('#name', [
       errorMessage: "Ф.И.О. представителя не может содержать больше 100 символов",
     },
   ])
-  .addField('#checkbox', [
+  .addField('#checkboxreg', [
     {
       rule: 'required',
       errorMessage: " ",
@@ -111,7 +111,7 @@ let authValidation = new JustValidate('#authform', {
   focusInvalidField: false,
 });
 
-authValidation.addField('#email', [
+authValidation.addField('#emailauth', [
   {
     rule: 'required',
     errorMessage: 'Введите Email'
@@ -126,7 +126,7 @@ authValidation.addField('#email', [
     errorMessage: "E-mail не может содержать больше 256 символов",
   },
 ])
-  .addField('#pass', [
+  .addField('#passauth', [
     {
       rule: 'required',
       errorMessage: 'Введите пароль'
@@ -153,7 +153,7 @@ let fbValidation = new JustValidate('#fb-form', {
   focusInvalidField: false,
 });
 
-fbValidation.addField('#name', [
+fbValidation.addField('#namefb', [
   {
     rule: 'required',
     errorMessage: 'Введите Ф.И.О.'
@@ -169,7 +169,7 @@ fbValidation.addField('#name', [
     errorMessage: "Фамилия не может содержать больше 100 символов",
   },
 ])
-  .addField('#email', [
+  .addField('#emailfb', [
     {
       rule: 'required',
       errorMessage: 'Введите Email'
@@ -184,7 +184,7 @@ fbValidation.addField('#name', [
       errorMessage: "E-mail не может содержать больше 256 символов",
     },
   ])
-  .addField('#phone', [
+  .addField('#phonefb', [
     {
       rule: "required",
       errorMessage: "Введите ваш телефон",
@@ -470,7 +470,7 @@ let passValidation = new JustValidate('#passform', {
   focusInvalidField: false,
 });
 
-passValidation.addField('#email', [
+passValidation.addField('#emailpassform', [
   {
     rule: 'required',
     errorMessage: 'Введите Email'
@@ -513,7 +513,7 @@ let passwordsValidation = new JustValidate('#passwords', {
   focusInvalidField: false,
 });
 
-passwordsValidation.addField('#newpass', [
+passwordsValidation.addField('#newpass-passform', [
   {
     rule: 'required',
     errorMessage: 'Введите новый пароль'
@@ -529,7 +529,7 @@ passwordsValidation.addField('#newpass', [
     errorMessage: "Новый пароль не может содержать меньше 6 символов",
   }
 ])
-  .addField('#repnewpass', [
+  .addField('#repnewpass-passform', [
     {
       rule: 'required',
       errorMessage: 'Повторите новый пароль'
