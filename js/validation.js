@@ -18,7 +18,7 @@ let profileValidation = new JustValidate('#profile-form', {
   validateBeforeSubmitting: false,
 });
 
-profileValidation.addField('#namnameprofilee', [
+profileValidation.addField('#nameprofile', [
   {
     rule: 'required',
     errorMessage: 'Введите Ф.И.О.'
