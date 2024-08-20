@@ -1,0 +1,121 @@
+<header class="header container flex header-profile">
+    <div class="logo-block flex header-profile__link-container">
+      <a href="/index.php" class="logo">
+        <picture>
+          <source srcset="img/logo_mobile.svg" media="(max-width: 730px)">
+          <source srcset="img/logo_tablet.svg" media="(max-width: 1024px)">
+          <img src="img/logo.svg" alt="logo header-profile__link1">
+        </picture>
+      </a>
+      <a href="https://rs.gov.ru/" class="logo" target="_blank">
+        <img src="img/logo-ros.png" class="logo-2 header-profile__link2" alt="logo">
+      </a>
+      <a href="https://concord.ac/" class="logo" target="_blank">
+        <img src="img/logo-sodruzestvo.png" class="logo-3 header-profile__link3" alt="logo">
+      </a>
+    </div>
+
+
+    <nav class="nav nav-profile">
+      <ul class="nav__list nav__list-visible list-reset flex">
+        <li class="nav__item">
+          <a href="/future_map.php" class="nav__link" id="link-map">Карта будущего</a>
+        </li>
+        <li class="nav__item">
+          <a href="tests.html" class="nav__link">Профтест</a>
+        </li>
+        <li class="nav__item">
+          <a href="materials.php" class="nav__link" id="link-home">Материалы</a>
+        </li>
+        <li class="nav__item nav__click flex">
+          <p class="nav__link nav__text flex">Еще</p>
+          <i class="arrow_down"></i>
+        </li>
+      </ul>
+      <ul class="nav__list nav__list-hidden opacity list-reset flex">
+        <li class="nav__item">
+          <a href="/index.php#program" class="nav__link">Программа</a>
+        </li>
+        <li class="nav__item">
+          <a href="/index.php#video" class="nav__link">Запись трансляции</a>
+        </li>
+        <li class="nav__item">
+          <a href="/index.php#partners" class="nav__link">Партнеры</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="header-profile__container">
+      <img class="header-profile__avatar" src="../../img/avatar.png" alt="аватарка" />
+      <button class="header-profile__button"></button>
+    </div>
+
+    <div class="menu-btn hidden header-profile__menu-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <div class="burger-menu header-profile__burger">
+    <div class="header-burger header-profile__burger-margin flex">
+      <div class="burger-logo-block flex">
+        <a href="/index.php" class="logo">
+          <img src="img/logo_mobile.svg" alt="logo">
+        </a>
+        <a href="https://rs.gov.ru/" class="logo" target="_blank">
+          <img src="img/logo-ros.png" class="burger-logo2" alt="logo">
+        </a>
+        <a href="https://concord.ac/" class="logo" target="_blank">
+          <img src="img/logo-sodruzestvo.png" class="burger-logo3" alt="logo">
+        </a>
+      </div>
+      <button class="btn-reset burger-close">
+        <img src="img/close.svg" alt="">
+      </button>
+    </div>
+
+    <div class="main-burger header-profile__main-burger">
+      <div class="header-profile__avatar-burger--container">
+        <img class="header-profile__avatar--burger" src="../../img/avatar.png" alt="аватар"/>
+        <span class="header-profile__avatar-burger--span">ИВАНОВ ИВАН ИВАНОВИЧ</span>
+      </div>
+
+      <ul class="list-reset burger-list">
+        <li class="burger-item">
+          <a href="/index.php" class="burger__link">Профиль</a>
+        </li>
+
+        <li class="burger-item">
+          <a href="/index.php" class="burger__link">Главная</a>
+        </li>
+
+        <li class="burger-item">
+          <a href="#" class="burger__link">Карта будущего</a>
+        </li>
+
+        <li class="burger-item">
+          <a href="tests.html" class="burger__link">Профтест</a>
+        </li>
+
+        <li class="burger-item">
+          <a href="#" class="burger__link">Контакты</a>
+        </li>
+      </ul>
+
+      <button class="header-profile__exit">
+        <img class="header-profile__exit-frame" src="../../img/logout.svg" alt="выход"/>
+        <span class="header-profile__exit-span">Выйти</span>
+      </button>
+    </div>
+
+    <div class="header-profile__info">
+      <img class="header-profile__info-frame" src="../../img/Mobile.svg" alt="выход"/>
+      <span class="header-profile__info-span">+7 (495) 165-15-08</span>
+    </div>
+
+    <div class="header-profile__info header-profile__info2">
+      <img class="header-profile__info-frame" src="../../img/telegram.svg" alt="выход"/>
+      <span class="header-profile__info-span">vr-rs@concord.ac</span>
+    </div>
+  </div>
