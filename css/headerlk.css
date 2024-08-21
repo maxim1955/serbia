@@ -17,6 +17,53 @@
   gap: 8px;
   align-self: start;
   align-items: center;
+  position: relative;
+}
+
+.header-profile__select {
+  width: 113px;
+  height: 80px;
+  box-sizing: border-box;
+  padding: 4px;
+  border-radius: 6px;
+  display: none;
+  flex-direction: column;
+  background-color: white;
+  position: absolute;
+  top: 68px;
+}
+
+.header-profile__select-open {
+  display: flex;
+}
+
+.header-profile__option {
+  width: 100%;
+  height: 36px;
+  border-radius: 6px;
+  list-style-type: none;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin: 0 auto;
+  padding: 8px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.header-profile__option:hover {
+  background-color: rgba(255, 170, 0, 1);
+}
+
+.header-profile__option-image {
+  width: 20px;
+  height: 20px;
+}
+
+.header-profile__option-text {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
 }
 
 .header-profile__avatar {
