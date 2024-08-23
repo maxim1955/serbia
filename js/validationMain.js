@@ -4,7 +4,7 @@ let regValidation = new JustValidate('#regform', {
   focusInvalidField: false,
 });
 
-regValidation.addField('#namereg', [
+regValidation.addField('#participant_fio', [
   {
     rule: 'required',
     errorMessage: 'Введите Ф.И.О.'
@@ -20,7 +20,7 @@ regValidation.addField('#namereg', [
     errorMessage: "Фамилия не может содержать больше 100 символов",
   },
 ])
-  .addField('#emailreg', [
+  .addField('#participant_email', [
     {
       rule: 'required',
       errorMessage: 'Введите Email'
@@ -35,7 +35,7 @@ regValidation.addField('#namereg', [
       errorMessage: "E-mail не может содержать больше 256 символов",
     },
   ])
-  .addField('#phonereg', [
+  .addField('#participant_phone', [
     {
       rule: "required",
       errorMessage: "Введите ваш телефон",
@@ -51,19 +51,19 @@ regValidation.addField('#namereg', [
       errorMessage: "Номер телефона не может содержать больше 18 символов",
     },
   ])
-  .addField('#cityreg', [
+  .addField('#participant_city', [
     {
       rule: 'required',
       errorMessage: 'Выберите город'
     }
   ])
-  .addField('#catreg', [
+  .addField('#participant_category', [
     {
       rule: 'required',
       errorMessage: 'Выберите категорию'
     }
   ])
-  .addField('#schoolreg', [
+  .addField('#participant_school', [
     {
       rule: 'required',
       errorMessage: 'Введите наименование учебного заведения'
@@ -79,7 +79,7 @@ regValidation.addField('#namereg', [
       errorMessage: "Наименование учебного заведения не может содержать больше 156 символов",
     },
   ])
-  .addField('#profnamereg', [
+  .addField('#participant_representative', [
     {
       rule: 'required',
       errorMessage: 'Введите Ф.И.О. представителя'
@@ -321,21 +321,21 @@ for (let i = 0; i < li_item_cat.length; i = i + 1) {
 
 //радокнопка снимает/навешивает required
 
-const radioDisable = document.getElementById('disable')
+const radioDisable = document.getElementById('participant_adult')
 const radioEnable = document.getElementById('enable')
 const inputProfname = document.querySelector('.reg__input-profname')
 
 if (radioDisable) {
   radioDisable.addEventListener('click', function () {
     inputProfname.removeAttribute('required')
-    regValidation.removeField('#profname')
+    regValidation.removeField('#participant_representative')
   })
 }
 
 if (radioEnable) {
   radioEnable.addEventListener('click', function () {
     inputProfname.setAttribute('required', 'required')
-    regValidation.addField('#profname', [
+    regValidation.addField('#participant_representative', [
       {
         rule: 'required',
         errorMessage: 'Введите Ф.И.О. представителя'
