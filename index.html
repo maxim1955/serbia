@@ -654,7 +654,7 @@
           <label class="reg__input-label">Ф.И.О.</label>
           <div class="reg__input-border">
             <label class="input__invisible-shield">
-              <input class="reg__input input__clear" placeholder="Введите Ф.И.О" type="text" name="namereg" id="namereg"
+              <input class="reg__input input__clear" placeholder="Введите Ф.И.О" type="text" name="participant[fio]" id="participant_fio"
                 maxlength="100" required>
               <img class="input-figure input-figure-hidden" src="./img/x-circle.svg" alt="кнопка" />
             </label>
@@ -663,22 +663,22 @@
           <div class="reg__input-border">
             <label class="input__invisible-shield">
               <input class="reg__input input__clear" placeholder="Введите Email" type="email" maxlength="256"
-                name="emailreg" id="emailreg" required>
+                name="participant[email]" id="participant_email" required>
               <img class="input-figure input-figure-hidden" src="./img/x-circle.svg" alt="кнопка" />
             </label>
           </div>
           <label class="reg__input-label">Телефон</label>
           <div class="reg__input-border">
             <label class="input__invisible-shield">
-              <input class="reg__input input__clear" placeholder="Введите телефон" maxlength="20" name="phonereg"
-                id="phonereg" required>
+              <input class="reg__input input__clear" placeholder="Введите телефон" maxlength="20" name="participant[phone]"
+                id="participant_phone" required>
               <img class="input-figure input-figure-hidden" src="./img/x-circle.svg" alt="кнопка" />
             </label>
           </div>
           <label class="reg__input-label">Город</label>
           <div class="reg__input-border">
             <label class="input__invisible-shield">
-              <input class="reg__input reg__input-city" placeholder="Выберите город" id="cityreg" type="text" name="cityreg"
+              <input class="reg__input reg__input-city" placeholder="Выберите город" id="participant_city" type="text" name="participant[city]"
                 required>
             </label>
             <img class="input-figure city-button" src="./img/arrow-down-white.svg" alt="кнопка" />
@@ -692,7 +692,7 @@
           <label class="reg__input-label">Категория</label>
           <div class="reg__input-border">
             <label class="input__invisible-shield">
-              <input class="reg__input reg__input-cat" placeholder="Выберите категорию" id="catreg" type="text" name="catreg"
+              <input class="reg__input reg__input-cat" placeholder="Выберите категорию" id="participant_category" type="text" name="participant[category]"
                 required>
             </label>
             <img class="input-figure cat-button" src="./img/arrow-down-white.svg" alt="кнопка" />
@@ -707,7 +707,7 @@
           <div class="reg__input-border">
             <label class="input__invisible-shield">
               <input class="reg__input reg__input-360 input__clear"
-                placeholder="Введите наименование учебного заведения" type="text" name="schoolreg" id="schoolreg"
+                placeholder="Введите наименование учебного заведения" type="text" name="participant[school]" id="participant_school"
                 maxlength="156" required>
               <img class="input-figure input-figure-hidden" src="./img/x-circle.svg" alt="кнопка" />
             </label>
@@ -715,14 +715,14 @@
           <label class="reg__input-label">Вам есть 14 лет?</label>
           <div class="reg__radio-container reg__radio-container-first">
             <label class="reg__radio-label">
-              <input class="reg__radio" id="disable" name="age" type="radio">
+              <input class="reg__radio" id="participant_adult" name="participant[adult]" type="radio">
               <span class="reg__fake-radio"></span>
               <span class="reg__input-label-rad">Да</span>
             </label>
           </div>
           <div class="reg__radio-container reg__radio-enable">
             <label class="reg__radio-label">
-              <input class="reg__radio" id="enable" name="age" type="radio" checked>
+              <input class="reg__radio" id="enable" name="participant[adult]" type="radio" checked>
               <span class="reg__fake-radio"></span>
               <span class="reg__input-label-rad">Нет</span>
             </label>
@@ -731,7 +731,7 @@
             <div class="reg__input-border reg__input-border-last">
               <label class="input__invisible-shield">
                 <input class="reg__input reg__input-profname input__clear" placeholder="Введите ФИО представителя"
-                  type="text" name="profnamereg" id="profnamereg" maxlength="100" required>
+                  type="text" name="participant[representative]" id="participant_representative" maxlength="100" required>
                 <img class="input-figure input-figure-hidden" src="./img/x-circle.svg" alt="кнопка" />
               </label>
             </div>
@@ -739,7 +739,7 @@
           <div class="reg__checkbox-container">
 
             <label class="reg__checkbox-label">
-              <input class="reg__checkbox" type="checkboxreg" id="checkboxreg" required>
+              <input class="reg__checkbox" type="checkbox" id="checkboxreg" required>
               <span class="reg__fake-checkbox"></span>
               <span class="reg__checkbox-text">Соглашаюсь с условиями <span class="reg__checkbox-text-span">Политики
                   конфиденциальности,
