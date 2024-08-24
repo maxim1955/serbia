@@ -1,3 +1,63 @@
+// Модалка авторизации открытие/закрытие
+const btnBurger = document.querySelector(".burger__btn");
+const btnHeader = document.querySelector('.header__btn');
+
+btnHeader.addEventListener("click", (e) => {
+  e.preventDefault();
+  window.location.href = 'login.html';
+});
+
+btnBurger.addEventListener("click", (e) => {
+  e.preventDefault();
+  window.location.href = 'login.html';
+});
+
+// Модалка регистрации открытие/закрытие
+const btnHero = document.querySelector(".hero-btn");
+const btnCard = document.querySelectorAll(".card-btn");
+const reg = document.querySelector(".reg");
+const regClose = document.querySelector(".reg__close");
+const regButton = document.querySelector('.reg__button')
+
+btnHero.addEventListener("click", (e) => {
+  e.preventDefault();
+  reg.style.display = "flex";
+  body.classList.add("overflow-body");
+});
+
+btnCard.forEach((btn) => {
+  btn.addEventListener("click", function (e) {
+    e.preventDefault();
+    reg.style.display = "flex";
+    body.classList.add("overflow-body");
+  });
+});
+
+regClose.addEventListener("click", (e) => {
+  e.preventDefault();
+  reg.style.display = "none";
+  body.classList.remove("overflow-body");
+});
+
+// Модалка обратной связи открытие/закрытие
+const btnFooter = document.querySelector(".footer__btn");
+const fb = document.querySelector(".fb");
+const fbClose = document.querySelector(".fb__close");
+
+btnFooter.addEventListener("click", (e) => {
+  e.preventDefault();
+  fb.style.display = "flex";
+  body.classList.add("overflow-body");
+});
+
+fbClose.addEventListener("click", (e) => {
+  e.preventDefault();
+  fb.style.display = "none";
+  body.classList.remove("overflow-body");
+});
+
+
+
 
 //Valid reg form
 let regValidation = new JustValidate('#regform', {
@@ -107,44 +167,6 @@ regValidation.addField('#participant_fio', [
     window.location.href = 'regthanks.html';
   })
 
-let authValidation = new JustValidate('#authform', {
-  focusInvalidField: false,
-});
-
-authValidation.addField('#emailauth', [
-  {
-    rule: 'required',
-    errorMessage: 'Введите Email'
-  },
-  {
-    rule: "email",
-    errorMessage: "Введите корректный E-mail",
-  },
-  {
-    rule: "maxLength",
-    value: 256,
-    errorMessage: "E-mail не может содержать больше 256 символов",
-  },
-])
-  .addField('#passauth', [
-    {
-      rule: 'required',
-      errorMessage: 'Введите пароль'
-    },
-    {
-      rule: "maxLength",
-      value: 64,
-      errorMessage: "Пароль не может содержать больше 64 символов",
-    },
-    {
-      rule: "minLength",
-      value: 6,
-      errorMessage: "Пароль не может содержать меньше 6 символов",
-    }
-  ])
-  .onSuccess((e) => {
-    e.preventDefault()
-  })
 
 // валидация формы обратной связи
 const inputWithClearFb = document.querySelectorAll('.input__clear-fb')
@@ -233,21 +255,6 @@ fbValidation.addField('#namefb', [
   });
 
 
-const passwordBtns = document.querySelectorAll(".input-figure-eye");
-const inputPasswords = document.querySelectorAll(".input__pass");
-
-for (let i = 0; i < passwordBtns.length; i++) {
-  passwordBtns[i].addEventListener("click", function (e) {
-    e.preventDefault();
-
-    const inputPassword = inputPasswords[i];
-    if (inputPassword.getAttribute("type") === "password") {
-      inputPassword.setAttribute("type", "text");
-    } else {
-      inputPassword.setAttribute("type", "password");
-    }
-  });
-}
 //Кнопка очистки инпута
 function updateButtonVisibility(input) {
   const button = input.nextElementSibling;
@@ -353,189 +360,3 @@ if (radioEnable) {
     ])
   })
 }
-
-// Модалка авторизации открытие/закрытие
-const btnBurger = document.querySelector(".burger__btn");
-const btnHeader = document.querySelector(".header__btn");
-const auth = document.querySelector(".auth");
-const authClose = document.querySelector(".auth__close");
-
-btnHeader.addEventListener("click", (e) => {
-  e.preventDefault();
-  auth.style.display = "flex";
-  body.classList.add("noscroll");
-});
-
-btnBurger.addEventListener("click", (e) => {
-  e.preventDefault();
-  auth.style.display = "flex";
-  body.classList.add("noscroll");
-});
-
-authClose.addEventListener("click", (e) => {
-  e.preventDefault();
-  auth.style.display = "none";
-  body.classList.remove("noscroll");
-});
-
-// Модалка регистрации открытие/закрытие
-const btnHero = document.querySelector(".hero-btn");
-const btnCard = document.querySelectorAll(".card-btn");
-const reg = document.querySelector(".reg");
-const regClose = document.querySelector(".reg__close");
-const regButton = document.querySelector('.reg__button')
-
-btnHero.addEventListener("click", (e) => {
-  e.preventDefault();
-  reg.style.display = "flex";
-  body.classList.add("overflow-body");
-});
-
-btnCard.forEach((btn) => {
-  btn.addEventListener("click", function (e) {
-    e.preventDefault();
-    reg.style.display = "flex";
-    body.classList.add("overflow-body");
-  });
-});
-
-regClose.addEventListener("click", (e) => {
-  e.preventDefault();
-  reg.style.display = "none";
-  body.classList.remove("overflow-body");
-});
-
-// Модалка обратной связи открытие/закрытие
-const btnFooter = document.querySelector(".footer__btn");
-const fb = document.querySelector(".fb");
-const fbClose = document.querySelector(".fb__close");
-
-btnFooter.addEventListener("click", (e) => {
-  e.preventDefault();
-  fb.style.display = "flex";
-  body.classList.add("overflow-body");
-});
-
-fbClose.addEventListener("click", (e) => {
-  e.preventDefault();
-  fb.style.display = "none";
-  body.classList.remove("overflow-body");
-});
-
-// Модалка "Забли пароль"
-
-const missPassButton = document.querySelector('.auth__miss-pass')
-const passModal = document.querySelector('.pass__modal-z')
-const passModalEmail = document.querySelector('.pass__container-email')
-
-const passModalCode = document.querySelector('.pass__container-code')
-
-const passModalPasswords = document.querySelector('.pass__container-pass')
-
-const passModalClose = document.querySelector('.pass__close')
-
-missPassButton.addEventListener('click', (e) => {
-  auth.style.display = "none";
-  passModal.style.display = "flex";
-  passModalEmail.style.display = "flex";
-})
-
-passModalClose.addEventListener('click', (e) => {
-  body.classList.remove("noscroll");
-  passModal.style.display = "none";
-  passModalCode.style.display = "none";
-})
-
-// PassForms
-
-let passValidation = new JustValidate('#passform', {
-  focusInvalidField: false,
-});
-
-passValidation.addField('#emailpassform', [
-  {
-    rule: 'required',
-    errorMessage: 'Введите Email'
-  },
-  {
-    rule: "email",
-    errorMessage: "Введите корректный E-mail",
-  },
-  {
-    rule: "maxLength",
-    value: 256,
-    errorMessage: "E-mail не может содержать больше 256 символов",
-  },
-])
-  .onSuccess((e) => {
-    e.preventDefault()
-    passModalEmail.style.display = "none";
-    passModalCode.style.display = "flex";
-  })
-
-
-let codeValidation = new JustValidate('#codeform', {
-  focusInvalidField: false,
-});
-
-codeValidation.addField('#code', [
-  {
-    rule: 'required',
-    errorMessage: ' '
-  },
-])
-  .onSuccess((e) => {
-    e.preventDefault()
-    passModalCode.style.display = "none";
-    passModalPasswords.style.display = "flex";
-  })
-
-
-let passwordsValidation = new JustValidate('#passwords', {
-  focusInvalidField: false,
-});
-
-passwordsValidation.addField('#newpass-passform', [
-  {
-    rule: 'required',
-    errorMessage: 'Введите новый пароль'
-  },
-  {
-    rule: "maxLength",
-    value: 64,
-    errorMessage: "Новый пароль не может содержать больше 64 символов",
-  },
-  {
-    rule: "minLength",
-    value: 6,
-    errorMessage: "Новый пароль не может содержать меньше 6 символов",
-  }
-])
-  .addField('#repnewpass-passform', [
-    {
-      rule: 'required',
-      errorMessage: 'Повторите новый пароль'
-    },
-    {
-      validator: (value, fields) => {
-        if (
-          fields['#newpass'] &&
-          fields['#repnewpass'].elem
-        ) {
-          const repeatPasswordValue =
-            fields['#newpass'].elem.value;
-
-          return value === repeatPasswordValue;
-        }
-
-        return true;
-      },
-      errorMessage: 'Пароли не совпадают',
-    }
-  ])
-  .onSuccess((e) => {
-    e.preventDefault()
-    body.classList.remove("noscroll");
-    passModal.style.display = "none";
-    passModalPasswords.style.display = "none";
-  })
