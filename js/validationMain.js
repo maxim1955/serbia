@@ -104,7 +104,7 @@ regValidation.addField('#participant_fio', [
   .onSuccess((e) => {
     e.preventDefault()
     reg.style.display = "none";
-    regNotice.style.display = "flex";
+    window.location.href = 'regthanks.html';
   })
 
 let authValidation = new JustValidate('#authform', {
@@ -225,7 +225,7 @@ fbValidation.addField('#namefb', [
   ])
   .onSuccess((e) => {
     e.preventDefault()
-    fbNotice.style.display = "flex";
+    window.location.href = 'fbthanks.html';
     fb.style.display = "none";
     inputWithClearFb.forEach((item) => {
       clearFields(item);
@@ -383,9 +383,7 @@ const btnHero = document.querySelector(".hero-btn");
 const btnCard = document.querySelectorAll(".card-btn");
 const reg = document.querySelector(".reg");
 const regClose = document.querySelector(".reg__close");
-const regNoticeClose = document.querySelector('.reg__notice-close')
 const regButton = document.querySelector('.reg__button')
-const regNotice = document.querySelector('.reg__notice-container')
 
 btnHero.addEventListener("click", (e) => {
   e.preventDefault();
@@ -407,18 +405,10 @@ regClose.addEventListener("click", (e) => {
   body.classList.remove("overflow-body");
 });
 
-regNoticeClose.addEventListener("click", (e) => {
-  e.preventDefault();
-  regNotice.style.display = "none";
-  body.classList.remove("overflow-body");
-});
-
 // Модалка обратной связи открытие/закрытие
 const btnFooter = document.querySelector(".footer__btn");
 const fb = document.querySelector(".fb");
 const fbClose = document.querySelector(".fb__close");
-const fbNotice = document.querySelector('.fb__notice-container')
-const fbNoticeClose = document.querySelector('.fb__notice-close')
 
 btnFooter.addEventListener("click", (e) => {
   e.preventDefault();
@@ -431,14 +421,6 @@ fbClose.addEventListener("click", (e) => {
   fb.style.display = "none";
   body.classList.remove("overflow-body");
 });
-
-fbNoticeClose.addEventListener("click", (e) => {
-  e.preventDefault();
-  fbNotice.style.display = "none";
-  body.classList.remove("overflow-body");
-});
-
-
 
 // Модалка "Забли пароль"
 
