@@ -676,7 +676,7 @@
           <label class="fb__input-label">Ф.И.О.*</label>
           <div class="fb__input-border">
             <label class="input__invisible-shield">
-              <input class="fb__input input__clear input__clear-fb" placeholder="Введите Ф.И.О" type="text" name="namefb" id="namefb"
+              <input class="fb__input input__clear input__clear-fb" placeholder="Введите Ф.И.О" type="text" name="feedback_form[name]" id="feedback_form_name"
                 maxlength="100" required>
               <img class="input-figure input-figure-fb input-figure-hidden" src="./img/x-circle.svg" alt="кнопка" />
             </label>
@@ -685,14 +685,14 @@
           <div class="fb__input-border">
             <label class="input__invisible-shield">
               <input class="fb__input input__clear input__clear-fb" placeholder="Введите E-mail" type="email" maxlength="256"
-                name="emailfb" id="emailfb" required>
+                name="feedback_form[email]" id="feedback_form_email" required>
               <img class="input-figure input-figure-fb input-figure-hidden" src="./img/x-circle.svg" alt="кнопка" />
             </label>
           </div>
           <label class="fb__input-label">Телефон*</label>
           <div class="fb__input-border">
             <label class="input__invisible-shield">
-              <input class="fb__input input__clear input__clear-fb" placeholder="Введите телефон" maxlength="20" name="phonefb" id="phonefb"
+              <input class="fb__input input__clear input__clear-fb" placeholder="Введите телефон" maxlength="20" name="feedback_form[phone]" id="feedback_form_phone"
                 required>
               <img class="input-figure input-figure-fb input-figure-hidden" src="./img/x-circle.svg" alt="кнопка" />
             </label>
@@ -700,7 +700,7 @@
           <label class="fb__input-label">Задать вопрос *</label>
           <div class="fb__input-border">
             <label class="input__invisible-shield">
-              <textarea class="fb__input fb__input-textarea input__clear-fb" type="text" name="textarea" id="textarea" maxlength="4000"
+              <textarea class="fb__input fb__input-textarea input__clear-fb" type="text" name="feedback_form[question]" id="feedback_form_question" maxlength="4000"
                 required></textarea>
             </label>
           </div>

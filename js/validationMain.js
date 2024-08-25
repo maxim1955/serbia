@@ -175,7 +175,7 @@ let fbValidation = new JustValidate('#fb-form', {
   focusInvalidField: false,
 });
 
-fbValidation.addField('#namefb', [
+fbValidation.addField('#feedback_form_name', [
   {
     rule: 'required',
     errorMessage: 'Введите Ф.И.О.'
@@ -191,7 +191,7 @@ fbValidation.addField('#namefb', [
     errorMessage: "Фамилия не может содержать больше 100 символов",
   },
 ])
-  .addField('#emailfb', [
+  .addField('#feedback_form_email', [
     {
       rule: 'required',
       errorMessage: 'Введите Email'
@@ -206,7 +206,7 @@ fbValidation.addField('#namefb', [
       errorMessage: "E-mail не может содержать больше 256 символов",
     },
   ])
-  .addField('#phonefb', [
+  .addField('#feedback_form_phone', [
     {
       rule: "required",
       errorMessage: "Введите ваш телефон",
@@ -222,7 +222,7 @@ fbValidation.addField('#namefb', [
       errorMessage: "Номер телефона не может содержать больше 18 символов",
     },
   ])
-  .addField('#textarea', [
+  .addField('#feedback_form_question', [
     {
       rule: 'required',
       errorMessage: 'Введите текст',
