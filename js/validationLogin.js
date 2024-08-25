@@ -3,7 +3,7 @@ const authClose = document.querySelector(".auth__close");
 
 authClose.addEventListener("click", (e) => {
   e.preventDefault();
-  window.location.href = 'index.html';
+  window.location.href = '/';
 });
 
 const missPassButton = document.querySelector('.auth__miss-pass')
@@ -25,7 +25,7 @@ missPassButton.addEventListener('click', (e) => {
 passModalClose.addEventListener('click', (e) => {
   passModal.style.display = "none";
   passModalCode.style.display = "none";
-  window.location.href = 'index.html';
+  window.location.href = '/';
 })
 
 function updateButtonVisibility(input) {
@@ -99,7 +99,7 @@ authValidation.addField('#emailauth', [
   ])
   .onSuccess((e) => {
     e.preventDefault()
-    window.location.href = 'index.html';
+    window.location.href = '/';
   })
 
 let passValidation = new JustValidate('#passform', {
@@ -172,7 +172,7 @@ passwordsValidation.addField('#newpass-passform', [
   .onSuccess((e) => {
     e.preventDefault()
     passModalPasswords.style.display = "none";
-    window.location.href = 'index.html';
+    window.location.href = '/';
   })
 
 let codeValidation = new JustValidate('#codeform', {
