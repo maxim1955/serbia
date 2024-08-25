@@ -45,7 +45,7 @@
     </ul>
   </nav>
 
-  <button class="btn-reset btn btn-color header__btn flex">Войти</button>
+  <button onclick="document.location='/profile'" class="btn-reset btn btn-color header__btn flex">Войти</button>
 
   <div class="menu-btn hidden">
     <span></span>
