@@ -1,0 +1,81 @@
+  <!--Код ниже вставляется вместо кнопки войти-->
+
+  <div class="header-profile__container header-profile__container-other--pages ">
+    <img class="header-profile__avatar" src="img/avatar.png" alt="аватарка" />
+    <button class="header-profile__button"></button>
+    <div class="header-profile__select">
+      <a class="header-profile__option">
+        <img class="header-profile__option-image" src="img/profile.svg" alt="профиль"/>
+        <span class="header-profile__option-text">Профиль</span>
+      </a>
+      <a class="header-profile__option">
+        <img class="header-profile__option-image" src="img/logout-black.svg" alt="выход"/>
+        <span class="header-profile__option-text">Выход</span>
+      </a>
+    </div>
+  </div>
+
+  <!--Код ниже заменяет такой же код на неавторизованном хедере (это выплывающее меню бургера)-->
+
+  <div class="burger-menu header-profile__burger">
+    <div class="header-burger header-profile__burger-margin flex">
+      <div class="burger-logo-block flex">
+        <a href="/index.php" class="logo">
+          <img src="img/logo_mobile.svg" alt="logo">
+        </a>
+        <a href="https://rs.gov.ru/" class="logo" target="_blank">
+          <img src="img/logo-ros.png" class="burger-logo2" alt="logo">
+        </a>
+        <a href="https://concord.ac/" class="logo" target="_blank">
+          <img src="img/logo-sodruzestvo.png" class="burger-logo3" alt="logo">
+        </a>
+      </div>
+      <button class="btn-reset burger-close">
+        <img src="img/close.svg" alt="">
+      </button>
+    </div>
+
+    <div class="main-burger header-profile__main-burger">
+      <div class="header-profile__avatar-burger--container">
+        <img class="header-profile__avatar--burger" src="../../img/avatar.png" alt="аватар"/>
+        <span class="header-profile__avatar-burger--span">ИВАНОВ ИВАН ИВАНОВИЧ</span>
+      </div>
+
+      <ul class="list-reset burger-list">
+        <li class="burger-item">
+          <a href="/index.php" class="burger__link">Профиль</a>
+        </li>
+
+        <li class="burger-item">
+          <a href="/index.php" class="burger__link">Главная</a>
+        </li>
+
+        <li class="burger-item">
+          <a href="#" class="burger__link">Карта будущего</a>
+        </li>
+
+        <li class="burger-item">
+          <a href="tests.html" class="burger__link">Профтест</a>
+        </li>
+
+        <li class="burger-item">
+          <a href="#" class="burger__link">Контакты</a>
+        </li>
+      </ul>
+
+      <button class="header-profile__exit">
+        <img class="header-profile__exit-frame" src="../../img/logout.svg" alt="выход"/>
+        <span class="header-profile__exit-span">Выйти</span>
+      </button>
+    </div>
+
+    <div class="header-profile__info">
+      <img class="header-profile__info-frame" src="../../img/Mobile.svg" alt="выход"/>
+      <span class="header-profile__info-span">+7 (495) 165-15-08</span>
+    </div>
+
+    <div class="header-profile__info header-profile__info2">
+      <img class="header-profile__info-frame" src="../../img/telegram.svg" alt="выход"/>
+      <span class="header-profile__info-span">vr-rs@concord.ac</span>
+    </div>
+  </div>

@@ -1,5 +1,4 @@
 // Кнопка разварачивания меню
-const body = document.body;
 const navClick = document.querySelector(".nav__click");
 const navListHidden = document.querySelector(".nav__list-hidden");
 const navListVisible = document.querySelector(".nav__list-visible");
@@ -64,15 +63,15 @@ burgerClose.addEventListener("click", (e) => {
 
 // Модалка авторизации
 const btnBurger = document.querySelector(".burger__btn");
-const btnHeader = document.querySelector(".header__btn");
+// const btnHeader = document.querySelector(".header__btn");
 const auth = document.querySelector(".auth");
 const authClose = document.querySelector(".auth__close");
 
-btnHeader.addEventListener("click", (e) => {
-  e.preventDefault();
-  auth.style.display = "flex";
-  body.classList.add("noscroll");
-});
+// btnHeader.addEventListener("click", (e) => {
+//   e.preventDefault();
+//   auth.style.display = "flex";
+//   body.classList.add("noscroll");
+// });
 
 btnBurger.addEventListener("click", (e) => {
   e.preventDefault();

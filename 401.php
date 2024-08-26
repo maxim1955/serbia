@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="css/401_404.css"/>
   <link rel="stylesheet" href="css/media.css" />
   <link rel="stylesheet" href="css/modals.css"/>
+  <link rel="icon" href="img/favicon.png" type="image/x-icon">
 </head>
 
 <body class="body-401">
@@ -19,7 +20,7 @@
   <div class="burger-menu">
     <div class="header-burger flex">
       <div class="burger-logo-block flex">
-        <a href="/index.php" class="logo">
+        <a href="index.php" class="logo">
           <img src="img/logo_mobile.svg" alt="logo">
         </a>
         <a href="https://rs.gov.ru/" class="logo" target="_blank">
@@ -239,7 +240,7 @@
   <section class="main-block-401">
     <header class="header container flex">
       <div class="logo-block flex">
-        <a href="/index.php" class="logo">
+        <a href="index.php" class="logo">
           <picture>
             <source srcset="img/logo_mobile.svg" media="(max-width: 730px)">
             <source srcset="img/logo_tablet.svg" media="(max-width: 1024px)">
@@ -316,7 +317,7 @@
               <use xlink:href="sprite.svg#figure"></use>
             </svg>
           </div>
-          <button onclick="window.location.href ='/index.php'" class="btn-reset btn p401-btn" style="width: 100%;">Вернуться на главную</button>
+          <button onclick="window.location.href ='index.php'" class="btn-reset btn p401-btn" style="width: 100%;">Вернуться на главную</button>
         </div>
       </div>
 

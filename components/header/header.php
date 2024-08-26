@@ -1,6 +1,6 @@
 <header class="header container flex">
   <div class="logo-block flex">
-    <a href="/index.php" class="logo">
+    <a href="index.php" class="logo">
       <picture>
         <source srcset="img/logo_mobile.svg" media="(max-width: 730px)">
         <source srcset="img/logo_tablet.svg" media="(max-width: 1024px)">
@@ -19,7 +19,7 @@
   <nav class="nav">
     <ul class="nav__list nav__list-visible list-reset flex">
       <li class="nav__item">
-        <a href="/future_map.php" class="nav__link" id="link-map">Карта будущего</a>
+        <a href="future_map.php" class="nav__link" id="link-map">Карта будущего</a>
       </li>
       <li class="nav__item">
         <a href="tests.html" class="nav__link">Профтест</a>
@@ -34,18 +34,18 @@
     </ul>
     <ul class="nav__list nav__list-hidden opacity list-reset flex">
       <li class="nav__item">
-        <a href="/index.php#program" class="nav__link">Программа</a>
+        <a href="index.php#program" class="nav__link">Программа</a>
       </li>
       <li class="nav__item">
-        <a href="/index.php#video" class="nav__link">Запись трансляции</a>
+        <a href="index.php#video" class="nav__link">Запись трансляции</a>
       </li>
       <li class="nav__item">
-        <a href="/index.php#partners" class="nav__link">Партнеры</a>
+        <a href="index.php#partners" class="nav__link">Партнеры</a>
       </li>
     </ul>
   </nav>
 
-  <button class="btn-reset btn btn-color header__btn flex">Войти</button>
+  <button onclick="document.location='/profile'" class="btn-reset btn btn-color header__btn flex">Войти</button>
 
   <div class="menu-btn hidden">
     <span></span>

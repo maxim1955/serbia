@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+  <script defer src="js/headerlk.js"></script>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/styles/choices.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/media.css" />
+  <link rel="stylesheet" href="css/modals.css" />
+  <link rel="stylesheet" href="css/lk.css" />
+  <link rel="stylesheet" href="css/headerlk.css" />
+  <script src="js/justValidate.js"></script>
+</head>
+
+<body>
+  <header class="header container flex header-profile">
+    <div class="logo-block flex header-profile__link-container">
+      <a href="/index.php" class="logo">
+        <picture>
+          <source srcset="img/logo_mobile.svg" media="(max-width: 730px)">
+          <source srcset="img/logo_tablet.svg" media="(max-width: 1024px)">
+          <img src="img/logo.svg" alt="logo header-profile__link1">
+        </picture>
+      </a>
+      <a href="https://rs.gov.ru/" class="logo" target="_blank">
+        <img src="img/logo-ros.png" class="logo-2 header-profile__link2" alt="logo">
+      </a>
+      <a href="https://concord.ac/" class="logo" target="_blank">
+        <img src="img/logo-sodruzestvo.png" class="logo-3 header-profile__link3" alt="logo">
+      </a>
+    </div>
+
+
+    <nav class="nav nav-profile">
+      <ul class="nav__list nav__list-visible list-reset flex">
+        <li class="nav__item">
+          <a href="/future_map.php" class="nav__link" id="link-map">Карта будущего</a>
+        </li>
+        <li class="nav__item">
+          <a href="tests.html" class="nav__link">Профтест</a>
+        </li>
+        <li class="nav__item">
+          <a href="materials.php" class="nav__link" id="link-home">Материалы</a>
+        </li>
+        <li class="nav__item nav__click flex">
+          <p class="nav__link nav__text flex">Еще</p>
+          <i class="arrow_down"></i>
+        </li>
+      </ul>
+      <ul class="nav__list nav__list-hidden opacity list-reset flex">
+        <li class="nav__item">
+          <a href="/index.php#program" class="nav__link">Программа</a>
+        </li>
+        <li class="nav__item">
+          <a href="/index.php#video" class="nav__link">Запись трансляции</a>
+        </li>
+        <li class="nav__item">
+          <a href="/index.php#partners" class="nav__link">Партнеры</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="header-profile__container">
+      <img class="header-profile__avatar" src="img/avatar.png" alt="аватарка" />
+      <button class="header-profile__button"></button>
+      <div class="header-profile__select">
+        <a class="header-profile__option">
+          <img class="header-profile__option-image" src="img/profile.svg" alt="профиль"/>
+          <span class="header-profile__option-text">Профиль</span>
+        </a>
+        <a class="header-profile__option">
+          <img class="header-profile__option-image" src="img/logout-black.svg" alt="выход"/>
+          <span class="header-profile__option-text">Выход</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="menu-btn hidden header-profile__menu-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <div class="burger-menu header-profile__burger">
+    <div class="header-burger header-profile__burger-margin flex">
+      <div class="burger-logo-block flex">
+        <a href="/index.php" class="logo">
+          <img src="img/logo_mobile.svg" alt="logo">
+        </a>
+        <a href="https://rs.gov.ru/" class="logo" target="_blank">
+          <img src="img/logo-ros.png" class="burger-logo2" alt="logo">
+        </a>
+        <a href="https://concord.ac/" class="logo" target="_blank">
+          <img src="img/logo-sodruzestvo.png" class="burger-logo3" alt="logo">
+        </a>
+      </div>
+      <button class="btn-reset burger-close">
+        <img src="img/close.svg" alt="">
+      </button>
+    </div>
+
+    <div class="main-burger header-profile__main-burger">
+      <div class="header-profile__avatar-burger--container">
+        <img class="header-profile__avatar--burger" src="img/avatar.png" alt="аватар" />
+        <span class="header-profile__avatar-burger--span">ИВАНОВ ИВАН ИВАНОВИЧ</span>
+      </div>
+
+      <ul class="list-reset burger-list">
+        <li class="burger-item">
+          <a href="/index.php" class="burger__link">Профиль</a>
+        </li>
+
+        <li class="burger-item">
+          <a href="/index.php" class="burger__link">Главная</a>
+        </li>
+
+        <li class="burger-item">
+          <a href="#" class="burger__link">Карта будущего</a>
+        </li>
+
+        <li class="burger-item">
+          <a href="tests.html" class="burger__link">Профтест</a>
+        </li>
+
+        <li class="burger-item">
+          <a href="#" class="burger__link">Контакты</a>
+        </li>
+      </ul>
+
+      <button class="header-profile__exit">
+        <img class="header-profile__exit-frame" src="img/logout.svg" alt="выход" />
+        <span class="header-profile__exit-span">Выйти</span>
+      </button>
+    </div>
+
+    <div class="header-profile__info">
+      <img class="header-profile__info-frame" src="img/Mobile.svg" alt="выход" />
+      <span class="header-profile__info-span">+7 (495) 165-15-08</span>
+    </div>
+
+    <div class="header-profile__info header-profile__info2">
+      <img class="header-profile__info-frame" src="img/telegram.svg" alt="выход" />
+      <span class="header-profile__info-span">vr-rs@concord.ac</span>
+    </div>
+  </div>
+
+  <div class="profilelk">
+    <div class="profilelk__banner"></div>
+    <div class="profilelk__section">
+      <form action="#" class="profilelk__form" id="profile-form" autocomplete="off">
+        <div class="prfoilelk__avatar-container">
+          <img class="prfoilelk__avatar" src="./img/avatar.png" alt="аватар" />
+        </div>
+        <div class="profilelk__form-first-container">
+          <div class="profilelk__input-container profilelk__input-container-tablet">
+            <label class="profilelk__input-label">Ф.И.О.</label>
+            <div class="profilelk__input-border">
+              <label class="input__invisible-shield">
+                <input class="profilelk__input input__clear" placeholder="Введите Ф.И.О." type="text" name="nameprofile"
+                  id="nameprofile" maxlength="100" required>
+                <img class="input-figure input-figure-hidden" src="./img/x-circle.svg" alt="кнопка" />
+              </label>
+            </div>
+          </div>
+          <div class="profilelk__input-container profilelk__input-container-tablet">
+            <label class="profilelk__input-label">E-mail</label>
+            <div class="profilelk__input-border">
+              <label class="input__invisible-shield">
+                <input class="profilelk__input input__clear" placeholder="Введите E-mail" type="email" maxlength="256"
+                  name="emailprofile" id="emailprofile" required>
+                <img class="input-figure input-figure-hidden" src="./img/x-circle.svg" alt="кнопка" />
+              </label>
+            </div>
+          </div>
+          <div class="profilelk__input-container profilelk__input-container-tablet">
+            <label class="profilelk__input-label">Телефон</label>
+            <div class="profilelk__input-border">
+              <label class="input__invisible-shield">
+                <input class="profilelk__input input__clear" placeholder="Введите телефон" maxlength="20"
+                  name="phoneprofile" id="phoneprofile" required>
+                <img class="input-figure input-figure-hidden" src="./img/x-circle.svg" alt="кнопка" />
+              </label>
+            </div>
+          </div>
+          <div class="profilelk__input-container profilelk__input-container-tablet">
+            <label class="profilelk__input-label">Город</label>
+            <div class="profilelk__input-border">
+              <label class="input__invisible-shield">
+                <input class="profilelk__input profilelk__input-city" placeholder="Выберите город" id="cityprofile"
+                  type="text" name="cityprofile" readonly required>
+              </label>
+              <img class="input-figure city-button" src="./img/arrow-down.svg" alt="кнопка" />
+              <ul class="reg-select reg-select-hidden" name="cities">
+                <li class="reg-select-option" data-value="Город 1">Город 1</li>
+                <li class="reg-select-option" data-value="Город 2">Город 2</li>
+                <li class="reg-select-option" data-value="Город 3">Город 3</li>
+                <li class="reg-select-option" data-value="Город 4">Город 4</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="profilelk__form-second-container">
+          <div class="profilelk__input-container">
+            <label class="profilelk__input-label">ФИО представителя</label>
+            <div class="profilelk__input-border">
+              <label class="input__invisible-shield">
+                <input class="profilelk__input input__clear" placeholder="Введите ФИО представителя" type="text"
+                  name="profnameprofile" id="profnameprofile" maxlength="100" required>
+                <img class="input-figure input-figure-hidden" src="./img/x-circle.svg" alt="кнопка" />
+              </label>
+            </div>
+          </div>
+          <div class="profilelk__input-container">
+            <label class="profilelk__input-label">Категория</label>
+            <div class="profilelk__input-border">
+              <label class="input__invisible-shield">
+                <input class="profilelk__input profilelk__input-cat" placeholder="Выберите категорию" id="catprofile"
+                  type="text" name="catprofile" required>
+              </label>
+              <img class="input-figure cat-button" src="./img/arrow-down.svg" alt="кнопка" />
+              <ul class="reg-select-cat reg-select-cat-hidden" name="cathegory">
+                <li class="reg-select-cat-option" data-value="Школьник">Школьник</li>
+                <li class="reg-select-cat-option" data-value="Студент">Студент</li>
+                <li class="reg-select-cat-option" data-value="Преподаватель">Преподаватель</li>
+                <li class="reg-select-cat-option" data-value="Другая категория">Другая категория</li>
+              </ul>
+            </div>
+          </div>
+          <div class="profilelk__input-container">
+            <label class="profilelk__input-label">Наименование учебного заведения</label>
+            <div class="profilelk__input-border profilelk__input-border-span">
+              <label class="input__invisible-shield">
+                <input class="profilelk__input profilelk__input-span input__clear"
+                  placeholder="Введите наименование учебного заведения" type="text" name="schoolprofile"
+                  id="schoolprofile" maxlength="156" required>
+                <img class="input-figure input-figure-hidden" src="./img/x-circle.svg" alt="кнопка" />
+              </label>
+            </div>
+          </div>
+          <button type="submit" class="profilelk__button profilelk__button-first">Сохранить</button>
+        </div>
+        <div class="profilelk__figure"></div>
+      </form>
+    </div>
+    <div class="profilelk__pass">
+      <h1 class="profilelk__title">СМЕНА ПАРОЛЯ</h1>
+      <form class="profilelk__pass-form" id="profile-pass-form" autocomplete="off">
+        <label class="profilelk__input-label">Текущий пароль</label>
+        <div class="profilelk__input-border">
+          <label class="input__invisible-shield">
+            <input class="profilelk__input input__pass" placeholder="Введите текущий пароль" type="password"
+              minlength="6" maxlength="64" id="passprofile" name="passprofile" required>
+          </label>
+          <img class="input-figure input-figure-eye" src="./img/password-eye.svg" alt="кнопка" />
+        </div>
+        <label class="profilelk__input-label">Новый пароль</label>
+        <div class="profilelk__input-border">
+          <label class="input__invisible-shield">
+            <input class="profilelk__input input__pass" placeholder="Новый пароль" type="password" minlength="6"
+              maxlength="64" id="newpassprofile" name="newpassprofile" required>
+          </label>
+          <img class="input-figure input-figure-eye" src="./img/password-eye.svg" alt="кнопка" />
+        </div>
+        <div class="profilelk__input-border-pass">
+          <div class="profilelk__input-border">
+            <label class="input__invisible-shield">
+              <input class="profilelk__input input__pass" placeholder="Повторите новый пароль" type="password"
+                minlength="6" maxlength="64" id="rep-newpassproflie" name="rep-newpassproflie" required>
+            </label>
+            <img class="input-figure input-figure-eye" src="./img/password-eye.svg" alt="кнопка" />
+          </div>
+        </div>
+        <button type="submit" class="profilelk__button profilelk__button-pass">Сохранить</button>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top flex">
+        <div class="footer-left">
+          <div class="footer-logo-wrap flex">
+            <a href="https://concord.ac/" class="logo" target="_blank">
+              <picture>
+                <source srcset="img/logo-sodruzestvo-mobile.png" media="(max-width: 730px)">
+                <source srcset="img/logo-sodruzestvo-tablet.png" media="(max-width: 768px)">
+                <img src="img/logo-sodruzestvo.png" alt="logo">
+              </picture>
+            </a>
+            <div class="footer-logo-wrap2 flex">
+              <a href="https://rs.gov.ru/" class="logo" target="_blank">
+                <picture>
+                  <source srcset="img/logo-ros-mobile.png" media="(max-width: 730px)">
+                  <source srcset="img/logo-ros-tablet.png" media="(max-width: 768px)">
+                  <img src="img/logo-ros.png" alt="logo">
+                </picture>
+              </a>
+              <a href="https://ruskidom.rs/" class="logo" target="_blank">
+                <picture>
+                  <source srcset="img/logo-Rus-house_slider-mobile.png" media="(max-width: 730px)">
+                  <source srcset="img/logo-Russian-tablet.png" media="(max-width: 768px)">
+                  <img src="img/logo-Russian.png" alt="logo">
+                </picture>
+              </a>
+            </div>
+
+          </div>
+
+          <div class="footer_contacts">
+            <a class="footer_contacts_text phone-contacts flex" href="tel:+74951651508">
+              <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M23.7142 17.014C22.1529 17.014 20.6222 16.77 19.1702 16.29C18.4742 16.054 17.6195 16.27 17.1929 16.7087L14.3155 18.8807C11.0142 17.1193 8.90353 15.0073 7.16619 11.7327L9.27953 8.92599C9.81286 8.39265 10.0035 7.61532 9.77419 6.88598C9.29286 5.42465 9.04753 3.89398 9.04753 2.33398C9.04753 1.23132 8.15019 0.333984 7.04753 0.333984H2.38086C1.27819 0.333984 0.380859 1.23132 0.380859 2.33398C0.380859 15.1993 10.8489 25.6673 23.7142 25.6673C24.8169 25.6673 25.7142 24.77 25.7142 23.6673V19.014C25.7142 17.9113 24.8169 17.014 23.7142 17.014Z" />
+              </svg>+7 (495) 165-15-08</a>
+          </div>
+          <div class="footer_contacts">
+            <a class="footer_contacts_text flex" href="mailto:vr-rs@concord.ac"><svg width="32" height="22"
+                viewBox="0 0 32 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M28.6667 0.333984H3.33333C1.496 0.333984 0 1.82998 0 3.66732V18.334C0 20.1713 1.496 21.6673 3.33333 21.6673H28.6667C30.504 21.6673 32 20.1713 32 18.334V3.66732C32 1.82998 30.504 0.333984 28.6667 0.333984ZM11.76 12.1793L3.76 18.846C3.636 18.95 3.484 19.0006 3.33333 19.0006C3.14133 19.0006 2.952 18.9193 2.82 18.7606C2.584 18.478 2.62267 18.0566 2.90533 17.8206L10.9053 11.154C11.188 10.9193 11.6093 10.958 11.8453 11.2393C12.0813 11.5233 12.0427 11.9447 11.76 12.1793ZM16 12.3567C15.2667 12.3567 14.532 12.138 13.892 11.6993L2.95733 4.21798C2.65333 4.00998 2.576 3.59532 2.78267 3.29132C2.98933 2.98732 3.404 2.90865 3.70933 3.11798L14.644 10.5993C15.4667 11.162 16.5307 11.162 17.3547 10.5993L28.2893 3.11798C28.5947 2.91132 29.0093 2.98732 29.216 3.29132C29.424 3.59532 29.3467 4.00998 29.0427 4.21798L18.108 11.6993C17.468 12.138 16.7333 12.3567 16 12.3567ZM29.1787 18.7606C29.0467 18.9193 28.8573 19.0006 28.6667 19.0006C28.516 19.0006 28.3653 18.95 28.24 18.846L20.24 12.1793C19.9573 11.9433 19.9187 11.5233 20.1547 11.2393C20.3907 10.958 20.8107 10.9193 21.0947 11.154L29.0947 17.8206C29.376 18.0566 29.4147 18.478 29.1787 18.7606Z" />
+              </svg>vr-rs@concord.ac</a>
+          </div>
+        </div>
+
+        <div class="footer-center flex">
+          <p class="section-title footer-title">Погрузись в науку легко</p>
+          <button class="btn-reset btn btn-color footer__btn flex">Задать вопрос</button>
+        </div>
+
+        <div class="footer-right flex">
+          <a class="footer-links" onclick="window.location.href ='#'" target="blank">Вход в личный кабинет</a>
+          <a class="footer-links" href="docs/Политика_обработки_ПДн_на_сайте_Содружество_проект.pdf" target="blank"
+            download="">Политика конфиденциальности</a>
+          <a class="footer-links" href="docs/Согласие_на_обработку_ПДн_на_сайте_Содружество_проект.pdf" target="blank"
+            download="">Согласие на обработку персональных данных</a>
+          <a class="footer-links" href="docs/Согласие_на_обработку_персональных_данных_для_Содружество_для_детей.pdf"
+            target="blank" download="">Согласие Пользователя на обработку персональных
+            данных</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom flex">
+        <p class="footer_bottomtext">© 2023 ООО СП «СОДРУЖЕСТВО»</p>
+        <div class="logos flex">
+          <p class="logos_text logos_text__margin">Сделано в </p>
+          <a href="https://xn--g1ani7c.xn--p1ai/" class="logos_1T" target="_blank">
+            <img src="img/logo-1T.png" alt="logo_1T">
+          </a>
+          <svg width="2" height="18" viewBox="0 0 2 18">
+            <use xlink:href="sprite.svg#line"></use>
+          </svg>
+          <a href="https://xn--g1ani7c.xn--p1ai/my/teams/2989122108225482194?name=ITitans&space=610" target="_blank">
+            <p class="logos_text">ITitans</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+<script src="./js/validation.js"></script>
+
+</html>

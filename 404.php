@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="css/401_404.css" />
   <link rel="stylesheet" href="css/media.css" />
   <link rel="stylesheet" href="css/modals.css" />
+  <link rel="icon" href="img/favicon.png" type="image/x-icon">
 </head>
 
 <body class="boby-404">
@@ -259,7 +260,7 @@
         </div>
 
         <div class="hero-btn-wrap" style="margin-bottom: 30px; margin-top: 20px;">
-          <button onclick="window.location.href ='index.html'" class="btn-reset btn p401-btn"
+          <button onclick="window.location.href ='index.php'" class="btn-reset btn p401-btn"
             style="width: 100%;">Вернуться на главную</button>
         </div>
 
