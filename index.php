@@ -40,7 +40,7 @@
     <div class="main-burger">
       <ul class="list-reset burger-list">
         <li class="burger-item">
-          <a href="#" class="burger__link">Карта будущего</a>
+          <a href="/future_map.php" class="burger__link">Карта будущего</a>
         </li>
         <li class="burger-item">
           <a href="tests.html" class="burger__link">Профтест</a>
@@ -52,7 +52,6 @@
           <a href="#" class="burger__link">Контакты</a>
         </li>
       </ul>
-
       <button class="btn-reset btn btn-color burger__btn flex">Войти</button>
     </div>
 

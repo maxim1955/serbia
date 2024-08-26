@@ -8,17 +8,79 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
     <script defer src="js/script.js"></script>
+    <script defer src="js/menu-modals.js"></script>
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/styles/choices.min.css"/>
     <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/media.css" />
     <link rel="stylesheet" href="css/future_map.css"/>
     <script src="https://api-maps.yandex.ru/v3/?apikey=409c56c9-7868-499c-af77-f29e4cde70d9&lang=ru_RU"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 
 </head>
 
 <body>
+<!-- Модальное окно бургер-меню -->
+<div class="burger-menu">
+    <div class="header-burger flex">
+        <div class="burger-logo-block flex">
+            <a href="index.php" class="logo">
+                <img src="img/logo_mobile.svg" alt="logo">
+            </a>
+            <a href="https://rs.gov.ru/" class="logo" target="_blank">
+                <img src="img/logo-ros.png" class="burger-logo2" alt="logo">
+            </a>
+            <a href="https://concord.ac/" class="logo" target="_blank">
+                <img src="img/logo-sodruzestvo.png" class="burger-logo3" alt="logo">
+            </a>
+        </div>
+        <button class="btn-reset burger-close">
+            <img src="img/close.svg" alt="">
+        </button>
+    </div>
+
+    <div class="main-burger">
+        <ul class="list-reset burger-list">
+            <li class="burger-item">
+                <a href="#" class="burger__link">Карта будущего</a>
+            </li>
+            <li class="burger-item">
+                <a href="tests.html" class="burger__link">Профтест</a>
+            </li>
+            <li class="burger-item">
+                <a href="materials.php" class="burger__link">Материалы</a>
+            </li>
+            <li class="burger-item">
+                <a href="#" class="burger__link">Контакты</a>
+            </li>
+        </ul>
+
+        <button class="btn-reset btn btn-color burger__btn flex">Войти</button>
+    </div>
+
+    <div class="burger-footer flex">
+        <div class="footer_contacts">
+            <a class="burger_contacts_text phone-burger flex" href="tel:+74951651508">
+                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M15.052 20.133C13.612 20.08 9.531 19.516 5.257 15.243C0.984 10.969 0.421 6.88897 0.367 5.44797C0.287 3.25197 1.969 1.11897 3.912 0.285971C4.14598 0.184938 4.4022 0.146472 4.65553 0.174347C4.90886 0.202222 5.15059 0.29548 5.357 0.444971C6.957 1.61097 8.061 3.37497 9.009 4.76197C9.21758 5.0667 9.30677 5.43752 9.25956 5.80377C9.21235 6.17002 9.03204 6.5061 8.753 6.74797L6.802 8.19697C6.70774 8.26504 6.64139 8.365 6.61528 8.47829C6.58916 8.59159 6.60505 8.71051 6.66 8.81297C7.102 9.61597 7.888 10.812 8.788 11.712C9.689 12.612 10.941 13.45 11.8 13.942C11.9077 14.0024 12.0345 14.0193 12.1543 13.9892C12.274 13.9591 12.3777 13.8842 12.444 13.78L13.714 11.847C13.9475 11.5368 14.2919 11.329 14.6752 11.2672C15.0584 11.2053 15.4508 11.2941 15.77 11.515C17.177 12.489 18.819 13.574 20.021 15.113C20.1826 15.3209 20.2854 15.5684 20.3187 15.8296C20.3519 16.0908 20.3144 16.3562 20.21 16.598C19.373 18.551 17.255 20.214 15.052 20.133Z"
+                          fill="white" />
+                </svg>
+                +7 (495) 165-15-08</a>
+        </div>
+        <div class="footer_contacts">
+            <a class="burger_contacts_text flex" href="mailto:vr-rs@concord.ac">
+                <svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M2.5 16C1.95 16 1.47933 15.8043 1.088 15.413C0.696667 15.0217 0.500667 14.5507 0.5 14V2C0.5 1.45 0.696 0.979333 1.088 0.588C1.48 0.196666 1.95067 0.000666667 2.5 0H18.5C19.05 0 19.521 0.196 19.913 0.588C20.305 0.98 20.5007 1.45067 20.5 2V14C20.5 14.55 20.3043 15.021 19.913 15.413C19.5217 15.805 19.0507 16.0007 18.5 16H2.5ZM10.5 9L18.5 4V2L10.5 7L2.5 2V4L10.5 9Z"
+                        fill="white" />
+                </svg>
+                vr-rs@concord.ac</a>
+        </div>
+    </div>
+</div>
 
 <main class="">
     <section class="title_block">
@@ -30,24 +92,29 @@
                 учреждениями России, предлагающими обучение по специальностям робототехника, мехатроника, VR и AR.
             </p>
         </div>
+        <div class="bg-lines-right"></div>
+        <div class="bg-lines-left"></div>
+    </section>
+    <section>
+        <div class="bg-bottom-map"></div>
     </section>
     <section class="map_block">
         <div class="tab_map_wrapper container">
             <p class="section-text">Направление:</p>
             <div class="tab_map">
-                <input type="checkbox" id="vr" class="tab_map__checkbox" checked value="vr">
+                <input type="checkbox" id="vr" class="tab_map__checkbox" checked value="VR">
                 <label for="vr" class="tab_map__button">
                     <img src="img/vr_btn.svg" alt="br_btn">
                     VR
                 </label>
 
-                <input type="checkbox" id="ar" class="tab_map__checkbox" checked value="ar">
+                <input type="checkbox" id="ar" class="tab_map__checkbox" checked value="AR">
                 <label for="ar" class="tab_map__button">
                     <img src="img/vr_btn.svg" alt="br_btn">
                     AR
                 </label>
 
-                <input type="checkbox" id="robotics" class="tab_map__checkbox" checked value="robot">
+                <input type="checkbox" id="robotics" class="tab_map__checkbox" checked value="Робототехника">
                 <label for="robotics" class="tab_map__button">
                     <img src="img/vr_btn.svg" alt="br_btn">
                     Робототехника
@@ -57,12 +124,12 @@
 
         <div class="container map_wrapper ">
             <div id="map"></div>
-            <svg viewBox="0 0 1360 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg viewBox="0 0 1360 760" fill="none" xmlns="http://www.w3.org/2000/svg" class="map-bg-xl">
                 <path d="M688.225 0H0L0.5 117L60.5 57.5H634L688.225 0Z" fill="#0E0214"/>
                 <path d="M1359.5 0L1360 265L1302.5 208.5L1300.03 2.5H1300L1298 0H1300H1359.5Z" fill="#0E0214"/>
                 <path
                     d="M446 758H165.5H6C3.79086 758 2 756.209 2 754V659V117.501C2 116.434 2.42622 115.411 3.18391 114.66L1.78445 113.248L3.18391 114.66L59.1695 59.1593C59.9187 58.4167 60.9308 58 61.9856 58H630.384C632.608 58 634.732 57.0737 636.246 55.4436L684.685 3.2782C685.442 2.46313 686.504 2 687.616 2H1298C1300.21 2 1302 3.79086 1302 6V205.483C1302 207.63 1302.86 209.686 1304.39 211.191L1356.8 262.663C1357.57 263.415 1358 264.444 1358 265.517V754C1358 756.209 1356.21 758 1354 758H446Z"
-                    stroke="url(#paint0_linear_2254_24991)" stroke-width="4"/>
+                    stroke="url(#paint0_linear_2254_24991)" stroke-width="4" style="height: 300px"/>
                 <path d="M115 0H649L621 28H87L115 0Z" fill="url(#paint1_linear_2254_24991)"/>
                 <path d="M1332 197L1360 225V0H1332V197Z" fill="url(#paint2_linear_2254_24991)"/>
                 <defs>
@@ -83,6 +150,7 @@
                     </linearGradient>
                 </defs>
             </svg>
+            <img src="img/map-bg-md.png" alt="" class="map-bg-md">
             <span class="help-modal-btn">
                     <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -190,6 +258,11 @@
             </div>
         </div>
 
+    </section>
+    <section>
+        <div class="btn-education-wrap">
+            <a href="#">Скачать список учебных заведений</a>
+        </div>
     </section>
 </main>
 
