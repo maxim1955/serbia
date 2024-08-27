@@ -1050,7 +1050,7 @@
 
           <div class="broadcast-video_flex">
             <div class="broadcast-video_wrap">
-              <video class="broadcast-video broadcast-video--active" preload="metadata" poster="img/broadcast-video_poster.webp" id="video-october_5">
+              <video class="broadcast-video" preload="metadata" poster="img/broadcast-video_poster.webp" id="video-october_5">
                 <source src="video/cathedral.mp4" type="video/mp4">
               </video>
 

@@ -13,7 +13,6 @@ cardBtn.forEach((el) => {
   el.addEventListener("click", (e) => {
     e.preventDefault();
     e.stopPropagation();
-    // console.log("Нажали");
   });
 });
 
@@ -277,6 +276,7 @@ const broadcastVideo = document.querySelectorAll(".broadcast-video");
 const dateSelect = document.querySelector(".broadcast-select");
 
 broadcastPlay.disabled = true;
+broadcastVideo[0].classList.add("broadcast-video--active");
 
 broadcastPlay.addEventListener("click", function (e) {
   e.preventDefault();
@@ -316,7 +316,7 @@ dateSelect.addEventListener("change", () => {
       broadcastPlay.classList.add("hidden");
     }
   }
-  console.log(selectedVideo);
+  // console.log(selectedVideo);
 });
 
 broadcastVideo.forEach((video) => {
