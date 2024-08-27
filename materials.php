@@ -191,32 +191,32 @@
           </div>
           <div class="caption-bottom opacity">
             <label class="reg__radio-label caption-label">
-              <input class="reg__radio" name="age" type="radio" checked>
+              <input class="reg__radio" name="age" type="radio" data-category="1">
               <span class="reg__fake-radio"></span>
               <span class="caption-text">История развития робототехники</span>
             </label>
             <label class="reg__radio-label caption-label">
-              <input class="reg__radio" name="age" type="radio">
+              <input class="reg__radio" name="age" type="radio" data-category="2">
               <span class="reg__fake-radio"></span>
               <span class="caption-text">Робототехника: прорывные технологии</span>
             </label>
             <label class="reg__radio-label caption-label">
-              <input class="reg__radio" name="age" type="radio">
+              <input class="reg__radio" name="age" type="radio" data-category="3">
               <span class="reg__fake-radio"></span>
               <span class="caption-text">Занимательная робототехника</span>
             </label>
             <label class="reg__radio-label caption-label">
-              <input class="reg__radio" name="age" type="radio">
+              <input class="reg__radio" name="age" type="radio" data-category="4">
               <span class="reg__fake-radio"></span>
               <span class="caption-text">Технологии будущего</span>
             </label>
             <label class="reg__radio-label caption-label">
-              <input class="reg__radio" name="age" type="radio">
+              <input class="reg__radio" name="age" type="radio" data-category="5">
               <span class="reg__fake-radio"></span>
               <span class="caption-text">Тренды робототехники в России</span>
             </label>
             <label class="reg__radio-label caption-label">
-              <input class="reg__radio" name="age" type="radio">
+              <input class="reg__radio" name="age" type="radio" data-category="6">
               <span class="reg__fake-radio"></span>
               <span class="caption-text">Образовательные материалы</span>
             </label>
@@ -226,7 +226,7 @@
         <div class="materials-info flex">
           <div class="materials_name">
             <div class="cards-wrap">
-              <div class="materials_cards materials_cards--active">
+              <div class="materials_cards materials_cards--active" data-category="1">
                 <img class="materials-cards-img" src="img/name1.png" alt="">
                 <div>
                   <h3 class="materials-cards-name">Есть над чем задуматься1:</h3>
@@ -237,7 +237,7 @@
                 </div>
               </div>
 
-              <div class="materials_cards">
+              <div class="materials_cards" data-category="2">
                 <img class="materials-cards-img" src="img/name2.png" alt="">
                 <div>
                   <h3 class="materials-cards-name">Есть над чем задуматься2:</h3>
@@ -248,7 +248,7 @@
                 </div>
               </div>
 
-              <div class="materials_cards">
+              <div class="materials_cards" data-category="1">
                 <img class="materials-cards-img" src="img/name3.png" alt="">
                 <div>
                   <h3 class="materials-cards-name">Есть над чем задуматься3:</h3>
@@ -259,7 +259,7 @@
                 </div>
               </div>
 
-              <div class="materials_cards">
+              <div class="materials_cards" data-category="3">
                 <img class="materials-cards-img" src="img/name4.png" alt="">
                 <div>
                   <h3 class="materials-cards-name">Есть над чем задуматься4:</h3>
@@ -270,7 +270,7 @@
                 </div>
               </div>
 
-              <div class="materials_cards">
+              <div class="materials_cards" data-category="4">
                 <img class="materials-cards-img" src="img/name5.png" alt="">
                 <div>
                   <h3 class="materials-cards-name">Есть над чем задуматься5:</h3>
@@ -281,7 +281,7 @@
                 </div>
               </div>
 
-              <div class="materials_cards">
+              <div class="materials_cards" data-category="4">
                 <img class="materials-cards-img" src="img/name6.png" alt="">
                 <div>
                   <h3 class="materials-cards-name">Есть над чем задуматься6:</h3>
@@ -292,7 +292,7 @@
                 </div>
               </div>
 
-              <div class="materials_cards">
+              <div class="materials_cards" data-category="1">
                 <img class="materials-cards-img" src="img/name1.png" alt="">
                 <div>
                   <h3 class="materials-cards-name">Есть над чем задуматься7:</h3>
@@ -303,7 +303,7 @@
                 </div>
               </div>
 
-              <div class="materials_cards">
+              <div class="materials_cards" data-category="3">
                 <img class="materials-cards-img" src="img/name2.png" alt="">
                 <div>
                   <h3 class="materials-cards-name">Есть над чем задуматься8:</h3>
