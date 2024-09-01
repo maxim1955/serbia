@@ -11,17 +11,18 @@ body {
     background-repeat: no-repeat;
     padding-top: 20px;
     min-height: calc(59vw - 1rem);
-}
 
+}
+/*
 .bg-lines-right {
-    position: absolute;
+  !*  position: absolute;
     background-image: url(/img/waves-rigth.png);
     background-repeat: no-repeat;
     background-size: cover;
     width: 79%;
     height: 100%;
     bottom: calc(-30vw - 1rem);
-    right: calc(-15vw - 1rem);
+    right: calc(-15vw - 1rem);*!
 }
 
 
@@ -35,14 +36,16 @@ body {
     bottom: calc(-41vw - 1rem);
     left: calc(-29vw - 1rem);
 
-}
+}*/
+
+
 .bg-bottom-map{
     position: absolute;
     background-image: url(/img/map_bg-bottom.png);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: 100%;
+    height: 95%;
     z-index: -1;
 }
 
@@ -79,7 +82,7 @@ body {
 }
 
 .tab_map_wrapper {
-    padding-top: 60px;
+    padding-top: 40px;
     padding-bottom: 40px;
 }
 
@@ -424,6 +427,10 @@ body {
 
 
 @media (max-width: 600px) {
+    .title_block{
+        background-image: url(/img/map_bg_mob.svg);
+        min-height: calc(46vh - 1rem);
+    }
     #map {
         height: 540px
     }
@@ -446,6 +453,7 @@ body {
 
     .section-text {
         text-align: center;
+        line-height: 18px;
     }
 
     .tab_map::-webkit-scrollbar {
@@ -461,6 +469,7 @@ body {
     .btn-education-wrap {
         background-size: contain;
         max-width: 320px;
+        margin-top: 60px;
     }
     .btn-education-wrap a{
         text-transform: none;
@@ -468,6 +477,11 @@ body {
         top: 14px;
         font-size: 16px;
     }
+    .bg-bottom-map{
+        height: 70%;
+    }
+
+
 
 }
 
@@ -475,5 +489,8 @@ body {
 @media (max-width: 480px) {
     .map_wrapper {
         height: 560px;
+    }
+    .btn-education-wrap {
+        margin-top: 0;
     }
 }
