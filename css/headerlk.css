@@ -36,6 +36,7 @@
 
 .header-profile__select-open {
   display: flex;
+  z-index: 2;
 }
 
 .header-profile__option {

@@ -326,10 +326,10 @@ for (let i = 0; i < li_item_cat.length; i = i + 1) {
   }, false)
 }
 
-//радокнопка снимает/навешивает required
+//радиокнопка снимает/навешивает required
 
-const radioDisable = document.getElementById('participant_adult')
-const radioEnable = document.getElementById('enable')
+const radioDisable = document.getElementById('participant_adult_0')
+const radioEnable = document.getElementById('participant_adult_1')
 const inputProfname = document.querySelector('.reg__input-profname')
 
 if (radioDisable) {
