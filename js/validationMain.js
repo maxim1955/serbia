@@ -331,10 +331,12 @@ for (let i = 0; i < li_item_cat.length; i = i + 1) {
 const radioDisable = document.getElementById('participant_adult_0')
 const radioEnable = document.getElementById('participant_adult_1')
 const inputProfname = document.querySelector('.reg__input-profname')
+const inputProfnameSelect = document.querySelector('.reg__input-label-last')
 
 if (radioDisable) {
   radioDisable.addEventListener('click', function () {
     inputProfname.removeAttribute('required')
+    inputProfnameSelect.classList.remove('reg__input-label-last-enable')
     regValidation.removeField('#participant_representative')
   })
 }
@@ -342,6 +344,7 @@ if (radioDisable) {
 if (radioEnable) {
   radioEnable.addEventListener('click', function () {
     inputProfname.setAttribute('required', 'required')
+    inputProfnameSelect.classList.add('reg__input-label-last-enable')
     regValidation.addField('#participant_representative', [
       {
         rule: 'required',
