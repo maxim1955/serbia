@@ -20,7 +20,8 @@
     text-align: left;
   }
 
-  .broadcast-video {
+  .broadcast-video,
+  .broadcast-img {
     width: 1020px;
     height: 569.69px;
   }
@@ -362,7 +363,8 @@
     clip-path: url(#clip-path_broadcast-tabletSmall);
   }
 
-  .broadcast-video {
+  .broadcast-video,
+  .broadcast-img {
     width: 664px;
     height: 368px;
   }
@@ -857,7 +859,8 @@
     clip-path: url(#clip-path_broadcast-mobile);
   }
 
-  .broadcast-video {
+  .broadcast-video,
+  .broadcast-img {
     width: 496px;
     height: 276px;
   }
@@ -1209,7 +1212,8 @@
     clip-path: url(#clip-path_broadcast-mobileSmall);
   }
 
-  .broadcast-video {
+  .broadcast-video,
+  .broadcast-img {
     width: 320px;
     height: 178px;
   }
@@ -1225,7 +1229,7 @@
 
   .broadcast-play {
     top: 35%;
-}
+  }
 
   .reviews {
     margin-bottom: 160px;

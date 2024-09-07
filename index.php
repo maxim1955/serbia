@@ -7,6 +7,8 @@
   <title>MainPage</title>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
   <script defer src="js/script.js"></script>
   <script defer src="js/menu-modals.js"></script>
   <link rel="stylesheet" href="css/normalize.css">
@@ -1049,30 +1051,6 @@
 
           <div class="broadcast-video_flex">
             <div class="broadcast-video_wrap">
-              <video class="broadcast-video" preload="metadata" poster="img/broadcast-video_poster.webp" id="video-october_5">
-                <source src="video/cathedral.mp4" type="video/mp4">
-              </video>
-
-              <video class="broadcast-video" preload="metadata" poster="img/broadcast-video_poster.webp" id="video-october_6">
-                <source src="video/Esmeralda.mp4" type="video/mp4">
-              </video>
-
-              <video class="broadcast-video" preload="metadata" poster="img/broadcast-video_poster.webp" id="video-october_8">
-                <source src="video/kings.mp4" type="video/mp4">
-              </video>
-
-              <video class="broadcast-video" preload="metadata" poster="img/broadcast-video_poster.webp" id="video-october_9">
-                <source src="video/Maria.mp4" type="video/mp4">
-              </video>
-
-              <video class="broadcast-video" preload="metadata" poster="img/broadcast-video_poster.webp" id="video-october_11">
-                <source src="video/cathedral.mp4" type="video/mp4">
-              </video>
-
-              <video class="broadcast-video" preload="metadata" poster="img/broadcast-video_poster.webp" id="video-october_12">
-                <source src="video/Esmeralda.mp4" type="video/mp4">
-              </video>
-
               <picture>
                 <source srcset="img/broadcast-video_frame-mobileSmall.png" media="(max-width: 576px)">
                 <source srcset="img/broadcast-video_frame-mobile.png" media="(max-width: 730px)">
@@ -1080,6 +1058,15 @@
                 <source srcset="img/broadcast-video_frame-tablet.png" media="(max-width: 1440px)">
                 <img class="broadcast-video_frame" src="img/broadcast-video_frame.png" alt="">
               </picture>
+
+              <img class="broadcast-img" src="img/broadcast-video_poster.webp" style="position: absolute;" alt="">
+
+              <iframe class="broadcast-video" id="video-october_5" src="https://www.youtube.com/embed/Nl8r4Ywu9M4?si=uuvDpTdDEiV94G1r?rel=0&showinfo=0&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <iframe class="broadcast-video" id="video-october_6" src="https://www.youtube.com/embed/oo8PHYJdXw4?si=j4oHWhWDpyPkcl37?rel=0&showinfo=0&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <iframe class="broadcast-video" id="video-october_8" src="https://www.youtube.com/embed/IFgl0nM6GUU?si=9Lj4iPpucMkjbcyn?rel=0&showinfo=0&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <iframe class="broadcast-video" id="video-october_9" src="https://www.youtube.com/embed/bkqGpUztBS4?si=4y4SPhMW46FMzGu0?rel=0&showinfo=0&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <iframe class="broadcast-video" id="video-october_11" src="https://www.youtube.com/embed/wtnQNN4otAU?si=ydPSm8lSt9cTOEWE?rel=0&showinfo=0&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <iframe class="broadcast-video" id="video-october_12" src="https://www.youtube.com/embed/rL15UR2cS1c?si=-HEBiG4JxoxxAC_l?rel=0&showinfo=0&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
               <button class="broadcast-play btn-reset">
                 <svg width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
