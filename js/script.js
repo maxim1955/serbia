@@ -270,61 +270,57 @@ var swiperPartners = new Swiper(".swiper-partners", {
   },
 });
 
-// Кнопка play в трансляциях
+// Трансляции
 const broadcastPlay = document.querySelector(".broadcast-play");
 const broadcastVideo = document.querySelectorAll(".broadcast-video");
 const dateSelect = document.querySelector(".broadcast-select");
+const broadcastImg = document.querySelector(".broadcast-img");
 
 broadcastPlay.disabled = true;
 broadcastVideo[0].classList.add("broadcast-video--active");
 
-broadcastPlay.addEventListener("click", function (e) {
-  e.preventDefault();
-
-  const selectedVideo = document.querySelector(".broadcast-video--active");
-
-  if (selectedVideo.paused) {
-    selectedVideo.play();
-    broadcastPlay.classList.add("hidden");
-  } else {
-    selectedVideo.pause();
-    broadcastPlay.classList.remove("hidden");
-  }
-});
-
-// Видео в трансляциях
 dateSelect.addEventListener("change", () => {
-  const selectedDate = dateSelect.value;
-  const selectedVideo = document.querySelector(`#video-${selectedDate}`);
-  const currentVideo = document.querySelector(".broadcast-video--active");
+  const selectedVideoId = dateSelect.value;
+  const selectedVideo = document.getElementById(`video-${selectedVideoId}`);
 
-  if (currentVideo) {
-    currentVideo.pause();
-  }
+  broadcastPlay.disabled = false;
 
-  broadcastVideo.forEach((video) =>
-    video.classList.remove("broadcast-video--active")
-  );
-
-  if (selectedVideo) {
-    selectedVideo.classList.add("broadcast-video--active");
-    broadcastPlay.disabled = false;
-
-    if (selectedVideo.paused) {
-      broadcastPlay.classList.remove("hidden");
-    } else {
-      broadcastPlay.classList.add("hidden");
+  broadcastVideo.forEach((video) => {
+    if (video !== selectedVideo) {
+      if (video.contentWindow) {
+        video.contentWindow.postMessage(
+          '{"event":"command","func":"pauseVideo","args":""}',
+          "*"
+        );
+      }
     }
-  }
-  // console.log(selectedVideo);
+
+    video.classList.remove("broadcast-video--active");
+  });
+
+  selectedVideo.classList.add("broadcast-video--active");
 });
 
-broadcastVideo.forEach((video) => {
-  video.addEventListener("ended", function () {
-    broadcastPlay.classList.remove("hidden");
-    broadcastPlay.classList.remove("active");
-    broadcastPlay.disabled = false;
-  });
+// Запуск видео
+jQuery(document).ready(function ($) {
+  (function initPlayVideo() {
+    var $videoCover = $(".broadcast-img");
+    var $videoPlay = $(".broadcast-play");
+
+    $(".broadcast-select").on("change", function () {
+      $videoCover.show();
+      $videoPlay.show();
+    });
+
+    $videoPlay.on("click", function () {
+      var selectedVideoId = $(".broadcast-select").val();
+      var $selectedVideo = $(`#video-${selectedVideoId}`);
+
+      $videoCover.hide();
+      $videoPlay.hide();
+      $selectedVideo.attr("src", $selectedVideo.attr("src") + "&autoplay=1");
+    });
+  })();
 });
 
 // Адаптив

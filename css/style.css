@@ -866,7 +866,7 @@ nav li[aria-current="page"] {
   background-size: contain;
 }
 
-/* Моальное окно отзывов */
+/* Модальное окно отзывов */
 .reviews-modal {
   max-width: 1038px;
   margin: 0 auto;
@@ -1204,6 +1204,7 @@ nav li[aria-current="page"] {
   top: 0;
   left: 0;
   object-fit: contain;
+  pointer-events: none;
 }
 
 .broadcast-video_frameSvg {
