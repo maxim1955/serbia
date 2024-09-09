@@ -52,9 +52,6 @@
         <li class="burger-item">
           <a href="materials.php" class="burger__link">Материалы</a>
         </li>
-        <li class="burger-item">
-          <a href="#" class="burger__link">Контакты</a>
-        </li>
       </ul>
       <button class="btn-reset btn btn-color burger__btn flex">Войти</button>
     </div>
