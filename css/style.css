@@ -1262,8 +1262,6 @@ nav li[aria-current="page"] {
 }
 
 .partners-slide {
-  padding-top: 28px;
-  padding-bottom: 32px;
   min-height: 164px;
   justify-content: center;
   align-items: center;
