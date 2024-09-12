@@ -54,6 +54,11 @@ src: url('../fonts/Inter-Medium.woff');
 .robot{
     max-width: 500px;
 }
+.show{
+    display: flex!important;
+    justify-content: center;
+    padding-top: 1.4% !important;
+}
 .quiz{
     max-width: 1120px;
     border: 2px solid;
@@ -259,8 +264,10 @@ header{
  .forma:first-child{
     margin-top: 0px;
  }
- .input_reg{
+ .need_mar{
     margin-bottom: 60px;
+ }
+ .input_reg{
     padding: 22px 16px 22px 16px;
     border: 1px solid;
     border-image: linear-gradient(to right,rgba(255, 170, 0, 1), rgba(170, 0, 255, 1)) 1;
@@ -334,8 +341,10 @@ header{
         padding-bottom: 20px;
     }
     .input_reg{
-        margin-bottom: 40px;
         width: 90%;
+    }
+    .need_mar{
+        margin-bottom: 40px;
     }
     .forma{
         font-size: 16px;
@@ -377,7 +386,7 @@ header{
         padding-bottom: 24px;
     }
  }
- @media(max-width:450px){
+ @media(max-width:520px){
     .return{
         display: none;
     }
@@ -398,6 +407,9 @@ header{
     .info_text{
         font-size: 14px;
         
+    }
+    .quiz-final{
+        font-size: 14px;
     }
     .quiz-st{
         font-size: 20px;
@@ -421,5 +433,13 @@ header{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+    }
+ }
+ @media (max-width:400px) {
+    .quiz{
+        max-width: 80%;
+    }
+    .lk{
+        max-width: 80%;
     }
  }

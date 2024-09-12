@@ -419,6 +419,8 @@ const xds = document.getElementById('xds');
 const kekw = document.getElementById('kekw');
 const toStart = document.getElementById('to_start');
 const entry = document.getElementById('entry');
+const nameHelp = document.getElementById('us_naming');
+const emailHelp = document.getElementById('us_mail');
 //  РЕНДЕР ВОПРОСОВ В ДОМ
 const renderQuestions=(index)=>{
     questions.dataset.currentStep = index;
@@ -450,30 +452,40 @@ const renderCount=()=>{
 }
 // ГЕНЕРАЦИЯ ВАРИАНТОВ ОБУЧЕНИЯ ПРИ ЗАВЕРШЕНИИ ТЕСТА
 const renderWrong1=()=>{
+    info.style.display="none";
     questions.innerHTML = `
     <div class="quiz-questions-item">
-                <div class="quiz-questions-item__question">Тестирование завершено. Попробуйте самостоятельно или с помощью профконсультанта изучить содержание профессий социальной сферы и/или менеджмента и выбрать интересную для вас</div>
-            </div>
+                <div class="quiz-questions-item__question">результаты тестирования</div>
+                <p class="info_text">Попробуйте самостоятельно или с помощью профконсультанта изучить содержание профессий социальной сферы и/или менеджмента и выбрать интересную для вас</p>
+                <a href="index.php" class="lk show"><div>Завершить</div></a>
+                </div>
     `;
     count.innerHTML =`Профтест`;
 };
 const renderWrong2=()=>{
+    info.style.display="none";
     questions.innerHTML = `
     <div class="quiz-questions-item">
-                <div class="quiz-questions-item__question">Тестирование завершено. Попробуйте самостоятельно или с помощью профконсультанта изучить профессии, посвященные наблюдению за природными явлениями, выращиванию, лечению, либо исследованию животных или растений, защите окружающей среды и выбрать интересную для вас</div>
-            </div>
+                <div class="quiz-questions-item__question">результаты тестирования</div>
+                <p class="info_text">Попробуйте самостоятельно или с помощью профконсультанта изучить профессии, посвященные наблюдению за природными явлениями, выращиванию, лечению, либо исследованию животных или растений, защите окружающей среды и выбрать интересную для вас</p>
+                <a href="index.php" class="lk show"><div>Завершить</div></a>
+                </div>
     `;
     count.innerHTML =`Профтест`;
 };
 const renderWrong3=()=>{
+    info.style.display="none";
     questions.innerHTML = `
     <div class="quiz-questions-item">
-                <div class="quiz-questions-item__question">Тестирование завершено. Попробуйте самостоятельно или с помощью профконсультанта изучить типы и классы профессий и выбрать интересный для вас</div>
-            </div>
+                <div class="quiz-questions-item__question">результаты тестирования</div>
+                <p class="info_text">Попробуйте самостоятельно или с помощью профконсультанта изучить типы и классы профессий и выбрать интересный для вас</p>
+                <a href="index.php" class="lk show"><div>Завершить</div></a>
+                </div>
     `;
     count.innerHTML =`Профтест`;
 };
 const renderWrong5=()=>{
+    info.style.display="none";
     questions.innerHTML = `
     <div class="quiz-questions-item">
                 <div class="quiz-questions-item__question q-pad">Поздравляем, вы успешно прошли тестирование!</div>
@@ -489,7 +501,17 @@ const renderWrong5=()=>{
     control.classList.add("flex-start");
     count.innerHTML =`Профтест`;
 };
+const renderWrong6=()=>{
+    info.style.display="none";
+    questions.innerHTML = `
+    <div class="quiz-questions-item">
+                <div class="quiz-questions-item__question q-pad">Тестирование завершено.</div>
+                <p class="info_text">Самостоятельно или с помощью профконсультанта выберите профессию, не связанную с физикой и информатикой</p>
+                <a href="index.php" class="lk show"><div>Завершить</div></a>
 
+            </div>
+    `;
+};
 
 // ЗАПОЛНЕНИЕ МАССИВА ОТВЕТАМИ
 quiz.addEventListener('change',(event)=>{
@@ -556,7 +578,8 @@ quiz.addEventListener('click',(event)=>{
            
             btnNext.disabled = true;
             if(event.target.classList.contains('btn-next') && Number(questions.dataset.currentStep)===2){
-              renderWrong5();
+              renderWrong6();
+              btnNext.style.display='none';
             }
         } 
         // КОНЕЦ ВТОРОГО ВОПРОСА
@@ -921,7 +944,7 @@ quiz.addEventListener('click',(event)=>{
     if(event.target.classList.contains('lform')){
         kekw.disabled=false;
     }
-    if(event.target.classList.contains('btn-start')){
+    if(event.target.classList.contains('btn-start') && nameHelp.classList.contains('just-validate-success-field') && emailHelp.classList.contains('just-validate-success-field')){
         renderQuestions(0);
        }
    })
