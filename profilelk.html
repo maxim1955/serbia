@@ -163,8 +163,8 @@
             <label class="profilelk__input-label">Ф.И.О.</label>
             <div class="profilelk__input-border">
               <label class="input__invisible-shield">
-                <input class="profilelk__input input__clear" placeholder="Введите Ф.И.О." type="text" name="nameprofile"
-                  id="nameprofile" maxlength="100" required>
+                <input class="profilelk__input input__clear" placeholder="Введите Ф.И.О." type="text" name="peronal[fio]"
+                  id="peronal_fio" maxlength="100" required>
                 <img class="input-figure input-figure-hidden" src="./img/x-circle.svg" alt="кнопка" />
               </label>
             </div>
@@ -174,7 +174,7 @@
             <div class="profilelk__input-border">
               <label class="input__invisible-shield">
                 <input class="profilelk__input input__clear" placeholder="Введите E-mail" type="email" maxlength="256"
-                  name="emailprofile" id="emailprofile" required>
+                  name="peronal[email]" id="peronal_email" required>
                 <img class="input-figure input-figure-hidden" src="./img/x-circle.svg" alt="кнопка" />
               </label>
             </div>
@@ -184,7 +184,7 @@
             <div class="profilelk__input-border">
               <label class="input__invisible-shield">
                 <input class="profilelk__input input__clear" placeholder="Введите телефон" maxlength="20"
-                  name="phoneprofile" id="phoneprofile" required>
+                  name="peronal[phone]" id="peronal_phone" required>
                 <img class="input-figure input-figure-hidden" src="./img/x-circle.svg" alt="кнопка" />
               </label>
             </div>
@@ -193,8 +193,8 @@
             <label class="profilelk__input-label">Город</label>
             <div class="profilelk__input-border">
               <label class="input__invisible-shield">
-                <input class="profilelk__input profilelk__input-city" placeholder="Выберите город" id="cityprofile"
-                  type="text" name="cityprofile" readonly required>
+                <input class="profilelk__input profilelk__input-city" placeholder="Выберите город" id="peronal_city"
+                  type="text" name="peronal[city]" readonly required>
               </label>
               <img class="input-figure city-button" src="./img/arrow-down.svg" alt="кнопка" />
               <ul class="reg-select reg-select-hidden" name="cities">
@@ -212,7 +212,7 @@
             <div class="profilelk__input-border">
               <label class="input__invisible-shield">
                 <input class="profilelk__input input__clear" placeholder="Введите ФИО представителя" type="text"
-                  name="profnameprofile" id="profnameprofile" maxlength="100" required>
+                  name="peronal[representative]" id="peronal_representative" maxlength="100" required>
                 <img class="input-figure input-figure-hidden" src="./img/x-circle.svg" alt="кнопка" />
               </label>
             </div>
@@ -221,8 +221,8 @@
             <label class="profilelk__input-label">Категория</label>
             <div class="profilelk__input-border">
               <label class="input__invisible-shield">
-                <input class="profilelk__input profilelk__input-cat" placeholder="Выберите категорию" id="catprofile"
-                  type="text" name="catprofile" required>
+                <input class="profilelk__input profilelk__input-cat" placeholder="Выберите категорию" id="peronal_category"
+                  type="text" name="peronal[category]" required>
               </label>
               <img class="input-figure cat-button" src="./img/arrow-down.svg" alt="кнопка" />
               <ul class="reg-select-cat reg-select-cat-hidden" name="cathegory">
@@ -238,8 +238,8 @@
             <div class="profilelk__input-border profilelk__input-border-span">
               <label class="input__invisible-shield">
                 <input class="profilelk__input profilelk__input-span input__clear"
-                  placeholder="Введите наименование учебного заведения" type="text" name="schoolprofile"
-                  id="schoolprofile" maxlength="156" required>
+                  placeholder="Введите наименование учебного заведения" type="text" name="peronal[school]"
+                  id="peronal_school" maxlength="156" required>
                 <img class="input-figure input-figure-hidden" src="./img/x-circle.svg" alt="кнопка" />
               </label>
             </div>
@@ -256,7 +256,7 @@
         <div class="profilelk__input-border">
           <label class="input__invisible-shield">
             <input class="profilelk__input input__pass" placeholder="Введите текущий пароль" type="password"
-              minlength="6" maxlength="64" id="passprofile" name="passprofile" required>
+              minlength="6" maxlength="64" id="recovery_password_password" name="recovery_password[password]" required>
           </label>
           <img class="input-figure input-figure-eye" src="./img/password-eye.svg" alt="кнопка" />
         </div>
@@ -264,7 +264,7 @@
         <div class="profilelk__input-border">
           <label class="input__invisible-shield">
             <input class="profilelk__input input__pass" placeholder="Новый пароль" type="password" minlength="6"
-              maxlength="64" id="newpassprofile" name="newpassprofile" required>
+              maxlength="64" id="recovery_password_newpassword" name="recovery_password[newpassword]" required>
           </label>
           <img class="input-figure input-figure-eye" src="./img/password-eye.svg" alt="кнопка" />
         </div>
@@ -272,7 +272,7 @@
           <div class="profilelk__input-border">
             <label class="input__invisible-shield">
               <input class="profilelk__input input__pass" placeholder="Повторите новый пароль" type="password"
-                minlength="6" maxlength="64" id="rep-newpassproflie" name="rep-newpassproflie" required>
+                minlength="6" maxlength="64" id="recovery_password_repeatpassword" name="recovery_password[repeatpassword]" required>
             </label>
             <img class="input-figure input-figure-eye" src="./img/password-eye.svg" alt="кнопка" />
           </div>

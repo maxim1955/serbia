@@ -50,7 +50,7 @@ let authValidation = new JustValidate('#authform', {
   focusInvalidField: false,
 });
 
-authValidation.addField('#emailauth', [
+authValidation.addField('#username', [
   {
     rule: 'required',
     errorMessage: 'Введите Email'
@@ -65,7 +65,7 @@ authValidation.addField('#emailauth', [
     errorMessage: "E-mail не может содержать больше 256 символов",
   },
 ])
-  .addField('#passauth', [
+  .addField('#password', [
     {
       rule: 'required',
       errorMessage: 'Введите пароль'

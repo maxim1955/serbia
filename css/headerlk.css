@@ -176,9 +176,10 @@
   font-weight: 400;
 }
 
+
 @media screen and (max-width: 1361px) {
   .header-profile {
-    max-width: 744px;
+    max-width: 100%;
   }
 
   .header-profile__avatar {
@@ -190,6 +191,13 @@
     display: none;
   }
 }
+
+/* @media screen and (max-width: 1300px) {
+  .header-profile__container-other--pages {
+    display: none;
+  }
+  
+} */
 
 @media screen and (max-width: 679px) {
   .header-profile {
@@ -228,11 +236,5 @@
 
   .header-profile__menu-btn {
     display: flex;
-  }
-}
-
-@media screen and (max-width: 1300px) {
-  .header-profile__container-other--pages {
-    display: none;
   }
 }

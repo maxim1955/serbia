@@ -48,7 +48,7 @@ let passValidation = new JustValidate('#passform', {
   focusInvalidField: false,
 });
 
-passValidation.addField('#emailpassform', [
+passValidation.addField('#email_recovery_username', [
   {
     rule: 'required',
     errorMessage: 'Введите Email'
