@@ -1,65 +1,7 @@
-// Модалка авторизации открытие/закрытие
-const btnBurger = document.querySelector(".burger__btn");
-const btnHeader = document.querySelector('.header__btn');
-
-btnHeader.addEventListener("click", (e) => {
-  e.preventDefault();
-  window.location.href = 'login.html';
-});
-
-btnBurger.addEventListener("click", (e) => {
-  e.preventDefault();
-  window.location.href = 'login.html';
-});
-
-// Модалка регистрации открытие/закрытие
-const btnHero = document.querySelector(".hero-btn");
-const btnCard = document.querySelectorAll(".card-btn");
-const reg = document.querySelector(".reg");
-const regClose = document.querySelector(".reg__close");
-const regButton = document.querySelector('.reg__button')
-
-btnHero.addEventListener("click", (e) => {
-  e.preventDefault();
-  reg.style.display = "flex";
-  body.classList.add("overflow-body");
-});
-
-btnCard.forEach((btn) => {
-  btn.addEventListener("click", function (e) {
-    e.preventDefault();
-    reg.style.display = "flex";
-    body.classList.add("overflow-body");
-  });
-});
-
-regClose.addEventListener("click", (e) => {
-  e.preventDefault();
-  reg.style.display = "none";
-  body.classList.remove("overflow-body");
-});
-
-// Модалка обратной связи открытие/закрытие
-const btnFooter = document.querySelector(".footer__btn");
-const fb = document.querySelector(".fb");
-const fbClose = document.querySelector(".fb__close");
-
-btnFooter.addEventListener("click", (e) => {
-  e.preventDefault();
-  fb.style.display = "flex";
-  body.classList.add("overflow-body");
-});
-
-fbClose.addEventListener("click", (e) => {
-  e.preventDefault();
-  fb.style.display = "none";
-  body.classList.remove("overflow-body");
-});
-
-
 
 
 //Valid reg form
+
 let regValidation = new JustValidate('#regform', {
   focusInvalidField: false,
 });

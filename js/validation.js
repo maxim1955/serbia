@@ -18,7 +18,7 @@ let profileValidation = new JustValidate('#profile-form', {
   validateBeforeSubmitting: false,
 });
 
-profileValidation.addField('#nameprofile', [
+profileValidation.addField('#peronal_fio', [
   {
     rule: 'required',
     errorMessage: 'Введите Ф.И.О.'
@@ -34,7 +34,7 @@ profileValidation.addField('#nameprofile', [
     errorMessage: "Фамилия не может содержать больше 100 символов",
   },
 ])
-  .addField('#emailprofile', [
+  .addField('#peronal_email', [
     {
       rule: 'required',
       errorMessage: 'Введите Email'
@@ -49,7 +49,7 @@ profileValidation.addField('#nameprofile', [
       errorMessage: "E-mail не может содержать больше 256 символов",
     },
   ])
-  .addField('#phoneprofile', [
+  .addField('#peronal_phone', [
     {
       rule: "required",
       errorMessage: "Введите ваш телефон",
@@ -65,7 +65,7 @@ profileValidation.addField('#nameprofile', [
       errorMessage: "Номер телефона не может содержать больше 18 символов",
     },
   ])
-  .addField('#profnameprofile', [
+  .addField('#peronal_representative', [
     {
       rule: 'required',
       errorMessage: 'Введите Ф.И.О. представителя'
@@ -81,7 +81,7 @@ profileValidation.addField('#nameprofile', [
       errorMessage: "Ф.И.О. представителя не может содержать больше 100 символов",
     },
   ])
-  .addField('#schoolprofile', [
+  .addField('#peronal_school', [
     {
       rule: 'required',
       errorMessage: 'Введите наименование учебного заведения'
@@ -97,13 +97,13 @@ profileValidation.addField('#nameprofile', [
       errorMessage: "Наименование учебного заведения не может содержать больше 156 символов",
     },
   ])
-  .addField('#cityprofile', [
+  .addField('#peronal_city', [
     {
       rule: 'required',
       errorMessage: 'Выберите город'
     }
   ])
-  .addField('#catprofile', [
+  .addField('#peronal_category', [
     {
       rule: 'required',
       errorMessage: 'Выберите категорию'
@@ -117,7 +117,7 @@ profileValidation.addField('#nameprofile', [
 
 let profilePassValidation = new JustValidate('#profile-pass-form')
 
-profilePassValidation.addField('#passprofile', [
+profilePassValidation.addField('#recovery_password_password', [
   {
     rule: 'required',
     errorMessage: 'Введите текущий пароль'
@@ -133,7 +133,7 @@ profilePassValidation.addField('#passprofile', [
     errorMessage: "Пароль не может содержать меньше 6 символов",
   }
 ])
-  .addField('#newpassprofile', [
+  .addField('#recovery_password_newpassword', [
     {
       rule: 'required',
       errorMessage: 'Введите новый пароль'
@@ -149,7 +149,7 @@ profilePassValidation.addField('#passprofile', [
       errorMessage: "Новый пароль не может содержать меньше 6 символов",
     }
   ])
-  .addField('#rep-newpassproflie', [
+  .addField('#recovery_password_repeatpassword', [
     {
       rule: 'required',
       errorMessage: 'Повторите новый пароль'
@@ -157,11 +157,11 @@ profilePassValidation.addField('#passprofile', [
     {
       validator: (value, fields) => {
         if (
-          fields['#newpassprofile'] &&
-          fields['#rep-newpassproflie'].elem
+          fields['#recovery_password_newpassword'] &&
+          fields['#recovery_password_repeatpassword'].elem
         ) {
           const repeatPasswordValue =
-            fields['#newpassprofile'].elem.value;
+            fields['#recovery_password_newpassword'].elem.value;
 
           return value === repeatPasswordValue;
         }
@@ -240,18 +240,3 @@ for (let i = 0; i < li_item_cat.length; i = i + 1) {
     regSelectCity.classList.add('reg-select-hidden')
   }, false)
 }
-
-
-const btnMenu = document.querySelector(".menu-btn");
-const burgerMenu = document.querySelector(".burger-menu");
-const burgerClose = document.querySelector(".burger-close");
-
-btnMenu.addEventListener("click", (e) => {
-  e.preventDefault();
-  burgerMenu.classList.toggle("appear");
-});
-
-burgerClose.addEventListener("click", (e) => {
-  e.preventDefault();
-  burgerMenu.classList.remove("appear");
-});
