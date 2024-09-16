@@ -351,7 +351,10 @@ function handleTabletChange4(e) {
   if (e.matches) {
     const broadcastTitleWrap = document.querySelector(".broadcast-title-wrap");
     const broadcastVideoFlex = document.querySelector(".broadcast-video_flex");
+    const cardText = document.querySelector(".card-1--text");
+
     broadcastTitleWrap.append(broadcastVideoFlex);
+    cardText.classList.add("hidden");
   }
 }
 mediaQuery4.addListener(handleTabletChange4);
