@@ -700,7 +700,7 @@
           </picture>
 
           <p class="section-text_name section-text ">VR, AR, робототехника в твоём городе</p>
-          <p class="section-text section-text_date">октябрь 2024</p>
+          <p class="section-text section-text_date">октябрь-ноябрь 2024</p>
         </div>
 
         <div class="hero-btn-wrap">
@@ -741,7 +741,7 @@
           </li>
           <li class="about-item about-item2">
             <img src="img/card.png" alt="">
-            <p class="section-text about-text">6 дней бесплатных мастер-классов по робототехнике, vr и ar</p>
+            <p class="section-text about-text">3 дня бесплатных мастер-классов по робототехнике, vr и ar</p>
           </li>
           <li class="about-item about-item3">
             <img src="img/card.png" alt="">
@@ -820,7 +820,7 @@
             <div class="program-cards flex">
               <div class="program-card card-3">
                 <div class="card-front flex">
-                  <p class="program-city">Белград</p>
+                  <p class="program-city">Вране</p>
 
                   <svg class="arrow" width="28" height="27" viewBox="0 0 28 27" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
@@ -843,19 +843,18 @@
                 </div>
 
                 <div class="card-back flex">
-                  <p class="program-city program-back-city">Белград, 10 октября</p>
+                  <p class="program-city program-back-city">Вране</p>
 
                   <svg class="arrow" width="28" height="27" viewBox="0 0 28 27" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <use xlink:href="sprite.svg#arrow"></use>
                   </svg>
 
-                  <p class="card-back-address">ул. Святого Саввы, 7</p>
-                  <div class="card-back-text">Вас ждут увлекательные квесты, мастер-классы по сборке роботов и
-                    практические
-                    занятия по разработке игры в виртуальной реальности, выставка экспонатов робототехники и
-                    образовательных
-                    VR-проектов.</div>
+                  <p class="card-back-address"><span>4 ноября</span> — Гимназия «Бора Станкович»</p>
+
+                  <div class="card-back-text">Вас ждут мастер-классы по моделированию и сборке роботов,
+                    практическое занятие по разработке VR-игры, интерактивный квест, выставка экспонатов
+                    робототехники и мехатроники.</div>
 
                   <div class="card-btn-wrap">
                     <button class="btn-reset btn section-btn card-btn card-back-btn">Зарегистрироваться</button>
@@ -868,7 +867,7 @@
 
               <div class="program-card card-2">
                 <div class="card-front flex">
-                  <p class="program-city">Белград</p>
+                  <p class="program-city">Смедерево</p>
 
                   <svg class="arrow" width="28" height="27" viewBox="0 0 28 27" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
@@ -884,17 +883,18 @@
                 </div>
 
                 <div class="card-back flex">
-                  <p class="program-city program-back-city">Белград, 10 октября</p>
+                  <p class="program-city program-back-city">Смедерево</p>
 
                   <svg class="arrow" width="28" height="27" viewBox="0 0 28 27" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <use xlink:href="sprite.svg#arrow"></use>
                   </svg>
 
-                  <p class="card-back-address">ул. Святого Саввы, 7</p>
-                  <div class="card-back-text">Вас ждут мастер-классы по моделированию и сборке роботов, практическое
-                    занятие
-                    по разработке VR-игры, интерактивный квест, выставка экспонатов робототехники и мехатроники.</div>
+                  <p class="card-back-address"><span>5 ноября</span> — Техническая школа</p>
+
+                  <div class="card-back-text">Вас ждут мастер-классы по моделированию и сборке роботов, 
+                    практическое занятие по разработке VR-игры, интерактивный квест, выставка экспонатов 
+                    робототехники и мехатроники.</div>
 
                   <div class="card-btn-wrap">
                     <button class="btn-reset btn section-btn card-btn card-back-btn">Зарегистрироваться</button>
@@ -923,18 +923,21 @@
                 </div>
 
                 <div class="card-back flex">
-                  <p class="program-city program-back-city">Белград, 10 октября</p>
+                  <p class="program-city program-back-city">Белград</p>
 
                   <svg class="arrow" width="28" height="27" viewBox="0 0 28 27" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <use xlink:href="sprite.svg#arrow"></use>
                   </svg>
 
-                  <p class="card-back-address">ул. Святого Саввы, 7</p>
-                  <div class="card-back-text">Образовательная выставка роботов и VR-проектов, интерактивные мастер-классы
-                    «Собираем луноход» и «Разработка игры в виртуальной реальности», квиз «Возвращение Тессеракта»,
-                    демонстрация интерактивной карты образования России.</div>
+                  <p class="card-back-address"><span>31 октября</span> — Русский дом</p>
+                  <p class="card-back-address"><span>1 ноября</span> — XII белградская гимназия</p>
+                  <p class="card-back-address"><span>6 ноября</span> — Русский дом</p>
+                  <p class="card-back-address"><span>7 ноября</span> — Девятая гимназия «Михаило Петрович Алас»</p>
 
+                  <div class="card-back-text card-1--text">Вас ждут мастер-классы по моделированию и сборке роботов,
+                    практическое занятие по разработке VR-игры, интерактивный квест, выставка экспонатов
+                    робототехники и мехатроники.</div>
                   <div class="card-btn-wrap">
                     <button class="btn-reset btn section-btn card-btn card-back-btn">Зарегистрироваться</button>
                     <svg width="120" height="14" viewBox="0 0 120 14">
