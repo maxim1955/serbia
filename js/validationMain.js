@@ -37,22 +37,6 @@ regValidation.addField('#participant_fio', [
       errorMessage: "E-mail не может содержать больше 256 символов",
     },
   ])
-  .addField('#participant_phone', [
-    {
-      rule: "required",
-      errorMessage: "Введите ваш телефон",
-    },
-    {
-      rule: "customRegexp",
-      value: /\+?[0-9\s\-\+\(\)]+/i,
-      errorMessage: "Введите корректный номер телефона",
-    },
-    {
-      rule: "maxLength",
-      value: 18,
-      errorMessage: "Номер телефона не может содержать больше 18 символов",
-    },
-  ])
   .addField('#participant_city', [
     {
       rule: 'required',
@@ -261,7 +245,7 @@ const regSelectCity = document.querySelector('.reg-select-city')
 const inp_city = document.querySelector('.reg__input-city');
 const li_item_city = document.querySelectorAll('.reg-select-option');
 
-for (let i = 0; i < li_item_cat.length; i = i + 1) {
+for (let i = 0; i < li_item_city.length; i = i + 1) {
   li_item_city[i].addEventListener('click', function () {
     inp_city.value = this.dataset.value;
     regSelectCity.classList.add('reg-select-hidden')
@@ -305,3 +289,45 @@ if (radioEnable) {
     ])
   })
 }
+
+const btnHero = document.querySelector(".hero-btn");
+const btnCard = document.querySelectorAll(".card-btn");
+const reg = document.querySelector(".reg");
+const regClose = document.querySelector(".reg__close");
+
+btnHero.addEventListener("click", (e) => {
+  e.preventDefault();
+  reg.style.display = "flex";
+  body.classList.add("overflow-body");
+});
+
+btnCard.forEach((btn) => {
+  btn.addEventListener("click", function (e) {
+    e.preventDefault();
+    reg.style.display = "flex";
+    body.classList.add("overflow-body");
+  });
+});
+
+regClose.addEventListener("click", (e) => {
+  e.preventDefault();
+  reg.style.display = "none";
+  body.classList.remove("overflow-body");
+});
+
+// // .addField('#participant_phone', [
+// //   {
+// //     rule: "required",
+// //     errorMessage: "Введите ваш телефон",
+// //   },
+// //   {
+// //     rule: "customRegexp",
+// //     value: /\+?[0-9\s\-\+\(\)]+/i,
+// //     errorMessage: "Введите корректный номер телефона",
+// //   },
+// //   {
+// //     rule: "maxLength",
+// //     value: 18,
+// //     errorMessage: "Номер телефона не может содержать больше 18 символов",
+// //   },
+// ])
