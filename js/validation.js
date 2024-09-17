@@ -234,7 +234,7 @@ const regSelectCity = document.querySelector('.reg-select')
 const inp_city = document.querySelector('.profilelk__input-city');
 const li_item_city = document.querySelectorAll('.reg-select-option');
 
-for (let i = 0; i < li_item_cat.length; i = i + 1) {
+for (let i = 0; i < li_item_city.length; i = i + 1) {
   li_item_city[i].addEventListener('click', function () {
     inp_city.value = this.dataset.value;
     regSelectCity.classList.add('reg-select-hidden')

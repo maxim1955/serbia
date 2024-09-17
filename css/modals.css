@@ -603,7 +603,7 @@
 .reg-select {
   position: absolute;
   background-color: white;
-  height: 184px;
+  max-height: 184px;
   box-sizing: border-box;
   padding: 4px;
   width: 100%;
@@ -641,7 +641,7 @@
 .reg-select-cat {
   position: absolute;
   background-color: white;
-  height: 188px;
+  max-height: 188px;
   box-sizing: border-box;
   padding: 4px;
   width: 100%;
