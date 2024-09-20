@@ -8,7 +8,7 @@ let codeValidation = new JustValidate('#codeform', {
   focusInvalidField: false,
 });
 
-codeValidation.addField('#code', [
+codeValidation.addField('#enter_code_code', [
   {
     rule: 'required',
     errorMessage: ' '
