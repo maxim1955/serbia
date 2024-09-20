@@ -129,6 +129,8 @@ body {
 }
 
 .logo-block {
+  height: fit-content;
+  align-items: center;
   gap: 20px;
 }
 
@@ -682,13 +684,13 @@ nav li[aria-current="page"] {
   top: 63px;
 }
 
-.card-3:hover ~ .card-1 {
+.card-3:hover~.card-1 {
   z-index: 1;
   filter: brightness(0.5);
   transition: filter 0.3s ease;
 }
 
-.card-2:hover ~ .card-1 {
+.card-2:hover~.card-1 {
   filter: brightness(0.5);
   transition: filter 0.3s ease;
 }

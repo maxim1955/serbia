@@ -8,7 +8,7 @@ let passwordsValidation = new JustValidate('#passwords', {
   focusInvalidField: false,
 });
 
-passwordsValidation.addField('#newpass-passform', [
+passwordsValidation.addField('#change_password_newpass', [
   {
     rule: 'required',
     errorMessage: 'Введите новый пароль'
@@ -24,7 +24,7 @@ passwordsValidation.addField('#newpass-passform', [
     errorMessage: "Новый пароль не может содержать меньше 6 символов",
   }
 ])
-  .addField('#repnewpass-passform', [
+  .addField('#change_password_repnewpass', [
     {
       rule: 'required',
       errorMessage: 'Повторите новый пароль'
@@ -32,11 +32,11 @@ passwordsValidation.addField('#newpass-passform', [
     {
       validator: (value, fields) => {
         if (
-          fields['#newpass-passform'] &&
-          fields['#repnewpass-passform'].elem
+          fields['#change_password_newpass'] &&
+          fields['#change_password_repnewpass'].elem
         ) {
           const repeatPasswordValue =
-            fields['#newpass-passform'].elem.value;
+            fields['#change_password_newpass'].elem.value;
 
           return value === repeatPasswordValue;
         }

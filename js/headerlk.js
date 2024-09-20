@@ -1,4 +1,3 @@
-//
 
 const avatarButton = document.querySelector('.header-profile__button')
 const headerProfileSelect = document.querySelector('.header-profile__select')

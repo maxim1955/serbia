@@ -176,6 +176,12 @@
   font-weight: 400;
 }
 
+.burger-logo-block__profile {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
 
 @media screen and (max-width: 1361px) {
   .header-profile {
@@ -190,6 +196,8 @@
   .nav-profile {
     display: none;
   }
+
+  
 }
 
 /* @media screen and (max-width: 1300px) {
@@ -211,17 +219,17 @@
     gap: 12px;
   }
 
-  .header-profile__link1 {
-    height: 58px;
-    width: 32px;
+  .header-profile__link48 {
+    height: 32px;
+    width: 48px;
   }
 
-  .header-profile__link2 {
+  .header-profile__link32 {
     height: 32px;
     width: 32px;
   }
 
-  .header-profile__link3 {
+  .header-profile__link122 {
     width: 122px;
     height: 32px;
   }
