@@ -391,6 +391,8 @@ body {
 
     .modal__body__img img {
         max-width: 278px;
+        min-height: 135px;
+        max-height: 135px;
     }
     .btn-education-wrap {
         background-size: contain;
