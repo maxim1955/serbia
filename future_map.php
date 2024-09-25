@@ -256,7 +256,7 @@
     </section>
     <section>
         <div class="btn-education-wrap">
-            <a href="#">Скачать список учебных заведений</a>
+            <a href="docs/univer.xlsx" download="univer.xlsx">Скачать список учебных заведений</a>
         </div>
     </section>
 </main>
