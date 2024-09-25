@@ -24,16 +24,25 @@
 
   <!-- Модальное окно бургер-меню -->
   <div class="burger-menu">
-    <div class="header-burger flex">
+  <div class="header-burger flex">
       <div class="burger-logo-block flex">
         <a href="index.php" class="logo">
           <img src="img/logo_mobile.svg" alt="logo">
         </a>
         <a href="https://rs.gov.ru/" class="logo" target="_blank">
-          <img src="img/logo-ros.png" class="burger-logo2" alt="logo">
+          <img src="img/logo-ros.png" alt="logo">
+        </a>
+        <a href="#" class="logo" target="_blank">
+          <img src="img/Logo_RS_RU.png" alt="logo">
+        </a>
+        <a href="https://ruskidom.rs/" class="logo" target="_blank">
+          <img src="img/logo-RusDom.png" alt="logo">
         </a>
         <a href="https://concord.ac/" class="logo" target="_blank">
-          <img src="img/logo-sodruzestvo.png" class="burger-logo3" alt="logo">
+          <img src="img/logo-sodr.png" alt="logo">
+        </a>
+        <a href="https://r-ed.world/" class="logo" target="_blank">
+          <img src="img/logo-RD.png" alt="logo">
         </a>
       </div>
       <button class="btn-reset burger-close">
